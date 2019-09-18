@@ -22,11 +22,13 @@
     "dotenv": "^8.1.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.0.1",
-    "react-stopwatch": "^2.0.4"
+    "react-timer-machine": "^1.0.2"
   }
 }
