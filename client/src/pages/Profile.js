@@ -13,18 +13,27 @@ class MenuWorkoutProfile extends Component {
         Intro: "",
         Location: "",
         ///
-        type:"",
+        type: "",
         workoutType: "",
         bodypart: "",
         weight: "",
         rep: "",
         set: "",
-        timer: ""
-        //date:""
+        timer: "",
+        date:""
     };
 
     /// get history 
-    workoutList = API.getWorkout().then(res=> this.setState({ books: res.data, title: "", author: "", synopsis: "" }))
+    workoutList = API.getWorkout().then(res => this.setState({
+        type: res.data.type,
+        workoutType: res.data.workoutType,
+        bodypart: res.data.bodypart,
+        weight: res.data.weight,
+        rep: res.data.rep,
+        set: res.data.set,
+        timer: res.data.timer
+        //date:""
+    }))
 
 
 
