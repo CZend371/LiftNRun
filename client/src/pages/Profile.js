@@ -20,20 +20,10 @@ class MenuWorkoutProfile extends Component {
         rep: "",
         set: "",
         timer: "",
-        date:""
+        date: ""
     };
 
-    /// get history 
-    workoutList = API.getWorkout().then(res => this.setState({
-        type: res.data.type,
-        workoutType: res.data.workoutType,
-        bodypart: res.data.bodypart,
-        weight: res.data.weight,
-        rep: res.data.rep,
-        set: res.data.set,
-        timer: res.data.timer
-        //date:""
-    }))
+
 
 
 
@@ -52,6 +42,17 @@ class MenuWorkoutProfile extends Component {
         }
     }
     render() {
+        /// get history 
+        let workoutList = API.getWorkout().then(res => this.setState({
+            type: res.data.type,
+            workoutType: res.data.workoutType,
+            bodypart: res.data.bodypart,
+            weight: res.data.weight,
+            rep: res.data.rep,
+            set: res.data.set,
+            timer: res.data.timer
+            //date:""
+        }))
         // get list of workout
         return (
             <div>
@@ -62,7 +63,15 @@ class MenuWorkoutProfile extends Component {
                 </div>
                 <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
                 <div id="HistoryGroup">
-                    {
+                {this.state.books.map(book => (
+                     <History {...props}>
+                    {name}</History>
+                  )}
+
+
+
+
+                    {this.state.books.length ? (
                         <List>
                             {this.state.books.map(book => (
                                 <ListItem key={book._id}>
@@ -71,12 +80,13 @@ class MenuWorkoutProfile extends Component {
                                             {book.title} by {book.author}
                                         </strong>
                                     </Link>
+                                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
                                 </ListItem>
                             ))}
-                        </List>
-
-
-                    }
+                        </List>)
+                        : (
+                            <h3>No Results to Display</h3>
+                        )}
                 </div>
             </div>
         );
