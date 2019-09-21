@@ -27,7 +27,11 @@ export default class GymForm extends Component {
         const id = event.target.id;
         this.setState({
             [bodypart]: id
-        })
+        });
+        document.getElementById("bodyMap1").classList.add('bodyMapHide ');
+        document.getElementById("bodyMap1 ").classList.remove('bodyMapShow');
+        document.getElementById("bodyMap2").classList.add('bodyMapHide ');
+        document.getElementById("bodyMap2 ").classList.remove('bodyMapShow');
     }
     flipBodyPart = event => {
         var check = document.getElementById("bodyFlip").getAttribute('isFront');
@@ -42,14 +46,19 @@ export default class GymForm extends Component {
             document.getElementById("bodyMap2 ").classList.remove('bodyMapHide');
         }
     }
+    updateBodyPart = event => {
+        var check = document.getElementById("bodyFlip");
+        document.getElementById("bodyMap1").classList.add('bodyMapShow ');
+        document.getElementById("bodyMap1 ").classList.remove('bodyMapHide');
+        }
     render() {
         <div>
-            <div id="bodyMap1" class="bodyMapShow">
+            <div id="bodyMap1" class="bodyMapHide">
                 <BodyBtn id="arm" class="" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
                 <BodyBtn id="chest" class="" src="assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
                 <BodyBtn id="abs" class="" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
             </div>
-            <div id="bodyFlip" class="" onClick={this.FlipBodyPart} isFront="true"></div>
+            <div id="bodyFlip" class="flipBtn" onClick={this.FlipBodyPart} isFront="true"></div>
             <div id="bodyMap2" class="bodyMapHide">
                 <BodyBtn id="back" class="" src="assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
                 <BodyBtn id="thigh" class="" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>

@@ -11,8 +11,8 @@ class Entrance extends Component {
     render() {
         return (
             <div>
-                <img href = "/MenuWorkoutProfile" src="asset/logo.jpg" />
-                <div href = "/MenuWorkoutProfile">
+                <img href = "/Login" src="asset/logo.jpg" />
+                <div href = "/Login">
                     Lift N Run
                 </div>
             </div>
