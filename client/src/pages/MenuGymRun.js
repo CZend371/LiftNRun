@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import BinarySeletion from "../components/BinarySeletion";
 
-class MenuWorkoutProfile extends Component {
+class MenuGymRun extends Component {
     state = {
-        topTitle: "Work Out",
-        botTitle: "Profile",
-        topLink: "/MenuGymRun",
-        botLink: "/Profile"
+        topTitle: "Gym",
+        botTitle: "Run",
+        topLink: "/Gym",
+        botLink: "/Run"
       };
     render() {
         return (
@@ -15,4 +15,4 @@ class MenuWorkoutProfile extends Component {
     }
 }
 
-export default MenuWorkoutProfile;
+export default MenuGymRun;

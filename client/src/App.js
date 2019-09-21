@@ -23,6 +23,10 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Entrance} />
           <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
+          <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/MenuGymRun" component={MenuGymRun} />
+          <Route exact path="/Gym" component={Gym} />
+          <Route exact path="/Run" component={Run} />
         </Wrapper>
         <Footer />
       </div>
