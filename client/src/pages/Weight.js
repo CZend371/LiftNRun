@@ -13,12 +13,14 @@ export default class GymForm extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         API.saveWorkout({
+            type:"weight",
             workoutType: this.state.workoutType,
             bodypart: this.state.bodypart,
             weight: this.state.weight,
             rep: this.state.rep,
             set: this.state.set,
             timer: this.state.timer,
+            //date:""
         })
             .catch(err => console.log(err));
     };

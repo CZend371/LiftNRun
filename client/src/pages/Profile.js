@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import History from "../components/ProfileHistory";
+import API from "../utils/API";
 import "./style.css";
 
 class MenuWorkoutProfile extends Component {
@@ -9,16 +11,25 @@ class MenuWorkoutProfile extends Component {
     state = {
         Name: "",
         Intro: "",
-        Location: ""
+        Location: "",
+        ///
+        type:"",
+        workoutType: "",
+        bodypart: "",
+        weight: "",
+        rep: "",
+        set: "",
+        timer: ""
+        //date:""
     };
 
-    /// get history
-
+    /// get history 
+    workoutList = API.getWorkout().then(res=> this.setState({ books: res.data, title: "", author: "", synopsis: "" }))
 
 
 
     /////
-    expandHistory = event => {
+    ExpandHistory = event => {
         var check = document.getElementById("bodyFlip").getAttribute('isFront');
         if (check === true) {
             document.getElementById("bodyFlip").setAttribute('isFront', false);
@@ -32,6 +43,7 @@ class MenuWorkoutProfile extends Component {
         }
     }
     render() {
+        // get list of workout
         return (
             <div>
                 <div id="profileGroup">
@@ -39,11 +51,23 @@ class MenuWorkoutProfile extends Component {
                     <div id="profileIntro">{this.state.Name}</div>
                     <div id="profileLocation">{this.state.Name}</div>
                 </div>
-                <div id="expandHiistory" onClick={this.FlipBodyPart} isFront="true"></div>
-                <div id="profileGroup">
-                    <div id="profileName">{this.state.Name}</div>
-                    <div id="profileIntro">{this.state.Name}</div>
-                    <div id="profileLocation">{this.state.Name}</div>
+                <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
+                <div id="HistoryGroup">
+                    {
+                        <List>
+                            {this.state.books.map(book => (
+                                <ListItem key={book._id}>
+                                    <Link to={"/books/" + book._id}>
+                                        <strong>
+                                            {book.title} by {book.author}
+                                        </strong>
+                                    </Link>
+                                </ListItem>
+                            ))}
+                        </List>
+
+
+                    }
                 </div>
             </div>
         );
