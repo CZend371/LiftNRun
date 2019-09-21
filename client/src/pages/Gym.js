@@ -25,21 +25,35 @@ export default class GymForm extends Component {
     };
 
     chooseBodyPart = event =>{
-        const name = event.target;
+        const id = event.target.id;
         this.setState({
-            [bodypart]: name
+            [bodypart]: id
         })
+    }
+    flipBodyPart = event =>{
+        var check = document.getElementById("bodyFlip").getAttribute('isFront');
+        if(check === true)
+        {
+            document.getElementById("bodyFlip").setAttribute('isFront', false);
+            document.getElementById("bodyMap1").classList.add('bodyMapHide ');
+            document.getElementById("bodyMap2 ").classList.remove('bodyMapShow');
 
+        }else{
+            document.getElementById("bodyFlip").setAttribute('isFront', true);
+            document.getElementById("bodyMap1").classList.add('bodyMapShow ');
+            document.getElementById("bodyMap2 ").classList.remove('bodyMapHide');
+        }
     }
     render() {
-        <div id="bodyMap_1" class="bodyMap_1">
-            <BodyBtn name="arm" class = "" src = "assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-            <BodyBtn name="chest" class = "" src = "assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-            <BodyBtn name="abs" class = "" src = "assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+        <div id="bodyMap1" class="bodyMapShow">
+            <BodyBtn id="arm" class = "" src = "assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+            <BodyBtn id="chest" class = "" src = "assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+            <BodyBtn id="abs" class = "" src = "assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
         </div>
-        <div id="bodyMap_2" class="bodyMap_2">
-            <BodyBtn name="back" class = "" src = "assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-            <BodyBtn name="thigh" class = "" src = "assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+        <div id="bodyFlip" class = "" onClick={this.FlipBodyPart} isFront = "true"></div>
+        <div id="bodyMap2" class="bodyMapHide">
+            <BodyBtn id="back" class = "" src = "assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+            <BodyBtn id="thigh" class = "" src = "assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
         </div>
             <form id="form">
                 <p>workoutType</p>
