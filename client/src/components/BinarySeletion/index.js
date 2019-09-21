@@ -11,7 +11,7 @@ export default class BinarySelection extends Component(prop) {
     clickTop = event => {
         if (this.state.top === true) {
             var a = document.getElementById('topBtn');
-            a.href = this.prop.topLink;
+            a.href = prop.topLink;
         } else {
             this.setState({ top: true, bot: false });
             document.getElementById("topBtn").classList.add('clicked1 ');
@@ -22,8 +22,8 @@ export default class BinarySelection extends Component(prop) {
     }
     clickBot = event => {
         if (this.state.bot === true) {
-            var a = document.getElementById('topBtn');
-            a.href = this.prop.botLink;
+            var a = document.getElementById('botBtn');
+            a.href = prop.botLink;
         } else {
             this.setState({ top: false, bot: true });
             document.getElementById("topBtn").classList.add('clicked0 ');
@@ -35,8 +35,8 @@ export default class BinarySelection extends Component(prop) {
     render() {
         return (
             <BinarySelection>
-                <BinaryBtn id="topBtn" class="clicked1" onclick={this.clickTop}>{this.prop.topTitle}</BinaryBtn>
-                <BinaryBtn id="botBtn" class="clicked0" onclick={this.clickBot}>{this.prop.botTitle}</BinaryBtn>
+                <BinaryBtn id="topBtn" class="clicked1" onclick={this.clickTop}>{prop.topTitle}</BinaryBtn>
+                <BinaryBtn id="botBtn" class="clicked0" onclick={this.clickBot}>{prop.botTitle}</BinaryBtn>
             </BinarySelection>
         )
     }

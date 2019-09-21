@@ -4,17 +4,17 @@ import React, { Component } from "react";
 class Entrance extends Component {
 
     toMenu = event => {
-        this.props.history.push('/*****')
-
+        var a = event.target;
+        a.href = prop.topLink;
     };
 
     render() {
         return (
             <div>
-                <img onClick={this.toMenu} src="asset/logo.jpg" />
-                <div onClick={this.toMenu}>
+                <img href = "/MenuWorkoutProfile" src="asset/logo.jpg" />
+                <div href = "/MenuWorkoutProfile">
                     Lift N Run
-              </div>
+                </div>
             </div>
         );
     }
