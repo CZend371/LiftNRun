@@ -1,11 +1,8 @@
 import React from "react";
 import "./style.css";
 
-// pass bodypart repnum setnum weight time
+// pass bodypart workoutname repnum setnum weight time
 //<Inputvalue = { this.state.title }onChange = { this.handleInputChange } name = "title"placeholder = "Title (required)"   />
-
-
-
 
 export class NumbericInput extends Component(prop) {
     ///Method: Increase, Decrease, Input
