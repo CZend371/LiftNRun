@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
-import BodyBtn from "../components/BodyBtn";
 
 export default class GymForm extends Component {
     state = {
@@ -24,37 +23,37 @@ export default class GymForm extends Component {
             .catch(err => console.log(err));
     };
 
-    chooseBodyPart = event =>{
+    chooseBodyPart = event => {
         const id = event.target.id;
         this.setState({
             [bodypart]: id
         })
     }
-    flipBodyPart = event =>{
+    flipBodyPart = event => {
         var check = document.getElementById("bodyFlip").getAttribute('isFront');
-        if(check === true)
-        {
+        if (check === true) {
             document.getElementById("bodyFlip").setAttribute('isFront', false);
             document.getElementById("bodyMap1").classList.add('bodyMapHide ');
             document.getElementById("bodyMap2 ").classList.remove('bodyMapShow');
 
-        }else{
+        } else {
             document.getElementById("bodyFlip").setAttribute('isFront', true);
             document.getElementById("bodyMap1").classList.add('bodyMapShow ');
             document.getElementById("bodyMap2 ").classList.remove('bodyMapHide');
         }
     }
     render() {
-        <div id="bodyMap1" class="bodyMapShow">
-            <BodyBtn id="arm" class = "" src = "assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-            <BodyBtn id="chest" class = "" src = "assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-            <BodyBtn id="abs" class = "" src = "assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-        </div>
-        <div id="bodyFlip" class = "" onClick={this.FlipBodyPart} isFront = "true"></div>
-        <div id="bodyMap2" class="bodyMapHide">
-            <BodyBtn id="back" class = "" src = "assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-            <BodyBtn id="thigh" class = "" src = "assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-        </div>
+        <div>
+            <div id="bodyMap1" class="bodyMapShow">
+                <BodyBtn id="arm" class="" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="chest" class="" src="assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="abs" class="" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+            </div>
+            <div id="bodyFlip" class="" onClick={this.FlipBodyPart} isFront="true"></div>
+            <div id="bodyMap2" class="bodyMapHide">
+                <BodyBtn id="back" class="" src="assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="thigh" class="" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+            </div>
             <form id="form">
                 <p>workoutType</p>
                 <NameInput
@@ -91,6 +90,7 @@ export default class GymForm extends Component {
                     Submit
             </FormBtn>
             </form>
+        </div>
     }
 }
 
