@@ -1,0 +1,25 @@
+.topBtn {
+	  Width: 1125px;
+  	height: 812px;
+    background: rgb(181, 20, 28);
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+    left:0;
+}
+
+
+
+.botBtn {
+	  Width: 1125px;
+	  height: 812px;
+    color: white;
+    background: rgb(100, 100, 100);
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+    left:0;
+}
+
