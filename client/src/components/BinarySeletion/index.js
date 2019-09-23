@@ -31,8 +31,13 @@ export default class BinarySelection extends Component(props) {
     render() {
         return (
             <BinarySelection>
+<<<<<<< HEAD
                 <a id = "topLink" href="#"><BinaryBtn id="topBtn" className="binaryBtn" onclick={this.clickTop}>{this.props.topTitle}</BinaryBtn></a>
                 <a id = "bopLink"href="#"><BinaryBtn id="botBtn" className="binaryBtn" onclick={this.clickBot}>{this.props.botTitle}</BinaryBtn></a>
+=======
+                <a id = "topLink" href="#"><BinaryBtn id="topBtn" className="binaryBtn" onclick={this.clickTop}>{prop.topTitle}</BinaryBtn></a>
+                <a id = "bopLink"href="#"><BinaryBtn id="botBtn" class="binaryBtn" onclick={this.clickBot}>{prop.botTitle}</BinaryBtn></a>
+>>>>>>> parent of 7717059... form style
             </BinarySelection>
         )
     }
