@@ -14,7 +14,7 @@ export default class GymForm extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         API.saveWorkout({
-            type:"weight",
+            type: "weight",
             workoutType: this.state.workoutType,
             bodypart: this.state.bodypart,
             weight: this.state.weight,
@@ -53,7 +53,7 @@ export default class GymForm extends Component {
         var check = document.getElementById("bodyFlip");
         document.getElementById("bodyMap1").classList.add('bodyMapShow ');
         document.getElementById("bodyMap1 ").classList.remove('bodyMapHide');
-        }
+    }
     render() {
         <div>
             <div id="bodyMap1" className="bodyMapHide">
