@@ -10,14 +10,12 @@ export default class BinarySelection extends Component(prop) {
     }
     clickTop = event => {
         if (this.state.top === true) {
-            var a = document.getElementById('topBtn');
+            var a = document.getElementById('topLink');
             a.href = prop.topLink;
         } else {
             this.setState({ top: true, bot: false });
-            document.getElementById("topBtn").classList.add('clicked1 ');
-            document.getElementById("topBtn ").classList.remove('clicked0');
-            document.getElementById("botBtn").classList.add('clicked0 ');
-            document.getElementById("botBtn ").classList.remove('clicked1');
+            document.getElementById("topBtn").style.height = "812px";
+            document.getElementById("botBtn").style.height = "162px";
         }
     }
     clickBot = event => {
@@ -26,17 +24,15 @@ export default class BinarySelection extends Component(prop) {
             a.href = prop.botLink;
         } else {
             this.setState({ top: false, bot: true });
-            document.getElementById("topBtn").classList.add('clicked0 ');
-            document.getElementById("topBtn ").classList.remove('clicked1');
-            document.getElementById("botBtn").classList.add('clicked1 ');
-            document.getElementById("botBtn ").classList.remove('clicked0');
+            document.getElementById("topBtn").style.height = "812px";
+            document.getElementById("botBtn").style.height = "162px";
         }
     }
     render() {
         return (
             <BinarySelection>
-                <BinaryBtn id="topBtn" class="clicked1" onclick={this.clickTop}>{prop.topTitle}</BinaryBtn>
-                <BinaryBtn id="botBtn" class="clicked0" onclick={this.clickBot}>{prop.botTitle}</BinaryBtn>
+                <a id = "topLink" href="#"><BinaryBtn id="topBtn" className="binaryBtn" onclick={this.clickTop}>{prop.topTitle}</BinaryBtn></a>
+                <a id = "bopLink"href="#"><BinaryBtn id="botBtn" class="binaryBtn" onclick={this.clickBot}>{prop.botTitle}</BinaryBtn></a>
             </BinarySelection>
         )
     }
