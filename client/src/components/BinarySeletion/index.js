@@ -3,7 +3,7 @@ import "./style.css";
 
 // pass topTitle botTitle topLink botLink
 
-export default class BinarySelection extends Component(prop) {
+export default class BinarySelection extends Component(props) {
     state = {
         top: true,
         bot: false,
@@ -11,7 +11,7 @@ export default class BinarySelection extends Component(prop) {
     clickTop = event => {
         if (this.state.top === true) {
             var a = document.getElementById('topLink');
-            a.href = prop.topLink;
+            a.href = this.props.topLink;
         } else {
             this.setState({ top: true, bot: false });
             document.getElementById("topBtn").style.height = "812px";
@@ -21,7 +21,7 @@ export default class BinarySelection extends Component(prop) {
     clickBot = event => {
         if (this.state.bot === true) {
             var a = document.getElementById('botBtn');
-            a.href = prop.botLink;
+            a.href = this.props.botLink;
         } else {
             this.setState({ top: false, bot: true });
             document.getElementById("topBtn").style.height = "812px";
@@ -31,8 +31,8 @@ export default class BinarySelection extends Component(prop) {
     render() {
         return (
             <BinarySelection>
-                <a id = "topLink" href="#"><BinaryBtn id="topBtn" className="binaryBtn" onclick={this.clickTop}>{prop.topTitle}</BinaryBtn></a>
-                <a id = "bopLink"href="#"><BinaryBtn id="botBtn" className="binaryBtn" onclick={this.clickBot}>{prop.botTitle}</BinaryBtn></a>
+                <a id = "topLink" href="#"><BinaryBtn id="topBtn" className="binaryBtn" onclick={this.clickTop}>{this.props.topTitle}</BinaryBtn></a>
+                <a id = "bopLink"href="#"><BinaryBtn id="botBtn" className="binaryBtn" onclick={this.clickBot}>{this.props.botTitle}</BinaryBtn></a>
             </BinarySelection>
         )
     }
