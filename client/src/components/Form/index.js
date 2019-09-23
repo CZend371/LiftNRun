@@ -61,9 +61,9 @@ export class NameInput extends Component(prop) {
     render() {
         return (
             <div className="Input">
-                <DecreaseBtn name={prop.name} class="NumBtn" onclick={this.DecreaseBtn}></DecreaseBtn>
+                <DecreaseBtn name={prop.name} className="NumBtn" onclick={this.DecreaseBtn}>-</DecreaseBtn>
                 <input {...props} />
-                <IncreaseBtn name={prop.name} class="NumBtn" onclick={this.IncreaseBtn}></IncreaseBtn>
+                <IncreaseBtn name={prop.name} className="NumBtn" onclick={this.IncreaseBtn}>+</IncreaseBtn>
             </div>
         )
     }
