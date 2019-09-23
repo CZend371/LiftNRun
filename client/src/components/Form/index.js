@@ -61,9 +61,13 @@ export class NameInput extends Component(props) {
     render() {
         return (
             <div className="Input">
+<<<<<<< HEAD
                 <DecreaseBtn name={this.prop.name} className="NumBtn" onclick={this.DecreaseBtn}>-</DecreaseBtn>
+=======
+                <DecreaseBtn name={prop.name} class="NumBtn" onclick={this.DecreaseBtn}></DecreaseBtn>
+>>>>>>> parent of 7717059... form style
                 <input {...props} />
-                <IncreaseBtn name={prop.name} className="NumBtn" onclick={this.IncreaseBtn}>+</IncreaseBtn>
+                <IncreaseBtn name={prop.name} class="NumBtn" onclick={this.IncreaseBtn}></IncreaseBtn>
             </div>
         )
     }

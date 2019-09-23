@@ -37,6 +37,9 @@ export default class BinarySelection extends Component(props) {
 =======
                 <a id = "topLink" href="#"><BinaryBtn id="topBtn" className="binaryBtn" onclick={this.clickTop}>{prop.topTitle}</BinaryBtn></a>
                 <a id = "bopLink"href="#"><BinaryBtn id="botBtn" class="binaryBtn" onclick={this.clickBot}>{prop.botTitle}</BinaryBtn></a>
+<<<<<<< HEAD
+>>>>>>> parent of 7717059... form style
+=======
 >>>>>>> parent of 7717059... form style
             </BinarySelection>
         )
