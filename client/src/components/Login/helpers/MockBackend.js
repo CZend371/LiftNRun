@@ -1,5 +1,5 @@
 export function configureMockBackend(){
-let users = [{ id: 1, username: 'Username', password: 'password', firstName: 'firstName', lastName: 'lastName'}];
+let users = [{ id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User'}];
 
 let realFetch = window.fetch;
 window.fetch = (url,opts) => {
