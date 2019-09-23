@@ -1,0 +1,44 @@
+.bodyPartBtnArm {
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.bodyPartBtnChest {
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.bodyPartBtnAbs {
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.bodyPartBtnBack {
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.bodyPartBtnThigh {
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.bodyMapHide{
+    display: none;
+    Width: 500px;
+    height: 100px;
+    background: blue;
+}
+
+.bodyMapShow{
+    display: block;
+    Width: 500px;
+    height: 100px;
+    background: blue;
+}
+

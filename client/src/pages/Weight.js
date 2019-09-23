@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
+import "./style.css";
 
 export default class GymForm extends Component {
     state = {
@@ -56,14 +57,14 @@ export default class GymForm extends Component {
     render() {
         <div>
             <div id="bodyMap1" class="bodyMapHide">
-                <BodyBtn id="arm" class="" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-                <BodyBtn id="chest" class="" src="assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-                <BodyBtn id="abs" class="" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="arm" class="bodyPartBtnArm" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="chest" class="bodyPartBtnChest" src="assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="abs" class="bodyPartBtnAbs" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
             </div>
             <div id="bodyFlip" class="flipBtn" onClick={this.FlipBodyPart} isFront="true"></div>
             <div id="bodyMap2" class="bodyMapHide">
-                <BodyBtn id="back" class="" src="assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-                <BodyBtn id="thigh" class="" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="back" class="bodyPartBtnBack" src="assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <BodyBtn id="thigh" class="bodyPartBtnThigh" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
             </div>
             <form id="form">
                 <p>workoutType</p>
