@@ -64,8 +64,7 @@ class MenuWorkoutProfile extends Component {
                 <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
                 <div id="HistoryGroup">
                 {this.state.books.map(book => (
-                     <History {...props}>
-                    {name}</History>
+                     <History {...props}></History>
                   )}
 
 

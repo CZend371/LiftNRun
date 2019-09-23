@@ -57,14 +57,14 @@ export default class GymForm extends Component {
     render() {
         <div>
             <div id="bodyMap1" className="bodyMapHide">
-                <BodyBtn id="arm" className="bodyPartBtnArm" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-                <BodyBtn id="chest" className="bodyPartBtnChest" src="assets/chest.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-                <BodyBtn id="abs" className="bodyPartBtnAbs" src="assets/arm.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <div id="arm" className="bodyPartBtnArm" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
+                <div id="chest" className="bodyPartBtnChest" src="assets/chest.jpg" onClick={this.chooseBodyPart}></div>
+                <div id="abs" className="bodyPartBtnAbs" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
             </div>
             <div id="bodyFlip" className="flipBtn" onClick={this.FlipBodyPart} isFront="true"></div>
             <div id="bodyMap2" className="bodyMapHide">
-                <BodyBtn id="back" className="bodyPartBtnBack" src="assets/back.jpg" onClick={this.chooseBodyPart}></BodyBtn>
-                <BodyBtn id="thigh" className="bodyPartBtnThigh" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></BodyBtn>
+                <div id="back" className="bodyPartBtnBack" src="assets/back.jpg" onClick={this.chooseBodyPart}></div>
+                <div id="thigh" className="bodyPartBtnThigh" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></div>
             </div>
             <form id="form">
                 <p>workoutType</p>
