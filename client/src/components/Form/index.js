@@ -43,9 +43,9 @@ export class NumbericInput extends Component(props) {
     render() {
         return (
             <div className="Input">
-                <DecreaseBtn name={this.props.name} class="NumBtn" onclick={this.DecreaseBtn}></DecreaseBtn>
+                <div name={this.props.name} class="NumBtn" onclick={this.DecreaseBtn}></div>
                 <input {...props} />
-                <IncreaseBtn name={this.props.name} class="NumBtn" onclick={this.IncreaseBtn}></IncreaseBtn>
+                <div name={this.props.name} class="NumBtn" onclick={this.IncreaseBtn}></div>
             </div>
         )
     }
@@ -61,9 +61,9 @@ export class NameInput extends Component(props) {
     render() {
         return (
             <div className="Input">
-                <DecreaseBtn name={prop.name} class="NumBtn" onclick={this.DecreaseBtn}></DecreaseBtn>
+                <div name={prop.name} class="NumBtn" onclick={this.DecreaseBtn}></div>
                 <input {...props} />
-                <IncreaseBtn name={prop.name} class="NumBtn" onclick={this.IncreaseBtn}></IncreaseBtn>
+                <div name={prop.name} class="NumBtn" onclick={this.IncreaseBtn}></div>
             </div>
         )
     }
