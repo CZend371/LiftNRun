@@ -14,6 +14,7 @@ class MenuWorkoutProfile extends Component {
         Location: "",
         ///
         savedWorkout: []
+    };
 
     };
 
@@ -22,7 +23,6 @@ class MenuWorkoutProfile extends Component {
             .then(res => this.setState({ savedWorkout: res.data }))
             .catch(err => console.log(err))
     }
-
 
 
     /////
@@ -40,18 +40,6 @@ class MenuWorkoutProfile extends Component {
         }
     }
     render() {
-        // /// get history 
-        // let workoutArray = API.getWorkout().then(res => this.setState({
-        //     type: res.data.type,
-        //     workoutType: res.data.workoutType,
-        //     bodypart: res.data.bodypart,
-        //     weight: res.data.weight,
-        //     rep: res.data.rep,
-        //     set: res.data.set,
-        //     timer: res.data.timer
-        //     //date:""
-        // }))
-        // get list of workout
         return (
             <div>
                 <div id="profileGroup">
@@ -61,12 +49,11 @@ class MenuWorkoutProfile extends Component {
                 </div>
                 <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
                 <div id="HistoryGroup">
-                    <Container fluid className="container">
-                        <Jumbotron />
-                        <Container>
-                            <History savedWorkout={this.state.savedWorkout} handleDeleteButton={this.handleDeleteButton} />
-                        </Container>
-                    </Container>
+                    <div fluid className="container">
+                        <div>
+                            <History savedWorkout={this.state.savedWorkout}/>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
