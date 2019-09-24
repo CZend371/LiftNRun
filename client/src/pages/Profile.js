@@ -13,17 +13,15 @@ class MenuWorkoutProfile extends Component {
         Intro: "",
         Location: "",
         ///
-        type: "",
-        workoutType: "",
-        bodypart: "",
-        weight: "",
-        rep: "",
-        set: "",
-        timer: "",
-        date: ""
+        savedWorkout: []
+
     };
 
-
+    componentDidMount() {
+        API.getWorkout()
+            .then(res => this.setState({ savedWorkout: res.data }))
+            .catch(err => console.log(err))
+    }
 
 
 
@@ -42,17 +40,17 @@ class MenuWorkoutProfile extends Component {
         }
     }
     render() {
-        /// get history 
-        let workoutList = API.getWorkout().then(res => this.setState({
-            type: res.data.type,
-            workoutType: res.data.workoutType,
-            bodypart: res.data.bodypart,
-            weight: res.data.weight,
-            rep: res.data.rep,
-            set: res.data.set,
-            timer: res.data.timer
-            //date:""
-        }))
+        // /// get history 
+        // let workoutArray = API.getWorkout().then(res => this.setState({
+        //     type: res.data.type,
+        //     workoutType: res.data.workoutType,
+        //     bodypart: res.data.bodypart,
+        //     weight: res.data.weight,
+        //     rep: res.data.rep,
+        //     set: res.data.set,
+        //     timer: res.data.timer
+        //     //date:""
+        // }))
         // get list of workout
         return (
             <div>
@@ -63,29 +61,12 @@ class MenuWorkoutProfile extends Component {
                 </div>
                 <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
                 <div id="HistoryGroup">
-                {this.state.books.map(book => (
-                     <History {...props}></History>
-                  )}
-
-
-
-
-                    {this.state.books.length ? (
-                        <List>
-                            {this.state.books.map(book => (
-                                <ListItem key={book._id}>
-                                    <Link to={"/books/" + book._id}>
-                                        <strong>
-                                            {book.title} by {book.author}
-                                        </strong>
-                                    </Link>
-                                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-                                </ListItem>
-                            ))}
-                        </List>)
-                        : (
-                            <h3>No Results to Display</h3>
-                        )}
+                    <Container fluid className="container">
+                        <Jumbotron />
+                        <Container>
+                            <History savedWorkout={this.state.savedWorkout} handleDeleteButton={this.handleDeleteButton} />
+                        </Container>
+                    </Container>
                 </div>
             </div>
         );
