@@ -22,13 +22,16 @@ export default class History extends Component(props) {
         } else {
             var detail;
             if (props.type === "weight") {
-                detail = <div>
-                    <div>Type</div>
-                    <div>{props.workoutType}</div>
-                    <div>{props.bodypart}</div>
-                    <div>{props.weight}</div>
-                    <div>{props.set} sets for {props.rep} </div>
-                    <div>Rest time {props.timer} </div>
+                detail = <div class ="container">
+                    <div class="titleClass">Type</div>
+                    <div class="contentClass">{props.workoutType}</div>
+                    <div class="titleClass">Body </div>
+                    <div class="contentClass">{props.bodypart}</div>
+                    <div class="titleClass">Type</div>
+                    <div class="contentClass">{props.weight}</div>
+                    <div class="contentClass">{props.set} sets for {props.rep} </div>
+                    <div class="titleClass">Type</div>
+                    <div class="contentClass">Rest time {props.timer} </div>
                 </div>
             } else {
                 detail = <div>
@@ -42,7 +45,7 @@ export default class History extends Component(props) {
             </div>
             <div class="history" id={props.id} class="hideDetail">
                 {detail}
-                <div class="HideHistory" onclick={this.HideHistory}>
+                <div class="hideHistory" onclick={this.HideHistory}>
                 </div>
             </div>
         </div>
