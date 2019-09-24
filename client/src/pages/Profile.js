@@ -16,7 +16,7 @@ class MenuWorkoutProfile extends Component {
         savedWorkout: []
     };
 
-    };
+
 
     componentDidMount() {
         API.getWorkout()
