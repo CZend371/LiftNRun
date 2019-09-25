@@ -20,6 +20,7 @@ class Map extends Component {
 
     componentDidMount() {
         this.currentLocation();
+        setInterval(this.currentLocation, 10000);
     };
 
     currentLocation = () => {
@@ -41,11 +42,8 @@ class Map extends Component {
     };
 
     render() {
+        const Marker = ({ icon }) => <img src={icon} alt="run icon"></img>;
 
-
-        const Marker = ({ icon }) => <img src={icon}></img>;
-
-        // 44.9530, 92.9952
 
         return (
             <div className="map" >
@@ -54,6 +52,7 @@ class Map extends Component {
                         bootstrapURLKeys={{ key: "AIzaSyBC4ILqEm-u_NZ3_kPFLGXDxhtlbVAFSdA" }}
                         defaultCenter={this.props.center}
                         defaultZoom={this.props.zoom}
+                        styles={{ mapStyles }}
                     >
                         <Marker
                             lat={this.state.location[0].lat}

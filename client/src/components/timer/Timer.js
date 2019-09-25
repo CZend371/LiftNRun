@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
 import "../timer/style.scss"
-
+// import file for API
 
 
 
@@ -40,6 +40,10 @@ class Timer extends Component {
         })
     }
 
+    handleSave = () => {
+        // api call to save time displayed on timer
+    }
+
 
     render() {
         const { timerTime } = this.state;
@@ -57,10 +61,13 @@ class Timer extends Component {
                     <button type="button" className="btn btn-secondary" id="stop" onClick={this.handleStop}>Stop</button>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="btn btn-success" id="resue" onClick={this.handleStart}>Resume</button>
+                    <button type="button" className="btn btn-success" id="resume" onClick={this.handleStart}>Resume</button>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
                     <button type="button" className="btn btn-danger" id="reset" onClick={this.handleReset}>Reset</button>
+                )}
+                {this.state.isRunning === false && this.state.timerTime > 0 && (
+                    <button type="button" className="btn btn-success" id="save" onClick={this.handleSave}>Save</button>
                 )}
             </div>
         )
