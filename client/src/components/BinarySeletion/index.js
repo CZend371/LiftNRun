@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 
 // pass topTitle botTitle topLink botLink
 
-export default class BinarySelection extends Component(props) {
+export default class BinarySelection extends Component {
     state = {
         top: true,
         bot: false,
@@ -31,8 +31,8 @@ export default class BinarySelection extends Component(props) {
     render() {
         return (
             <div>
-                <a id = "topLink" href="#"><div id="topBtn" className="binaryBtn" onclick={this.clickTop}>{props.topTitle}</div></a>
-                <a id = "bopLink"href="#"><div id="botBtn" class="binaryBtn" onclick={this.clickBot}>{props.botTitle}</div></a>
+                <a id="topLink" href="#"><div id="topBtn" className="binaryBtn" onclick={this.clickTop}>{this.props.topTitle}</div></a>
+                <a id="bopLink" href="#"><div id="botBtn" class="binaryBtn" onclick={this.clickBot}>{this.props.botTitle}</div></a>
             </div>
         )
     }

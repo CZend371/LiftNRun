@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 
 // pass bodypart workoutname repnum setnum weight time
 //<Inputvalue = { this.state.title }onChange = { this.handleInputChange } name = "title"placeholder = "Title (required)"   />
 
-export class NumbericInput extends Component(props) {
+export class NumbericInput extends Component {
     ///Method: Increase, Decrease, Input
     IncreaseBtn = event => {
         var { name, value } = event.target;
@@ -44,14 +44,14 @@ export class NumbericInput extends Component(props) {
         return (
             <div className="Input">
                 <div name={this.props.name} class="NumBtn" onclick={this.DecreaseBtn}></div>
-                <input {...props} />
+                <input {...this.props} />
                 <div name={this.props.name} class="NumBtn" onclick={this.IncreaseBtn}></div>
             </div>
         )
     }
 }
 
-export class NameInput extends Component(props) {
+export class NameInput extends Component {
     handleInputChange = event => {
         var { name, value } = event.target;
         this.setState({
@@ -61,18 +61,18 @@ export class NameInput extends Component(props) {
     render() {
         return (
             <div className="Input">
-                <div name={prop.name} class="NumBtn" onclick={this.DecreaseBtn}></div>
-                <input {...props} />
-                <div name={prop.name} class="NumBtn" onclick={this.IncreaseBtn}></div>
+                <div name={this.props.name} class="NumBtn" onclick={this.DecreaseBtn}></div>
+                <input {...this.props} />
+                <div name={this.props.name} class="NumBtn" onclick={this.IncreaseBtn}></div>
             </div>
         )
     }
 }
 
-export function FormBtn(props) {
+export function FormBtn() {
     return (
-        <button {...props}>
-            {props.children}
+        <button {...this.props}>
+            {this.props.children}
         </button>
     );
 }
