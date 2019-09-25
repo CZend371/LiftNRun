@@ -11,26 +11,25 @@ import Run from "./pages/Run/Run";
 //import ProfileMain from "./pages/ProfileMain";
 //import ProfileHistory from "./pages/ProfileHistory";
 
-import Navbar from "./components/Navbar";
-import Wrapper from "./components/Wrapper";
+// import Navbar from "./components/Navbar";
+// import Wrapper from "./components/Wrapper";
 
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
-        <Wrapper>
-          <Route exact path="/" component={Entrance} />
-          <Route exact path="/Entrance" component={Entrance} />
-
-          <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
-          <Route exact path="/Profile" component={Profile} />
-          <Route exact path="/MenuGymRun" component={MenuGymRun} />
-          <Route exact path="/Run" component={Run} />
-          <Route exact path="/MenuWeightCardio" component={MenuWeightCardio} />
-          <Route exact path="/Weight" component={Weight} />
-        </Wrapper>
-        <Footer />
+        {/* <Navbar /> */}
+        {/* <Wrapper> */}
+        <Route exact path="/" component={Entrance} />
+        <Route exact path="/Entrance" component={Entrance} />
+        <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
+        {/* <Route exact path="/Profile" component={Profile} /> */}
+        <Route exact path="/MenuGymRun" component={MenuGymRun} />
+        <Route exact path="/Run" component={Run} />
+        <Route exact path="/MenuWeightCardio" component={MenuWeightCardio} />
+        <Route exact path="/Weight" component={Weight} />
+        {/* </Wrapper> */}
+        {/* <Footer /> */}
       </div>
     </Router>
   );

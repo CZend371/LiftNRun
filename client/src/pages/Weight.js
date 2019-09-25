@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
-import API from "../utils/API";
+import API from "../util/API";
 import "./style.css";
 
 export default class GymForm extends Component {
@@ -28,7 +28,7 @@ export default class GymForm extends Component {
     };
 
     chooseBodyPart = event => {
-        const {name, id} = event.target.id;
+        const { name, id } = event.target.id;
         this.setState({
             [name]: id
         });
@@ -62,58 +62,60 @@ export default class GymForm extends Component {
     };
 
     render() {
-        <div>
-            <div id="bodyMap1" className="bodyMapHide">
-                <div id="arms" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
-                <div id="chest" name="bodyType" className="bodyPartBtn" src="assets/chest.jpg" onClick={this.chooseBodyPart}></div>
-                <div id="abs" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
-            </div>
-            <div id="bodyFlip" className="flipBtn" onClick={this.FlipBodyPart} isFront="true"></div>
-            <div id="bodyMap2" name="bodyType" className="bodyMapHide">
-                <div id="back" name="bodyType" className="bodyPartBtn" src="assets/back.jpg" onClick={this.chooseBodyPart}></div>
-                <div id="legs" name="bodyType" className="bodyPartBtn" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></div>
-            </div>
-            <form id="form">
-                <p>workoutType</p>
-                <NameInput
-                    value={this.state.name}
-                    onChange={this.handleInputChange}
-                    name="workoutType"
-                />
-                <p>bodypart</p>
-                <div class="bodypartSelect"
-                    name="bodypart"
-                    onClick={this.updateBodyPart}>
+        return (
+            <div>
+                <div id="bodyMap1" className="bodyMapHide">
+                    <div id="arms" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
+                    <div id="chest" name="bodyType" className="bodyPartBtn" src="assets/chest.jpg" onClick={this.chooseBodyPart}></div>
+                    <div id="abs" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
                 </div>
-                <p>weight</p>
-                <NumbericInput
-                    value={this.state.weight}
-                    onChange={this.handleInputChange}
-                    name="weight"
-                />
-                <p>rep</p>
-                <NumbericInput
-                    value={this.state.rep}
-                    onChange={this.handleInputChange}
-                    name="rep"
-                />
-                <p>set</p>
-                <NumbericInput
-                    value={this.state.set}
-                    onChange={this.handleInputChange}
-                    name="set"
-                />
-                <p>timer</p>
-                <NameInput
-                    value={this.state.timer}
-                    onChange={this.handleInputChange}
-                    name="timer"
-                />
-                <FormBtn onClick={this.handleFormSubmit}>
-                    Submit
+                <div id="bodyFlip" className="flipBtn" onClick={this.FlipBodyPart} isFront="true"></div>
+                <div id="bodyMap2" name="bodyType" className="bodyMapHide">
+                    <div id="back" name="bodyType" className="bodyPartBtn" src="assets/back.jpg" onClick={this.chooseBodyPart}></div>
+                    <div id="legs" name="bodyType" className="bodyPartBtn" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></div>
+                </div>
+                <form id="form">
+                    <p>workoutType</p>
+                    <NameInput
+                        value={this.state.name}
+                        onChange={this.handleInputChange}
+                        name="workoutType"
+                    />
+                    <p>bodypart</p>
+                    <div class="bodypartSelect"
+                        name="bodypart"
+                        onClick={this.updateBodyPart}>
+                    </div>
+                    <p>weight</p>
+                    <NumbericInput
+                        value={this.state.weight}
+                        onChange={this.handleInputChange}
+                        name="weight"
+                    />
+                    <p>rep</p>
+                    <NumbericInput
+                        value={this.state.rep}
+                        onChange={this.handleInputChange}
+                        name="rep"
+                    />
+                    <p>set</p>
+                    <NumbericInput
+                        value={this.state.set}
+                        onChange={this.handleInputChange}
+                        name="set"
+                    />
+                    <p>timer</p>
+                    <NameInput
+                        value={this.state.timer}
+                        onChange={this.handleInputChange}
+                        name="timer"
+                    />
+                    <FormBtn onClick={this.handleFormSubmit}>
+                        Submit
             </FormBtn>
-            </form>
-        </div>
+                </form>
+            </div>
+        )
     }
 }
 
