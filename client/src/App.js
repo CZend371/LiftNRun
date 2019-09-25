@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Entrance from "./pages/Entrance";
 //import Login from "./pages/Login";
@@ -6,6 +6,7 @@ import MenuWorkoutProfile from "./pages/MenuWorkoutProfile";
 import MenuGymRun from "./pages/MenuGymRun";
 import MenuWeightCardio from "./pages/MenuWeightCardio.js";
 import Weight from "./pages/Weight";
+import Run from "./pages/Run/Run";
 //import Cardio from "./pages/Cardio";
 //import ProfileMain from "./pages/ProfileMain";
 //import ProfileHistory from "./pages/ProfileHistory";
