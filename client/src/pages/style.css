@@ -1,28 +1,4 @@
-.bodyPartBtnArm {
-    Width: 500px;
-    height: 100px;
-    background: rgb(181, 20, 28);
-}
-
-.bodyPartBtnChest {
-    Width: 500px;
-    height: 100px;
-    background: rgb(181, 20, 28);
-}
-
-.bodyPartBtnAbs {
-    Width: 500px;
-    height: 100px;
-    background: rgb(181, 20, 28);
-}
-
-.bodyPartBtnBack {
-    Width: 500px;
-    height: 100px;
-    background: rgb(181, 20, 28);
-}
-
-.bodyPartBtnThigh {
+.bodyPartBtn {
     Width: 500px;
     height: 100px;
     background: rgb(181, 20, 28);
@@ -32,7 +8,6 @@
     display: none;
     Width: 500px;
     height: 100px;
-    background: blue;
 }
 
 .bodyMapShow{
@@ -42,3 +17,27 @@
     background: blue;
 }
 
+.workoutPartBtn{
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.workoutMapHide{
+    display: none;
+}
+
+.workoutMapShow{
+    display: block;
+    Width: 500px;
+    height: 100px;
+    background: blue;
+}
+
+.historyGroupHide{
+    display: none;
+}
+
+.historyGroupShow{
+    display: block;
+}

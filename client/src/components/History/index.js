@@ -16,36 +16,39 @@ export default class History extends Component(props) {
     }
     render() {
         if (props.savedWorkout.length === 0) {
-            <div className="">
-                No Workout Saved
+            <div class="container">
+                <div className="titleClass">
+                    No Workout Saved
+                </div>
             </div>;
         } else {
             var detail;
             if (props.type === "weight") {
-                detail = <div class ="container">
-                    <div class="titleClass">Type</div>
-                    <div class="contentClass">{props.workoutType}</div>
-                    <div class="titleClass">Body </div>
-                    <div class="contentClass">{props.bodypart}</div>
-                    <div class="titleClass">Type</div>
-                    <div class="contentClass">{props.weight}</div>
-                    <div class="contentClass">{props.set} sets for {props.rep} </div>
-                    <div class="titleClass">Type</div>
-                    <div class="contentClass">Rest time {props.timer} </div>
+                detail = <div class="container">
+                    <div className="titleClass">Type</div>
+                    <div className="contentClass">{props.workoutType}</div>
+                    <div className="titleClass">Body </div>
+                    <div className="contentClass">{props.bodypart}</div>
+                    <div className="titleClass">Type</div>
+                    <div className="contentClass">{props.weight}</div>
+                    <div className="contentClass">{props.set} sets for {props.rep} </div>
+                    <div className="titleClass">Type</div>
+                    <div className="contentClass">Rest time {props.timer} </div>
                 </div>
             } else {
-                detail = <div>
-                    <div>Running Time {props.timer} </div>
-                </div>
+                detail =
+                    <div class="container">
+                        <div className="titleClass">Running Time {props.timer} </div>
+                    </div>
             }
         }
         <div>
-            <div class="historyTitle" onclick={this.ShowHistory}>
+            <div className="historyTitle" onclick={this.ShowHistory}>
                 {props.date}{props.type}
             </div>
-            <div class="history" id={props.id} class="hideDetail">
+            <div className="history" id={props.id}>
                 {detail}
-                <div class="hideHistory" onclick={this.HideHistory}>
+                <div className="hideHistory" onclick={this.HideHistory}>
                 </div>
             </div>
         </div>
