@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import Map from "../../components/map/Map";
-import Map from "../../components/map/Maptwo"
+import Map from "../../components/map/Map";
 import "../Run/style.scss"
 import Timer from "../../components/timer/Timer";
 import mapStyles from "../../mapStyles";
@@ -16,7 +15,8 @@ class Run extends Component {
         zoom: 10
     };
     state = {
-        location: []
+        location: [],
+        message: ""
     }
 
     componentDidMount() {
@@ -54,10 +54,14 @@ class Run extends Component {
             { lat: 44.983331, lng: -93.187154 },
             { lat: 44.981996, lng: -93.187202 }
         ];
+
         return (
             <div className="container">
                 <div className="timer">
                     <Timer />
+                </div>
+                <div className="display">
+                    Distance: {this.state.message}
                 </div>
                 <Map
                     id="myMap"
@@ -82,13 +86,50 @@ class Run extends Component {
                         });
                         var testPath = new window.google.maps.Polyline({
                             path: testRun,
-                            geodesic: true,
+                            geodesic: false,
                             strokeColor: "#475dff",
                             strokeOpacity: 1.0,
                             strokeWeight: 2
                         });
-
                         testPath.setMap(map);
+
+                        var origin1 = new window.google.maps.LatLng(44.9837359, -93.18048850000001);
+                        var origin2 = "Saint Paul, MN";
+                        var destinationA = "Saint Paul, MN";
+                        var destinationB = new window.google.maps.LatLng(44.981996, -93.187202);
+
+                        var service = new window.google.maps.DistanceMatrixService();
+                        let self = this;
+                        service.getDistanceMatrix(
+                            {
+                                origins: [origin1, origin2],
+                                destinations: [destinationA, destinationB],
+                                travelMode: "WALKING",
+                                unitSystem: window.google.maps.UnitSystem.IMPERIAL,
+                            }, callback);
+                        function callback(response, status) {
+
+                            if (status == 'OK') {
+                                var origins = response.originAddresses;
+                                var destinations = response.destinationAddresses;
+
+                                for (var i = 0; i < origins.length; i++) {
+                                    var results = response.rows[i].elements;
+                                    for (var j = 0; j < results.length; j++) {
+                                        var element = results[j];
+                                        var distance = element.distance.text;
+                                        var duration = element.duration.text;
+                                        var from = origins[i];
+                                        var to = destinations[j];
+                                    }
+                                    self.setState({
+                                        message: distance
+                                    })
+                                }
+                                console.log(distance);
+
+                            }
+                        }
                     }
                     }
                 />
