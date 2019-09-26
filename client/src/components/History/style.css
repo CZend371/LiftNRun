@@ -1,0 +1,35 @@
+.historyTitle{
+    height: 500px;
+    width: 250px;
+    background: lightgreen;
+}
+
+.history{
+    height: 1000px;
+    width: 250px;
+    background: lightskyblue;
+}
+
+.hideHistory{
+    height: 50px;
+    width: 250px;
+    background: lightgreen;
+}
+
+.contentClass{
+    height: 20px;
+    width: 100%;
+    color: black;
+}
+
+.titleClass{
+    height: 20px;
+    width: 100%;
+    color: black;
+}
+
+.container{
+    height: 20px;
+    width: 100%;
+    color: black;
+}
