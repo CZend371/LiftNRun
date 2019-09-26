@@ -31,8 +31,8 @@ export default class BinarySelection extends Component {
     render() {
         return (
             <div>
-                <a id="topLink" href="#"><div id="topBtn" className="binaryBtn" onclick={this.clickTop}>{this.props.topTitle}</div></a>
-                <a id="bopLink" href="#"><div id="botBtn" class="binaryBtn" onclick={this.clickBot}>{this.props.botTitle}</div></a>
+                <a id="topLink" href={this.props.topLink}><div id="topBtn" className="binaryBtn" onclick={this.clickTop}>{this.props.topTitle}</div></a>
+                <a id="bopLink" href={this.props.botLink}><div id="botBtn" class="binaryBtn" onclick={this.clickBot}>{this.props.botTitle}</div></a>
             </div>
         )
     }
