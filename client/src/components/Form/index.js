@@ -69,7 +69,7 @@ export class NameInput extends Component {
     }
 }
 
-export function FormBtn() {
+export function FormBtn(props) {
     return (
         <div className="FormBtn" {...this.props}>
             Submit

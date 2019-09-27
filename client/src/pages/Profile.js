@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import History from "../components/History";
 import API from "../utils/API";
-import "./style.css";
+import "./../style/main";
 
 class Profile extends Component {
     state = {

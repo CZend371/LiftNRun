@@ -103,14 +103,69 @@ footer, header, hgroup, menu, nav, section {
 .historyTitle{
     width: 75%;
     height: 150px;
+    background: $red;
 }
 
 .history{
-    width: auto;
+    width: 75%;
+    height: 100px;
+    background: $white;
+    color: $font-black;
 
 }
 
 .hideHistory{
     width: auto;
+    height: 100px;
+    background: $gray;
+    color: $font-white;
+}
 
+.bodyPartBtn {
+    width: 500px;
+    height: 500px;
+    background: $red;
+}
+
+.bodyMapHide{
+    display: none;
+}
+
+.bodyMapShow{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: $gray;
+}
+
+.workoutPartBtn{
+    width: 500px;
+    height: 500px;
+    background: $gray;
+}
+
+.workoutMapHide{
+    display: none;
+}
+
+.workoutMapShow{
+    display: block;
+    width: 500px;
+    height: 100px;
+    background: $gray;
+}
+
+.historyGroupHide{
+    display: none;
+}
+
+.historyGroupShow{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: $gray;
+}
+
+.display {
+    border: 2px solid $red;
 }
