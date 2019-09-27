@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import { userService } from '../services';
 
@@ -43,7 +43,7 @@ class LoginPage extends React.Component {
                     const { from } = this.props.location.state || { from: { pathname: "/" } };
                     this.props.history.push(from);
                 },
-                error => this.setState({ error, loading: false })
+                // error => this.setState({ error, loading: false })
             );
     }
 
@@ -86,4 +86,4 @@ class LoginPage extends React.Component {
     }
 }
 
-export { LoginPage };
+export default LoginPage;

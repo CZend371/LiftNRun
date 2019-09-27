@@ -1,9 +1,10 @@
-import React from "react";
-import "./style.css";
+import React , { Component } from "react";
+import "../../style/main.scss";
 
 
 
-export default class History extends Component(props) {
+
+export default class History extends Component {
     ShowHistory = event => {
         const id = event.target.id;
         document.getElementById(id).classList.add('showDetail ');
@@ -15,7 +16,7 @@ export default class History extends Component(props) {
         document.getElementById(id).classList.remove('showDetail');
     }
     render() {
-        if (props.savedWorkout.length === 0) {
+        if (this.props.savedWorkout.length === 0) {
             <div class="container">
                 <div className="titleClass">
                     No Workout Saved
@@ -23,30 +24,30 @@ export default class History extends Component(props) {
             </div>;
         } else {
             var detail;
-            if (props.type === "weight") {
+            if (this.props.type === "weight") {
                 detail = <div class="container">
                     <div className="titleClass">Type</div>
-                    <div className="contentClass">{props.workoutType}</div>
+                    <div className="contentClass">{this.props.workoutType}</div>
                     <div className="titleClass">Body </div>
-                    <div className="contentClass">{props.bodypart}</div>
+                    <div className="contentClass">{this.props.bodypart}</div>
                     <div className="titleClass">Type</div>
-                    <div className="contentClass">{props.weight}</div>
-                    <div className="contentClass">{props.set} sets for {props.rep} </div>
+                    <div className="contentClass">{this.props.weight}</div>
+                    <div className="contentClass">{this.props.set} sets for {this.props.rep} </div>
                     <div className="titleClass">Type</div>
-                    <div className="contentClass">Rest time {props.timer} </div>
+                    <div className="contentClass">Rest time {this.props.timer} </div>
                 </div>
             } else {
                 detail =
                     <div class="container">
-                        <div className="titleClass">Running Time {props.timer} </div>
+                        <div className="titleClass">Running Time {this.props.timer} </div>
                     </div>
             }
         }
         <div>
             <div className="historyTitle" onclick={this.ShowHistory}>
-                {props.date}{props.type}
+                {this.props.date}{this.props.type}
             </div>
-            <div className="history" id={props.id}>
+            <div className="history" id={this.props.id}>
                 {detail}
                 <div className="hideHistory" onclick={this.HideHistory}>
                 </div>

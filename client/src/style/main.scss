@@ -82,3 +82,35 @@ footer, header, hgroup, menu, nav, section {
     color: $font-white;
 }
 
+.titleClass{
+    width: 75%;
+    height: 100px;
+    background: $gray;
+    color: $font-white;
+}
+
+.contentClass{
+    width: 75%;
+    height: 100px;
+    background: $white;
+    color: $font-black;
+}
+
+.container{
+    width: auto;
+}
+
+.historyTitle{
+    width: 75%;
+    height: 150px;
+}
+
+.history{
+    width: auto;
+
+}
+
+.hideHistory{
+    width: auto;
+
+}

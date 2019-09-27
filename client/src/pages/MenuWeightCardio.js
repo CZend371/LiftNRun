@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BinarySeletion from "../components/BinarySeletion";
+import "../style/main.scss";
 
 class MenuWeightCario extends Component {
     state = {
