@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../style/main.scss";
 import BinarySeletion from "../components/BinarySeletion";
 
 class MenuWorkoutProfile extends Component {

@@ -1,5 +1,6 @@
 import React , { Component } from "react";
-import "./../../assets/main";
+import "../../style/main.scss";
+
 
 
 

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
 import API from "../util/API";
-import "./style.css";
+// import "./style.css";
+import "../style/main.scss";
+
 
 export default class GymForm extends Component {
     state = {

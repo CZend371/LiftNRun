@@ -44,7 +44,7 @@ function getAll() {
 
 function handleResponse(response) {
     return response.text().then(text => {
-        const data = text && JSON.parse(text);
+        // const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api
@@ -52,10 +52,10 @@ function handleResponse(response) {
                 // Document.location.reload(true);
             }
 
-            const error = (data && data.message) || response.statusText;
-            return Promise.reject(error);
+            // const error = (data && data.message) || response.statusText;
+            // return Promise.reject(error);
         }
 
-        return data;
+        // return data;
     });
 }

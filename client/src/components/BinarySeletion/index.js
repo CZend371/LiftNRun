@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../style/main";
+import "../../style/main.scss";
 
 // pass topTitle botTitle topLink botLink
 

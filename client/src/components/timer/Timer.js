@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
-import "./../../assets/main"
+import "../../style/main.scss";
+
+// import "../timer/style.scss"
 // import file for API
 
 

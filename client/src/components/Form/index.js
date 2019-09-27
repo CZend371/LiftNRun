@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../../style/main";
+import "../../style/main.scss";
+
 
 // pass bodypart workoutname repnum setnum weight time
 //<Inputvalue = { this.state.title }onChange = { this.handleInputChange } name = "title"placeholder = "Title (required)"   />
@@ -71,7 +72,7 @@ export class NameInput extends Component {
 
 export function FormBtn(props) {
     return (
-        <div className="FormBtn" {...this.props}>
+        <div className="FormBtn">
             Submit
         </div>
     );

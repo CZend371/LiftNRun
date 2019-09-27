@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Entrance from "./pages/Entrance";
-//import Login from "./pages/Login";
+import LoginPage from "./pages/Login/LoginPage/LoginPage.js";
 import MenuWorkoutProfile from "./pages/MenuWorkoutProfile";
 import MenuGymRun from "./pages/MenuGymRun";
 import MenuWeightCardio from "./pages/MenuWeightCardio";
@@ -22,6 +22,7 @@ function App() {
         {/* <Wrapper> */}
         <Route exact path="/" component={Entrance} />
         <Route exact path="/Entrance" component={Entrance} />
+        <Route exact path="/login" component={LoginPage} />
         <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
         {/* <Route exact path="/Profile" component={Profile} /> */}
         <Route exact path="/MenuGymRun" component={MenuGymRun} />

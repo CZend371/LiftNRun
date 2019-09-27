@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../style/main.scss";
 
 
 class Entrance extends Component {
@@ -12,9 +13,9 @@ class Entrance extends Component {
         return (
             <div>
                 <img href="/Login" src="asset/logo.jpg" />
-                <div href="/Login">
+                <a href="/login">
                     Lift N Run
-                </div>
+                </a>
             </div>
         );
     }
