@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream:client/src/components/Login/LoginPage/LoginPage.js
 import React from 'react';
 
+=======
+import React, {Component} from 'react';
+>>>>>>> Stashed changes:client/src/pages/Login/LoginPage/LoginPage.js
 import { userService } from '../services';
+import axios from 'axios';
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -30,6 +35,31 @@ class LoginPage extends React.Component {
 
         this.setState({ submitted: true });
         const { username, password } = this.state;
+
+        axios
+            .post('/user/login', {
+                username: this.state.username,
+                password: this.state.password
+            })
+            .then(response => {
+                console.log('login response: ')
+                console.log(response)
+                if (response.status === 200) {
+                    // update App.js state
+                    this.props.updateUser({
+                        loggedIn: true,
+                        username: response.data.username
+                    })
+                    // update the state to redirect to home
+                    this.setState({
+                        redirectTo: '/'
+                    })
+                }
+            }).catch(error => {
+                console.log('login error: ')
+                console.log(error);
+                
+            })
 
         // stop here if form is invalid
         if (!(username && password)) {

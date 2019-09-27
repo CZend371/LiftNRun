@@ -8,7 +8,7 @@ import MenuWeightCardio from "./pages/MenuWeightCardio.js";
 import Weight from "./pages/Weight";
 import Run from "./pages/Run/Run";
 //import Cardio from "./pages/Cardio";
-//import ProfileMain from "./pages/ProfileMain";
+import Profile from "./pages/Profile";
 //import ProfileHistory from "./pages/ProfileHistory";
 
 // import Navbar from "./components/Navbar";
@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/" component={Entrance} />
         <Route exact path="/Entrance" component={Entrance} />
         <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
-        {/* <Route exact path="/Profile" component={Profile} /> */}
+        <Route exact path="/Profile" component={Profile} />
         <Route exact path="/MenuGymRun" component={MenuGymRun} />
         <Route exact path="/Run" component={Run} />
         <Route exact path="/MenuWeightCardio" component={MenuWeightCardio} />
