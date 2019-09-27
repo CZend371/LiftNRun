@@ -38,24 +38,21 @@ footer, header, hgroup, menu, nav, section {
     width: 1125px;
     height: 812px;
     background: $red;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-    left:0;
+    color: $font-black;
 }
 .botBtn {
     width: 1125px;
     height: 1624px;
     color: $font-white;
     background: $gray;
+}
+.binaryBtn{
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
     -o-transition: all 1s linear;
     transition: all 1s linear;
     left:0;
 }
-
 .Input{
     width: 1125px;
     height: 1624px;
