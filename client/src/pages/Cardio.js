@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
 import Timer from "../components/Timer";
 import API from "../utils/API";
-import "./style.css";
+import "../style/main.scss";
+// import "./style.css";
 
 export default class GymForm extends Component {
     state = {
