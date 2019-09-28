@@ -34,9 +34,9 @@ class Profile extends Component {
         return (
             <div>
                 <div id="profileGroup">
-                    <div id="profileName">{this.state.name}</div>
-                    <div id="profileIntro">{this.state.intro}</div>
-                    <div id="profileLocation">{this.state.location}</div>
+                    <div id="profileName">Name: {this.state.name}</div>
+                    <div id="profileIntro">Intro: {this.state.intro}</div>
+                    <div id="profileLocation">Location: {this.state.location}</div>
                 </div>
                 <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
                 <div id="HistoryGroup" class="historyGroupHide">

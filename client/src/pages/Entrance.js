@@ -11,9 +11,9 @@ class Entrance extends Component {
 
     render() {
         return (
-            <div>
-                <img href="/Login" src="asset/logo.jpg" />
-                <a href="/login">
+            <div className = "mobileWrapper">
+                <img href="/Login" src="../style/image/logo.png" />
+                <a className = "mainTitle" href="/login">
                     Lift N Run
                 </a>
             </div>
