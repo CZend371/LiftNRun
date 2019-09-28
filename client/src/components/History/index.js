@@ -15,7 +15,7 @@ export default class History extends Component {
         document.getElementById(id).classList.add('hideDetail ');
         document.getElementById(id).classList.remove('showDetail');
     }
-    render() {
+    generateJSX = () => {
         if (this.props.savedWorkout.length === 0) {
             <div class="container">
                 <div className="titleClass">
@@ -43,7 +43,11 @@ export default class History extends Component {
                     </div>
             }
         }
+    }
+    render() {
+       
         <div>
+            {this.generateJSX()}
             <div className="historyTitle" onclick={this.ShowHistory}>
                 {this.props.date}{this.props.type}
             </div>

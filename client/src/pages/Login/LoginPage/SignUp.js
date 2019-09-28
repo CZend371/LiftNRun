@@ -1,72 +1,60 @@
-// import { userService } from '../services';
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import Profile from "./pages/Profile";
 
-class LoginPage extends Component {
+class Signup extends Component {
     constructor() {
-        super()
-        this.state = {
+		super()
+		this.state = {
             username: '',
-            password: '',
-            redirectTo: null
+			email: '',
+			password: '',
+			confirmPassword: '',
+
         }
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-  
-    }
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        }
+        handleChange(e) {
+            this.setState({
+                [e.target.name]: e.target.value
+            })
+        }
 
-    handleChange(event) {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
+        handleSubmit(e) {
+            console.log('sign-up handleSubmit, username: ')
+            console.log(this.state.username)
+            e.preventDefault()
 
-    handleSubmit(event) {
-        event.preventDefault()
-        console.log('handleSubmit')
-
-        axios
-            .post('/user/login', {
-                username: this.state.username,
+            axios.post('/user/', {
+                userName: this.state.username,
                 password: this.state.password
             })
             .then(response => {
-                console.log('login response: ')
-                console.log(response)
-                if (response.status === 200) {
-                    // update App.js state
-                    this.props.updateUser({
-                        loggedIn: true,
-                        username: response.data.username
-                    })
-                    // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/Profile'
-                    })
-                }
-            }).catch(error => {
-                console.log('login error: ')
-                console.log(error);
-                
-            })
-    }
+				console.log(response)
+				if (!response.data.errmsg) {
+					console.log('successful signup')
+					this.setState({ //redirect to login page
+						redirectTo: '/login'
+					})
+				} else {
+					console.log('username already taken')
+				}
+			}).catch(error => {
+				console.log('signup error: ')
+				console.log(error)
 
-    render() {
+			})
+	    }
+    
+    render(){
         const { username, password, submitted, loading, error } = this.state;
-        if (this.state.redirectTo) {
-            return <Redirect to={{ pathname: { Profile } }} />
-        } else {
-            // <Redirect to={{ pathname: "/Profile" }} />
-        }
-        return (
+        return(
             <div className="col-md-6 col-md-offset-3">
-                <div className="alert alert-info">
+                {/* <div className="alert alert-info">
                     Username: test<br />
                     Password: test
-                </div>
-                <h2>Login</h2>
+                </div> */}
+                <h2>Signup</h2>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                         <label htmlFor="username">Username</label>
@@ -82,19 +70,28 @@ class LoginPage extends Component {
                             <div className="help-block">Password is required</div>
                         }
                     </div>
-                    <div className="form-group">
-                        <button className="btn btn-primary" disabled={loading}>Login</button>
+                    {/* <div className="form-group">
+                        <button className="btn btn-primary" disabled={loading}>Signup</button>
                         {loading &&
                             <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                         }
-                    </div>
+                    </div> */}
                     {error &&
                         <div className={'alert alert-danger'}>{error}</div>
-                    }
+                    };
+                    <div className="form-group ">
+					<div className="col-7"></div>
+					<button
+						className="btn btn-primary col-1 col-mr-auto"
+						onClick={this.handleSubmit}
+						type="submit"
+					>Sign up</button>
+				</div>
+
                 </form>
             </div>
         );
-    };
-};
+    }
+    }
 
-export default LoginPage;
+    export default Signup
