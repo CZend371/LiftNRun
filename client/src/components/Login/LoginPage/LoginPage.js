@@ -1,9 +1,4 @@
-<<<<<<< Updated upstream:client/src/components/Login/LoginPage/LoginPage.js
-import React from 'react';
-
-=======
 import React, {Component} from 'react';
->>>>>>> Stashed changes:client/src/pages/Login/LoginPage/LoginPage.js
 import { userService } from '../services';
 import axios from 'axios';
 
