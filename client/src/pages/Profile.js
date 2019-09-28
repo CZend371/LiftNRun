@@ -1,31 +1,39 @@
 import React, { Component } from "react";
 import History from "../components/History";
-import API from "../utils/API";
+import API from "../util/API";
 // import "./style.css";
 import "../style/main.scss";
 
 
 class Profile extends Component {
     state = {
-        name: "",
-        intro: "",
-        location: "",
-        savedWorkout: []
+        name: "Cristian",
+        intro: "asdfsd",
+        location: "stp",
+        savedWorkout: [],
+        savedRun: []
     };
     componentDidMount() {
         API.getWorkout()
-            .then(res => this.setState({ savedWorkout: res.data }))
+            .then(res => this.setState({
+                savedWorkout: res.data
+            }))
+            .catch(err => console.log(err))
+        API.getRun()
+            .then(res => this.setState({
+                savedRun: res.data
+            }))
             .catch(err => console.log(err))
     }
     ExpandHistory = event => {
-        var check = document.getElementById("expandHiistory").getAttribute('isExpanded');
+        var check = document.getElementById("expandHiistory").getAttribute('isexpanded');
         if (check === true) {
-            document.getElementById("expandHiistory").setAttribute('isFront', false);
+            document.getElementById("expandHiistory").setAttribute('isfront', false);
             document.getElementById("HistoryGroup").classList.add('historyGroupShow');
             document.getElementById("HistoryGroup ").classList.remove('historyGroupHide');
 
         } else {
-            document.getElementById("expandHiistory").setAttribute('isFront', true);
+            document.getElementById("expandHiistory").setAttribute('isfront', true);
             document.getElementById("HistoryGroup").classList.add('historyGroupHide');
             document.getElementById("HistoryGroup ").classList.remove('historyGroupShow');
         }
@@ -33,16 +41,20 @@ class Profile extends Component {
     render() {
         return (
             <div>
+                <p>sdfsdfs</p>
                 <div id="profileGroup">
                     <div id="profileName">{this.state.name}</div>
                     <div id="profileIntro">{this.state.intro}</div>
                     <div id="profileLocation">{this.state.location}</div>
                 </div>
-                <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
-                <div id="HistoryGroup" class="historyGroupHide">
-                    <div fluid className="container">
+                <div id="expandHiistory" className="expandBtn" onClick={this.ExpandHistory} isexpanded="true"></div>
+                <div id="HistoryGroup" className="historyGroupHide">
+                    <div className="container">
                         <div>
-                            <History savedWorkout={this.state.savedWorkout}/>
+                            <History
+                                savedWorkout={this.state.savedWorkout}
+                                savedRun={this.state.savedRun}
+                            />
                         </div>
                     </div>
                 </div>

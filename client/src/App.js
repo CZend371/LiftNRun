@@ -13,6 +13,8 @@ import Signup from "./pages/Login/LoginPage/SignUp";
 import axios from "axios";
 //import Cardio from "./pages/Cardio";
 //import ProfileMain from "./pages/ProfileMain";
+import Cardio from "./pages/Cardio";
+import Profile from "./pages/Profile";
 //import ProfileHistory from "./pages/ProfileHistory";
 
 // import Navbar from "./components/Navbar";
@@ -90,6 +92,7 @@ render() {
         <Route exact path="/MenuGymRun" component={MenuGymRun} />
         <Route exact path="/Run" component={Run} />
         <Route exact path="/MenuWeightCardio" component={MenuWeightCardio} />
+        <Route exact path="/Cardio" component={Cardio} />
         <Route exact path="/Weight" component={Weight} />
         <Route component={Entrance} />
 
