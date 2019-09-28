@@ -20,12 +20,12 @@ class Profile extends Component {
     ExpandHistory = event => {
         var check = document.getElementById("expandHiistory").getAttribute('isExpanded');
         if (check === true) {
-            document.getElementById("expandHiistory").setAttribute('isFront', false);
+            document.getElementById("expandHiistory").setAttribute('isfront', false);
             document.getElementById("HistoryGroup").classList.add('historyGroupShow');
             document.getElementById("HistoryGroup ").classList.remove('historyGroupHide');
 
         } else {
-            document.getElementById("expandHiistory").setAttribute('isFront', true);
+            document.getElementById("expandHiistory").setAttribute('isfront', true);
             document.getElementById("HistoryGroup").classList.add('historyGroupHide');
             document.getElementById("HistoryGroup ").classList.remove('historyGroupShow');
         }
@@ -38,11 +38,11 @@ class Profile extends Component {
                     <div id="profileIntro">Intro: {this.state.intro}</div>
                     <div id="profileLocation">Location: {this.state.location}</div>
                 </div>
-                <div id="expandHiistory" class="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
-                <div id="HistoryGroup" class="historyGroupHide">
+                <div id="expandHiistory" className="expandBtn" onClick={this.ExpandHistory} isExpanded="true"></div>
+                <div id="HistoryGroup" className="historyGroupHide">
                     <div fluid className="container">
                         <div>
-                            <History savedWorkout={this.state.savedWorkout}/>
+                            <History savedWorkout={this.state.savedWorkout} />
                         </div>
                     </div>
                 </div>

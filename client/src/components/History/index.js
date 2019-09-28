@@ -16,6 +16,8 @@ export default class History extends Component {
         document.getElementById(id).classList.remove('showDetail');
     }
     render() {
+        return (
+
         if (this.props.savedWorkout.length === 0) {
             <div class="container">
                 <div className="titleClass">
@@ -54,5 +56,6 @@ export default class History extends Component {
             </div>
         </div>
 
+        )
     }
 }

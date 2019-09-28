@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const runningController = require("../../controllers/runningController");
 
-router.route("/run")
+router.route("/")
     .get(runningController.findAll)
     .post(runningController.create);
 
