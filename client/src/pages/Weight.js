@@ -62,6 +62,40 @@ export default class GymForm extends Component {
             [name]: value
         });
     };
+    IncreaseBtn = event => {
+        var name = event.target.name;
+        var value = this.state[name]
+        if (name === "weight") {
+            this.value += 5;
+            this.setState({
+                name: value
+            });
+        } else {
+            this.value += 1;
+            this.setState({
+                name: value
+            });
+        }
+        document.getElementById(name).value = value;
+    };
+    DecreaseBtn = event => {
+        var name = event.target.name;
+        var value = this.state[name]
+        this.setState({name:name})
+        if (name === "weight") {
+            this.value += 5;
+            this.setState({
+                name: value
+            });
+        } else {
+            this.value += 1;
+            this.setState({
+                name: value
+            });
+        }
+        document.getElementById(name).value = value;
+    };
+
 
     render() {
         return (
@@ -89,23 +123,29 @@ export default class GymForm extends Component {
                         onClick={this.updateBodyPart}>
                     </div>
                     <p>weight</p>
+                    <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         value={this.state.weight}
-                        // onChange={this.handleInputChange}
-                        name="weight"
+                        onChange={this.handleInputChange}
+                        id="weight"
                     />
+                    <div name="weight" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <p>rep</p>
+                    <div name="rep" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         value={this.state.rep}
                         onChange={this.handleInputChange}
-                        name="rep"
+                        id="rep"
                     />
+                    <div name="rep" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <p>set</p>
+                    <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         value={this.state.set}
                         onChange={this.handleInputChange}
-                        name="set"
+                        id="set"
                     />
+                    <div name="set" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <p>timer</p>
                     <NameInput
                         value={this.state.timer}

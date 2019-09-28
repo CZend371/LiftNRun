@@ -5,7 +5,7 @@ import Entrance from "./pages/Entrance";
 import LoginPage from "./pages/Login/LoginPage/LoginPage.js";
 import MenuWorkoutProfile from "./pages/MenuWorkoutProfile";
 import MenuGymRun from "./pages/MenuGymRun";
-import MenuWeightCardio from "./pages/MenuWeightCardio.js";
+import MenuWeightCardio from "./pages/MenuWeightCardio";
 import Weight from "./pages/Weight";
 import Run from "./pages/Run/Run";
 import Navbar from "./pages/Login/LoginPage/NavBar";

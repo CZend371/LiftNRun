@@ -2,11 +2,13 @@
 //backgrd color
 $red:rgb(190, 30, 38);  
 $gray: rgb(63, 63, 63);
+$lightGray: rgb(141, 121, 121);
 $white:  rgb(255, 249, 223);
 //for grey backgrd
 $font-white: rgb(216, 216, 216);
 //for red backgrd
 $font-black: rgb(26, 22, 22);
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,65 +35,70 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
+.mobileWrapper{
+    width : 375px;
+    height : 812px;
+    background:$gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mainTitle{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 48px;
+    color: $font-white;
+}
 .topBtn {
-    width: 1125px;
-    height: 812px;
+    width: 375px;
+    height: 540px;
     background: $red;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-    left:0;
+    color: $font-black;
 }
-#botBtn {
-    width: 1125px;
-    height: 1624px;
+.botBtn {
+    width: 375px;
+    height: 271px;
     color: $font-white;
     background: $gray;
+}
+.binaryBtn{
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
     -o-transition: all 1s linear;
     transition: all 1s linear;
     left:0;
 }
-
 .Input{
-    width: 1125px;
-    height: 1624px;
+    width: 200px;
+    height: 30px;
     color: $font-white;
-    background: $gray;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    background: $lightGray;
     left:0;
 }
 
 .NumBtn{
-    width: 50px;
-    height: 50px;
-    background: red;
+    width: 30px;
+    height: 30px;
+    background: $red;
     color: $font-white;
 }
 
 .FormBtn{
     width: 150px;
-    height: 50px;
+    height: 30px;
     background: $gray;
     color: $font-white;
 }
 
 .titleClass{
     width: 75%;
-    height: 100px;
+    height: 30px;
     background: $gray;
     color: $font-white;
 }
 
 .contentClass{
     width: 75%;
-    height: 100px;
+    height: 40px;
     background: $white;
     color: $font-black;
 }
@@ -102,15 +109,70 @@ footer, header, hgroup, menu, nav, section {
 
 .historyTitle{
     width: 75%;
-    height: 150px;
+    height: 35px;
+    background: $red;
 }
 
 .history{
-    width: auto;
+    width: 75%;
+    height: 30px;
+    background: $white;
+    color: $font-black;
 
 }
 
 .hideHistory{
     width: auto;
+    height: 30px;
+    background: $gray;
+    color: $font-white;
+}
 
+.bodyPartBtn {
+    width: 500px;
+    height: 500px;
+    background: $red;
+}
+
+.bodyMapHide{
+    display: none;
+}
+
+.bodyMapShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    background: $gray;
+}
+
+.workoutPartBtn{
+    width: 500px;
+    height: 500px;
+    background: $gray;
+}
+
+.workoutMapHide{
+    display: none;
+}
+
+.workoutMapShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    background: $gray;
+}
+
+.historyGroupHide{
+    display: none;
+}
+
+.historyGroupShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    background: $gray;
+}
+
+.display {
+    border: 2px solid $red;
 }

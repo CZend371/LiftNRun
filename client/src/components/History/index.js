@@ -50,7 +50,7 @@ export default class History extends Component {
             <div className="history" id={this.props.id}>
                 {detail}
                 <div className="hideHistory" onclick={this.HideHistory}>
-                </div>
+                Exit</div>
             </div>
         )
     }

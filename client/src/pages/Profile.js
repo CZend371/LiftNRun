@@ -43,9 +43,9 @@ class Profile extends Component {
             <div>
                 <p>sdfsdfs</p>
                 <div id="profileGroup">
-                    <div id="profileName">{this.state.name}</div>
-                    <div id="profileIntro">{this.state.intro}</div>
-                    <div id="profileLocation">{this.state.location}</div>
+                    <div id="profileName">Name: {this.state.name}</div>
+                    <div id="profileIntro">Intro: {this.state.intro}</div>
+                    <div id="profileLocation">Location: {this.state.location}</div>
                 </div>
                 <div id="expandHiistory" className="expandBtn" onClick={this.ExpandHistory} isexpanded="true"></div>
                 <div id="HistoryGroup" className="historyGroupHide">
