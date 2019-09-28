@@ -3,19 +3,19 @@ import axios from "axios";
 export default {
   // Gets all workouts
   getWorkout: function () {
-    return axios.get("/api/Workout");
+    return axios.get("/api/weightlifting");
   },
   // Gets the workout with the given id
-  getWorkout: function (id) {
-    return axios.get("/api/Workout/" + id);
+  getRun: function () {
+    return axios.get("/api/Run");
   },
   // Deletes the workout with the given id
   deleteWorkout: function (id) {
-    return axios.delete("/api/Workout/" + id);
+    return axios.delete("/api/weightlifting/" + id);
   },
   // Saves a workout to the database
   saveWorkout: function (WorkoutData) {
-    return axios.post("/api/Workout", WorkoutData);
+    return axios.post("/api/weightlifting", WorkoutData);
   },
   // Saves run to the DB
   saveRun: function (runData) {
