@@ -13,13 +13,6 @@ export default class History extends Component {
         document.getElementById(id).classList.remove('showDetail');
     }
     generateJSX = () => {
-        if (this.props.savedWorkout.length === 0) {
-            <div class="container">
-                <div className="titleClass">
-                    No Workout Saved
-                </div>
-            </div>;
-
         var detail;
         if (this.props.type === "weight") {
             detail = <div class="container">
@@ -40,17 +33,18 @@ export default class History extends Component {
                 </div>
         }
     }
+
     render() {
-       
-        <div>
-            {this.generateJSX()}
-            <div className="historyTitle" onclick={this.ShowHistory}>
-                {this.props.date}{this.props.type}
-            </div>
-            <div className="history" id={this.props.id}>
-                {detail}
-                <div className="hideHistory" onclick={this.HideHistory}>
-                Exit</div>
+        return (
+            <div>
+                {this.generateJSX()}
+                <div className="historyTitle" onclick={this.ShowHistory}>
+                    {this.props.date}{this.props.type}
+                </div>
+                <div className="history" id={this.props.id}>
+                    <div className="hideHistory" onclick={this.HideHistory}>
+                        Exit</div>
+                </div>
             </div>
         )
     }

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import Profile from "./pages/Profile";
+import Profile from "../../Profile";
 
 class LoginPage extends Component {
     constructor() {
@@ -14,7 +14,7 @@ class LoginPage extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
-  
+
     }
 
     handleChange(event) {
@@ -49,7 +49,7 @@ class LoginPage extends Component {
             }).catch(error => {
                 console.log('login error: ')
                 console.log(error);
-                
+
             })
     }
 
