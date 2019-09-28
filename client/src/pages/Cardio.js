@@ -45,7 +45,7 @@ export default class GymForm extends Component {
             </div>
             <Timer></Timer>
             <form id="form">
-            <p>Workout Type</p>
+                <p>Workout Type</p>
                 <div className="workoutInput"
                     name="workoutType"
                     onClick={this.updateworkoutPart}>

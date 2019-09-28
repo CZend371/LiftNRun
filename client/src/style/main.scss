@@ -44,7 +44,7 @@ footer, header, hgroup, menu, nav, section {
     transition: all 1s linear;
     left:0;
 }
-.botBtn {
+#botBtn {
     width: 1125px;
     height: 1624px;
     color: $font-white;
@@ -71,7 +71,7 @@ footer, header, hgroup, menu, nav, section {
 .NumBtn{
     width: 50px;
     height: 50px;
-    background: $gray;
+    background: red;
     color: $font-white;
 }
 

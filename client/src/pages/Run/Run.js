@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Map from "../../components/map/Map";
 import "../Run/style.scss"
 import Timer from "../../components/timer/Timer";
+// import API from "../../util/API";
 import mapStyles from "../../mapStyles";
 
 // Possible ideas: user should be able to switch between long distance runnig and sprints/intervals
@@ -16,7 +17,7 @@ class Run extends Component {
     };
     state = {
         location: [],
-        message: ""
+        distance: 0
     }
 
     componentDidMount() {
@@ -61,7 +62,7 @@ class Run extends Component {
                     <Timer />
                 </div>
                 <div className="display">
-                    Distance: {this.state.message}
+                    Distance: {this.state.distance}
                 </div>
                 <Map
                     id="myMap"
@@ -97,7 +98,7 @@ class Run extends Component {
                         var origin2 = "Saint Paul, MN";
                         var destinationA = "Saint Paul, MN";
                         var destinationB = new window.google.maps.LatLng(44.981996, -93.187202);
-
+                        // var prevDistance= this.state.distance;
                         var service = new window.google.maps.DistanceMatrixService();
                         let self = this;
                         service.getDistanceMatrix(
@@ -123,11 +124,10 @@ class Run extends Component {
                                         var to = destinations[j];
                                     }
                                     self.setState({
-                                        message: distance
+                                        distance: distance
                                     })
                                 }
                                 console.log(distance);
-
                             }
                         }
                     }
