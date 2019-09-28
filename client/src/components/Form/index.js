@@ -9,7 +9,7 @@ export class NumbericInput extends Component {
     render() {
         return (
             <div className="Input">
-                <input id={this.props.name} value={this.state.value} />                
+                <input {...this.props} />
             </div>
         )
     }

@@ -3,7 +3,6 @@ import { NumbericInput, NameInput, FormBtn } from "../components/Form";
 import Timer from "../components/timer/Timer";
 import API from "../util/API";
 import "../style/main.scss";
-// import "./style.css";
 
 export default class GymForm extends Component {
     state = {

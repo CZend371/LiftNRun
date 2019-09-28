@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../style/main.scss";
+import image from "../style/image/logo.png"
 
 
 class Entrance extends Component {
@@ -11,9 +12,9 @@ class Entrance extends Component {
 
     render() {
         return (
-            <div className = "mobileWrapper">
-                <img href="/Login" src="../style/image/logo.png" />
-                <a className = "mainTitle" href="/login">
+            <div className="mobileWrapper">
+                <img href="/Login" src={image} />
+                <a className="mainTitle" href="/login">
                     Lift N Run
                 </a>
             </div>

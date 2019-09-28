@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-// import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { Route, Switch } from 'react-router-dom'
 import Entrance from "./pages/Entrance";
-import LoginPage from "./pages/Login/LoginPage/LoginPage.js";
+// import LoginPage from "./pages/Login/LoginPage/LoginPage.js";
 import MenuWorkoutProfile from "./pages/MenuWorkoutProfile";
 import MenuGymRun from "./pages/MenuGymRun";
 import MenuWeightCardio from "./pages/MenuWeightCardio";
@@ -11,14 +10,9 @@ import Run from "./pages/Run/Run";
 import Navbar from "./pages/Login/LoginPage/NavBar";
 import Signup from "./pages/Login/LoginPage/SignUp";
 import axios from "axios";
-//import Cardio from "./pages/Cardio";
-//import ProfileMain from "./pages/ProfileMain";
 import Cardio from "./pages/Cardio";
 import Profile from "./pages/Profile";
-//import ProfileHistory from "./pages/ProfileHistory";
 
-// import Navbar from "./components/Navbar";
-// import Wrapper from "./components/Wrapper";
 class App extends Component {
   constructor() {
     super()
@@ -36,7 +30,7 @@ class App extends Component {
     this.getUser()
   }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
 
@@ -61,51 +55,43 @@ class App extends Component {
     })
   };
 
-
-
-render() {
-  return (
+  render() {
+    return (
       <div className="App">
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        {!this.state.loggedIn ?
-        (<Switch>
-          <Route
-          path="/signup"
-          render={() =>
-            <Signup/>}
-          />
+        {/* {!this.state.loggedIn ?
+          (<Switch>
+            <Route
+              path="/signup"
+              render={() =>
+                <Signup />}
+            />
 
-          <Route  //no path on this route means it is a catch-all
-          render={() =>
-              <LoginPage
-                updateUser={this.updateUser}
-              />
-            }
-          />
+            <Route  //no path on this route means it is a catch-all
+              render={() =>
+                <LoginPage
+                  updateUser={this.updateUser}
+                />
+              }
+            />
 
-        </Switch>):
+          </Switch>) : */}
         <Switch>
-         <Route exact path="/Entrance" component={Entrance} />
-         <Route exact path="/login" component={LoginPage} />
-         <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
-        <Route exact path="/Profile" component={Profile} />
-        <Route exact path="/MenuGymRun" component={MenuGymRun} />
-        <Route exact path="/Run" component={Run} />
-        <Route exact path="/MenuWeightCardio" component={MenuWeightCardio} />
-        <Route exact path="/Cardio" component={Cardio} />
-        <Route exact path="/Weight" component={Weight} />
-        <Route component={Entrance} />
-
+          <Route exact path="/Entrance" component={Entrance} />
+          {/* <Route exact path="/login" component={LoginPage} /> */}
+          <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
+          <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/MenuGymRun" component={MenuGymRun} />
+          <Route exact path="/Run" component={Run} />
+          <Route exact path="/MenuWeightCardio" component={MenuWeightCardio} />
+          <Route exact path="/Cardio" component={Cardio} />
+          <Route exact path="/Weight" component={Weight} />
+          <Route component={Entrance} />
         </Switch>
         }
-        {/* <Navbar /> */}
-        {/* <Wrapper> */}
-        
-        {/* </Wrapper> */}
-        {/* <Footer /> */}
         }
       </div>
-  );
-};
+    );
+  };
 }
 export default App;

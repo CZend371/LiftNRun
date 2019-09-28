@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
 import API from "../util/API";
-// import "./style.css";
 import "../style/main.scss";
 
 
@@ -81,7 +80,7 @@ export default class GymForm extends Component {
     DecreaseBtn = event => {
         var name = event.target.name;
         var value = this.state[name]
-        this.setState({name:name})
+        this.setState({ name: name })
         if (name === "weight") {
             this.value += 5;
             this.setState({
