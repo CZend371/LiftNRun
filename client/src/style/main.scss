@@ -2,6 +2,7 @@
 //backgrd color
 $red:rgb(190, 30, 38);  
 $gray: rgb(63, 63, 63);
+$lightGray: rgb(141, 121, 121);
 $white:  rgb(255, 249, 223);
 //for grey backgrd
 $font-white: rgb(216, 216, 216);
@@ -49,13 +50,13 @@ footer, header, hgroup, menu, nav, section {
 }
 .topBtn {
     width: 375px;
-    height: 812px;
+    height: 540px;
     background: $red;
     color: $font-black;
 }
 .botBtn {
     width: 375px;
-    height: 1624px;
+    height: 271px;
     color: $font-white;
     background: $gray;
 }
@@ -67,41 +68,37 @@ footer, header, hgroup, menu, nav, section {
     left:0;
 }
 .Input{
-    width: 375px;
-    height: 1624px;
+    width: 200px;
+    height: 30px;
     color: $font-white;
-    background: $gray;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    background: $lightGray;
     left:0;
 }
 
 .NumBtn{
-    width: 50px;
-    height: 50px;
-    background: red;
+    width: 30px;
+    height: 30px;
+    background: $red;
     color: $font-white;
 }
 
 .FormBtn{
     width: 150px;
-    height: 50px;
+    height: 30px;
     background: $gray;
     color: $font-white;
 }
 
 .titleClass{
     width: 75%;
-    height: 100px;
+    height: 30px;
     background: $gray;
     color: $font-white;
 }
 
 .contentClass{
     width: 75%;
-    height: 100px;
+    height: 40px;
     background: $white;
     color: $font-black;
 }
@@ -112,13 +109,13 @@ footer, header, hgroup, menu, nav, section {
 
 .historyTitle{
     width: 75%;
-    height: 150px;
+    height: 35px;
     background: $red;
 }
 
 .history{
     width: 75%;
-    height: 100px;
+    height: 30px;
     background: $white;
     color: $font-black;
 
@@ -126,7 +123,7 @@ footer, header, hgroup, menu, nav, section {
 
 .hideHistory{
     width: auto;
-    height: 100px;
+    height: 30px;
     background: $gray;
     color: $font-white;
 }
@@ -143,8 +140,8 @@ footer, header, hgroup, menu, nav, section {
 
 .bodyMapShow{
     display: block;
-    width: 100px;
-    height: 100px;
+    width : 375px;
+    height : 812px;
     background: $gray;
 }
 
@@ -160,8 +157,8 @@ footer, header, hgroup, menu, nav, section {
 
 .workoutMapShow{
     display: block;
-    width: 500px;
-    height: 100px;
+    width : 375px;
+    height : 812px;
     background: $gray;
 }
 
@@ -171,8 +168,8 @@ footer, header, hgroup, menu, nav, section {
 
 .historyGroupShow{
     display: block;
-    width: 100px;
-    height: 100px;
+    width : 375px;
+    height : 812px;
     background: $gray;
 }
 
