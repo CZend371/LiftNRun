@@ -20,6 +20,8 @@ module.exports = {
     console.log("weight controller hit");
     console.log(req.body);
     var weightLifting = {
+      "workoutType": req.body.name,
+      "bodypart": req.body.bodyPart,
       "sets": req.body.sets || -1,
       "reps": req.body.reps || -1,
       "weight": req.body.weight || -1,

@@ -8,7 +8,7 @@ export default class GymForm extends Component {
     state = {
         workoutType: "",
         bodypart: "",
-        weight: 10,
+        weight: 5,
         rep: 0,
         set: 0,
         timer: "",

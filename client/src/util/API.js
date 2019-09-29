@@ -15,6 +15,7 @@ export default {
   },
   // Saves a workout to the database
   saveWorkout: function (WorkoutData) {
+    console.log("save workout function");
     return axios.post("/api/weightlifting", WorkoutData);
   },
   // Saves run to the DB

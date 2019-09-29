@@ -25,10 +25,10 @@ export class NameInput extends Component {
     }
 }
 
-export function FormBtn(props) {
+export function FormBtn() {
     return (
-        <div className="FormBtn">
+        <button className="FormBtn">
             Submit
-        </div>
+        </button>
     );
 }
