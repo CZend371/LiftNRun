@@ -14,6 +14,8 @@ class Entrance extends Component {
         return (
             <div className="mobileWrapper">
                 <img className="logo" href="/Login" src={image} />
+                <br />
+                <br />
                 <a className="mainTitle" href="/login">
                     Lift N Run
                 </a>

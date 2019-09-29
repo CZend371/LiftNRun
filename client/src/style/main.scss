@@ -39,18 +39,22 @@ footer, header, hgroup, menu, nav, section {
     width : 375px;
     height : 812px;
     background:$gray;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 .logo{
-    width : 375px;
-    height : 375px;
+    width : 300px;
+    height : 300px;
+    top: 30px;
+    position: relative;
+  	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
 }
 .mainTitle{
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     font-size: 48px;
     color: $font-white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .topBtn {
     width: 375px;
@@ -60,7 +64,7 @@ footer, header, hgroup, menu, nav, section {
 }
 .botBtn {
     width: 375px;
-    height: 271px;
+    height: 272px;
     color: $font-white;
     background: $gray;
 }
@@ -179,4 +183,21 @@ footer, header, hgroup, menu, nav, section {
 
 .display {
     border: 2px solid $red;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    color: black;
+    background: $lightGray;
+    left:0;
+}
+
+.btn{
+    color: $font-black;
+    background: $gray;
+}
+
+.alert{
+    background: $red;
 }

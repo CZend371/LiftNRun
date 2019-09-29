@@ -23,7 +23,6 @@ export default class GymForm extends Component {
             rep: this.state.rep,
             set: this.state.set,
             timer: this.state.timer,
-            //date:""
         })
             .catch(err => console.log(err));
     };
@@ -112,7 +111,7 @@ export default class GymForm extends Component {
                 <form id="form">
                     <p>workoutType</p>
                     <NameInput
-                        value={this.state.name}
+                        value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
                     />

@@ -8,9 +8,7 @@ import "../../style/main.scss";
 export class NumbericInput extends Component {
     render() {
         return (
-            <div className="Input">
-                <input {...this.props} />
-            </div>
+            <input className="Input" {...this.props} />
         )
     }
 }
@@ -18,16 +16,16 @@ export class NumbericInput extends Component {
 export class NameInput extends Component {
     render() {
         return (
-            <div className="Input">
-                <input {...this.props} />
-            </div>
+
+            <input className="Input" {...this.props} />
+
         )
     }
 }
 
 export function FormBtn() {
     return (
-        <button className="FormBtn">
+        <button {...props} className="FormBtn">
             Submit
         </button>
     );
