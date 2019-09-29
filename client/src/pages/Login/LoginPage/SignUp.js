@@ -49,22 +49,22 @@ class Signup extends Component {
     render(){
         const { username, password, submitted, loading, error } = this.state;
         return(
-            <div className="col-md-6 col-md-offset-3">
+            <div className="mobileWrapper col-md-6 col-md-offset-3">
                 {/* <div className="alert alert-info">
                     Username: test<br />
                     Password: test
                 </div> */}
-                <h2>Signup</h2>
+                <div className="mainTitle">Signup</div>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                        <label htmlFor="username">Username</label>
+                        <label className="label" htmlFor="username">Username</label>
                         <input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />
                         {submitted && !username &&
                             <div className="help-block">Username is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                        <label htmlFor="password">Password</label>
+                        <label className="label" htmlFor="password">Password</label>
                         <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
                         {submitted && !password &&
                             <div className="help-block">Password is required</div>
