@@ -28,7 +28,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -36,9 +37,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 .mobileWrapper{
-    width : 375px;
-    height : 812px;
+    width : 355px;
+    height : 792px;
     background:$gray;
+    padding: 10px;
     margin: auto;
 }
 .logo{
@@ -200,4 +202,11 @@ input{
 
 .alert{
     background: $red;
+}
+
+.mainTitle{
+    font-size: 24px;
+    color: $font-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
