@@ -9,7 +9,7 @@ $font-white: rgb(216, 216, 216);
 //for red backgrd
 $font-black: rgb(26, 22, 22);
 
-
+a {text-decoration: none;} 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,7 +28,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -36,17 +37,27 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 .mobileWrapper{
-    width : 375px;
-    height : 812px;
+    width : 355px;
+    height : 792px;
     background:$gray;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px;
+    margin: auto;
+}
+.logo{
+    width : 300px;
+    height : 300px;
+    top: 30px;
+    position: relative;
+  	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
 }
 .mainTitle{
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     font-size: 48px;
     color: $font-white;
+    background: $red;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .topBtn {
     width: 375px;
@@ -56,7 +67,7 @@ footer, header, hgroup, menu, nav, section {
 }
 .botBtn {
     width: 375px;
-    height: 271px;
+    height: 272px;
     color: $font-white;
     background: $gray;
 }
@@ -175,4 +186,44 @@ footer, header, hgroup, menu, nav, section {
 
 .display {
     border: 2px solid $red;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    color: black;
+    background: $lightGray;
+    right:0;
+}
+
+.btn{
+    width: 100px;
+    height: 30px;
+    color: $font-black;
+    background: $lightGray;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    float: right;
+    padding: 5px;
+}
+
+.btn:hover{
+    color: $font-white;
+    background: $gray;
+}
+
+.alert{
+    background: $red;
+}
+
+.mainTitle{
+    font-size: 24px;
+    color: $font-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.label{
+    color: $font-white;
 }
