@@ -99,14 +99,14 @@ export default class GymForm extends Component {
         return (
             <div>
                 <div id="bodyMap1" className="bodyMapHide">
-                    <div id="arms" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
-                    <div id="chest" name="bodyType" className="bodyPartBtn" src="assets/chest.jpg" onClick={this.chooseBodyPart}></div>
-                    <div id="abs" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
+                    <div id="arms" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="chest" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="abs" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                 </div>
-                <div id="bodyFlip" className="flipBtn" onClick={this.FlipBodyPart} isfront="true"></div>
-                <div id="bodyMap2" name="bodyType" className="bodyMapHide">
-                    <div id="back" name="bodyType" className="bodyPartBtn" src="assets/back.jpg" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodyType" className="bodyPartBtn" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></div>
+                <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true"></div>
+                <div id="bodyMap2" className="bodyMapHide">
+                    <div id="back" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="legs" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                 </div>
                 <form id="form">
                     <p>workoutType</p>
@@ -117,6 +117,7 @@ export default class GymForm extends Component {
                     />
                     <p>bodypart</p>
                     <div className="bodypartSelect"
+                        value=""
                         name="bodypart"
                         onClick={this.updateBodyPart}>
                     </div>

@@ -16,8 +16,9 @@ class Entrance extends Component {
                 <img className="logo" href="/Login" src={image} />
                 <br />
                 <br />
-                <a className="mainTitle" href="/login">
-                    Lift N Run
+                <a href="/login">
+                <div class="mainTitle" >
+                    Lift N Run </div>
                 </a>
             </div>
         );
