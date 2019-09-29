@@ -13,7 +13,7 @@ class Entrance extends Component {
     render() {
         return (
             <div className="mobileWrapper">
-                <img href="/Login" src={image} />
+                <img className="logo" href="/Login" src={image} />
                 <a className="mainTitle" href="/login">
                     Lift N Run
                 </a>
