@@ -1,4 +1,4 @@
-const db = require("../models/weightlifting");
+const db = require("../models/weightLifting");
 
 // Defining methods for the weightLiftController
 module.exports = {
@@ -20,8 +20,8 @@ module.exports = {
     console.log("weight controller hit");
     console.log(req.body);
     var weightLifting = {
-      "workoutType": req.body.name,
-      "bodypart": req.body.bodyPart,
+      "workoutType": req.body.name || -1,
+      "bodypart": req.body.bodyPart || -1,
       "sets": req.body.sets || -1,
       "reps": req.body.reps || -1,
       "weight": req.body.weight || -1,
