@@ -124,20 +124,20 @@ export default class GymForm extends Component {
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false">Go to Front</div>
                 </div>
                 <form id="form">
-                    <p>workoutType</p>
+                    <div className="weightTag">workoutType</div>
                     <NameInput
                     
                         value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
                     />
-                    <p>bodypart</p>
+              
                     <div className="bodypartSelect"
                         value=""
                         name="bodypart"
                         onClick={this.updateBodyPart}>{this.state.bodypart}
                     </div>
-                    <p>weight</p>
+                    <div className="weightTag">weight</div>
                     <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -146,7 +146,7 @@ export default class GymForm extends Component {
                         id="weight"
                     />
                     <div name="weight" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
-                    <p>rep</p>
+                    <div className="weightTag">rep</div>
                     <div name="rep" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -164,7 +164,7 @@ export default class GymForm extends Component {
                         id="set"
                     />
                     <div name="set" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
-                    <p>timer</p>
+                    <div className="weightTag">timer</div>
                     <NameInput
                         className="Num"
                         value={this.state.timer}
