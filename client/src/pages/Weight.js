@@ -126,7 +126,7 @@ export default class GymForm extends Component {
                 <form id="form">
                     <div className="weightTag">workoutType</div>
                     <NameInput
-                    
+                        className="Name"
                         value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
@@ -157,7 +157,7 @@ export default class GymForm extends Component {
                     />
                     <div name="rep" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <br/>        
-                    <p>set</p>
+                    <div className="weightTag">Set</div>
                     <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
