@@ -62,6 +62,16 @@ footer, header, hgroup, menu, nav, section {
     background: $red;
     font-family: Arial, Helvetica, sans-serif;
 }
+.mainTitle{
+    margin: auto;
+    font-size: 48px;
+    font-weight: 200;
+    color: $font-white;
+    text-align: center;
+    border-radius: 15px;
+    background: $red;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .topBtn {
     width: 375px;
     height: 540px;
