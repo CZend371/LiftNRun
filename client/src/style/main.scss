@@ -119,9 +119,8 @@ footer, header, hgroup, menu, nav, section {
     height: 30px;
     background: $gray;
     color: $font-white;
-    position: absolute;
-    right: 20px;
-    bottom: 20px
+margin: 10px;
+	float:left
 }
 
 .titleClass{
@@ -186,6 +185,7 @@ footer, header, hgroup, menu, nav, section {
     font-size: 36px;
     height: 40px;
     line-height: 40px;
+	margin: 10px;
 }
 
 .workoutPartBtn{
@@ -239,6 +239,7 @@ input{
     font-size: 24px;
     line-height: 50px;
     float:left;
+	margin: 10px;
 
 }
 .btn{
