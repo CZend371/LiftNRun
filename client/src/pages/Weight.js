@@ -126,7 +126,7 @@ export default class GymForm extends Component {
                 <form id="form">
                     <p>workoutType</p>
                     <NameInput
-                        className="Num"
+                    
                         value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
@@ -140,7 +140,7 @@ export default class GymForm extends Component {
                     <p>weight</p>
                     <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
-                        
+                        className="Num"
                         value={this.state.weight}
                         onChange={this.handleInputChange}
                         id="weight"
@@ -149,6 +149,7 @@ export default class GymForm extends Component {
                     <p>rep</p>
                     <div name="rep" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
+                        className="Num"
                         value={this.state.rep}
                         onChange={this.handleInputChange}
                         id="rep"
@@ -157,6 +158,7 @@ export default class GymForm extends Component {
                     <p>set</p>
                     <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
+                        className="Num"
                         value={this.state.set}
                         onChange={this.handleInputChange}
                         id="set"
@@ -164,6 +166,7 @@ export default class GymForm extends Component {
                     <div name="set" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <p>timer</p>
                     <NameInput
+                        className="Num"
                         value={this.state.timer}
                         onChange={this.handleInputChange}
                         name="timer"
