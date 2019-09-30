@@ -179,8 +179,10 @@ footer, header, hgroup, menu, nav, section {
 
 .weightTag{
     color: $font-white;
-    clear: right;
+    clear: both;
     font-size: 36px;
+    height: 40px;
+    line-height: 40px;
 }
 
 .workoutPartBtn{
