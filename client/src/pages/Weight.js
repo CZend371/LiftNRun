@@ -32,25 +32,27 @@ export default class GymForm extends Component {
         this.setState({
             [name]: id
         });
-        document.getElementById("bodyMap1").setAttribute("block");
-        document.getElementById("bodyMap2").setAttribute("block");
+        document.getElementById("bodyMap1").classList.add('bodyMapHide');
+        document.getElementById("bodyMap1").classList.remove('bodyMapShow');
+        document.getElementById("bodyMap2").classList.add('bodyMapHide');
+        document.getElementById("bodyMap2").classList.remove('bodyMapShow');
     }
     flipBodyPart = event => {
         var check = document.getElementById("bodyFlip").getAttribute('isfront');
         if (check === true) {
             document.getElementById("bodyFlip").setAttribute('isfront', false);
-            document.getElementById("bodyMap1").classList.add('bodyMapHide ');
-            document.getElementById("bodyMap2 ").classList.remove('bodyMapShow');
+            document.getElementById("bodyMap1").classList.add('bodyMapHide');
+            document.getElementById("bodyMap2").classList.remove('bodyMapShow');
 
         } else {
             document.getElementById("bodyFlip").setAttribute('isfront', true);
-            document.getElementById("bodyMap1").classList.add('bodyMapShow ');
-            document.getElementById("bodyMap2 ").classList.remove('bodyMapHide');
+            document.getElementById("bodyMap1").classList.add('bodyMapShow');
+            document.getElementById("bodyMap2").classList.remove('bodyMapHide');
         }
     }
     updateBodyPart = event => {
-        document.getElementById("bodyMap1").classList.add('bodyMapShow ');
-        document.getElementById("bodyMap1 ").classList.remove('bodyMapHide');
+        document.getElementById("bodyMap1").classList.add('bodyMapShow');
+        document.getElementById("bodyMap1").classList.remove('bodyMapHide');
     }
     handleInputChange = event => {
         const { name, value } = event.target;
