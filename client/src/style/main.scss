@@ -1,6 +1,7 @@
 
 //backgrd color
-$red:rgb(190, 30, 38);  
+$red:rgb(160, 55, 55);
+$darkRed:rgb(91, 47, 47);   
 $gray: rgb(63, 63, 63);
 $lightGray: rgb(141, 121, 121);
 $white:  rgb(255, 249, 223);
@@ -58,6 +59,7 @@ footer, header, hgroup, menu, nav, section {
     font-weight: 200;
     color: $font-white;
     text-align: center;
+    margin-top: 20px;
     border-radius: 15px;
     background: $red;
     font-family: Arial, Helvetica, sans-serif;
