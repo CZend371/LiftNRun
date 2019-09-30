@@ -119,6 +119,9 @@ footer, header, hgroup, menu, nav, section {
     height: 30px;
     background: $gray;
     color: $font-white;
+    position: absolute;
+    right: 20px;
+    bottom: 20px
 }
 
 .titleClass{
@@ -233,6 +236,9 @@ input{
     color: $font-white;
     width: 200px;
     height: 50px;
+    font-size: 48px;
+    line-height: 50px;
+    margin-top: 20px;
 }
 .btn{
     width: 100px;
