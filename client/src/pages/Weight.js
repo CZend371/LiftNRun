@@ -111,7 +111,6 @@ export default class GymForm extends Component {
                     <div id="abs" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true"></div>
-
                 </div>                
                 <div id="bodyMap2" background={bodyImage2} className="bodyMapHide">
                     <div id="back" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
@@ -129,7 +128,7 @@ export default class GymForm extends Component {
                     <div className="bodypartSelect"
                         value=""
                         name="bodypart"
-                        onClick={this.updateBodyPart}>
+                        onClick={this.updateBodyPart}>{this.state.bodypart}
                     </div>
                     <p>weight</p>
                     <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
