@@ -30,7 +30,7 @@ export default class BinarySelection extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="mobileWrapper">
                 <a id="topLink" href={this.props.topLink}>
                     <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}</div></a>
                 <a id="bopLink" href={this.props.botLink}>

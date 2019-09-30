@@ -1,6 +1,7 @@
 
 //backgrd color
-$red:rgb(190, 30, 38);  
+$red:rgb(160, 55, 55);
+$darkRed:rgb(91, 47, 47);   
 $gray: rgb(63, 63, 63);
 $lightGray: rgb(141, 121, 121);
 $white:  rgb(255, 249, 223);
@@ -10,6 +11,9 @@ $font-white: rgb(216, 216, 216);
 $font-black: rgb(26, 22, 22);
 
 a {text-decoration: none;} 
+legend.green-color a:hover{
+    text-decoration: none;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,10 +56,24 @@ footer, header, hgroup, menu, nav, section {
   	margin-left: auto;
  	margin-right: auto;
 }
+.mainTitleEntrance{
+    margin: auto;
+    font-size: 60px;
+    font-weight: 200;
+    color: $font-white;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 15px;
+    background: $red;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .mainTitle{
     margin: auto;
     font-size: 48px;
+    font-weight: 200;
     color: $font-white;
+    text-align: center;
+    border-radius: 15px;
     background: $red;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -78,26 +96,32 @@ footer, header, hgroup, menu, nav, section {
     transition: all 1s linear;
     left:0;
 }
-.Input{
-    width: 200px;
-    height: 30px;
-    color: black;
-    background: $lightGray;
-    left:0;
+.Num{
+    width: 100px;
+    height: 50px;
+    float:left;
+    font-size:48px;
+    text-align:center;
 }
 
 .NumBtn{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background: $red;
+    float:left;
     color: $font-white;
+    font-size:40px;
+    line-height:50px;
+    text-align:center;
 }
 
 .FormBtn{
-    width: 150px;
-    height: 30px;
+    width: 200px;
+    height: 50px;
     background: $gray;
     color: $font-white;
+margin-top: 10px;
+	float:left
 }
 
 .titleClass{
@@ -140,9 +164,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .bodyPartBtn {
-    width: 500px;
-    height: 500px;
-    background: $red;
+    border-color: $red;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .bodyMapHide{
@@ -153,7 +177,16 @@ footer, header, hgroup, menu, nav, section {
     display: block;
     width : 375px;
     height : 812px;
-    background: $gray;
+    position: relative;
+}
+
+.weightTag{
+    color: $font-white;
+    clear: both;
+    font-size: 36px;
+    height: 40px;
+    line-height: 40px;
+	margin-top: 10px;
 }
 
 .workoutPartBtn{
@@ -197,13 +230,28 @@ footer, header, hgroup, menu, nav, section {
 }
 
 input{
-    width: 200px;
-    height: 30px;
-    color: black;
-    background: $lightGray;
+    color: $font-black;
+    background: $white;
     right:0;
 }
+.Name{
+    width: 200px;
+    height: 50px;
+    float:left;
+    font-size:24px;
+    text-align:center;
+}
+.bodypartSelect{
+    background: $red;
+    color: $font-white;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    float:left;
+    margin-top: 10px;
 
+}
 .btn{
     width: 100px;
     height: 30px;
@@ -235,6 +283,64 @@ input{
 .label{
     color: $font-white;
 }
+.flipBtn{
+    background: $red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: $font-white;
+}
+
+
+
+.imageWrapper{
+    width : 355px;
+    height : 792px;
+    background:$darkRed;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.arm{
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 160px;
+}
+
+.chest{
+    position: absolute;
+    left: 190px;
+    top: 160px;
+    width: 160px;
+    height: 110px;
+}
+
+.abs{
+   position: absolute;
+    left: 190px;
+    top: 270px;
+    width: 160px;
+    height: 160px;
+}
+.back{
+   position: absolute;
+    left: 190px;
+    top: 160px;
+    width: 160px;
+    height: 270px;
+}
+.legs{
+   position: absolute;
+    left: 190px;
+    top: 430px;
+    width: 160px;
+    height: 200px;
+
 #start, #resume, #stop{
     margin-right: 40%;
 }
