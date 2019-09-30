@@ -100,6 +100,8 @@ footer, header, hgroup, menu, nav, section {
     width: 100px;
     height: 50px;
     float:left;
+    font-size:48px;
+}
 }
 
 .NumBtn{
@@ -219,7 +221,12 @@ input{
     background: $white;
     right:0;
 }
-
+.Name{
+    width: 200px;
+    height: 50px;
+    float:left;
+    font-size:48px;
+}
 .bodypartSelect{
     background: $red;
     color: $font-white;
