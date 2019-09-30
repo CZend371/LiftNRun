@@ -248,12 +248,13 @@ input{
 
 .flipBtn{
     background: $red;
-    width: 1000px;
-    height: 1000px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 10;
+    color: $font-white;
 }
 
 .flipBtnShow{
@@ -290,6 +291,13 @@ input{
     top: 270px;
     width: 160px;
     height: 160px;
+}
+.back{
+   position: absolute;
+    left: 190px;
+    top: 160px;
+    width: 160px;
+    height: 270px;
 }
 .legs{
    position: absolute;
