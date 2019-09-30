@@ -274,7 +274,7 @@ input{
 
 .chest{
     position: absolute;
-    left: 200px;
+    left: 190px;
     top: 160px;
     width: 160px;
     height: 110px;
@@ -282,8 +282,15 @@ input{
 
 .abs{
    position: absolute;
-    left: 200px;
+    left: 190px;
     top: 270px;
     width: 160px;
-    height: 190px;
+    height: 160px;
+}
+.leg{
+   position: absolute;
+    left: 190px;
+    top: 560px;
+    width: 160px;
+    height: 200px;
 }
