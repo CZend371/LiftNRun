@@ -96,13 +96,7 @@ footer, header, hgroup, menu, nav, section {
     transition: all 1s linear;
     left:0;
 }
-.Input{
-    width: 200px;
-    height: 30px;
-    color: black;
-    background: $lightGray;
-    left:0;
-}
+
 
 .NumBtn{
     width: 30px;
@@ -209,8 +203,8 @@ footer, header, hgroup, menu, nav, section {
 input{
     width: 200px;
     height: 30px;
-    color: black;
-    background: $lightGray;
+    color: $font-black;
+    background: $white;
     right:0;
 }
 
@@ -244,4 +238,8 @@ input{
 
 .label{
     color: $font-white;
+}
+
+.bodypartSelect{
+    background: $red;
 }

@@ -39,7 +39,7 @@ export default class GymForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className="mobileWrapper">
                 <div id="workoutMap" className="workoutMapHide">
                     <div id="elliptical" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}></div>
                     <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}></div>

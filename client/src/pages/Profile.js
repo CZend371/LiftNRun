@@ -38,8 +38,8 @@ class Profile extends Component {
     }
     render() {
         return (
-            <div>
-                <p>sdfsdfs</p>
+            <div className="mobileWrapper">
+                
                 <div id="profileGroup">
                     <div id="profileName">Name: {this.state.name}</div>
                     <div id="profileIntro">Intro: {this.state.intro}</div>
