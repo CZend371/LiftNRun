@@ -45,14 +45,12 @@ export default class GymForm extends Component {
         var check = event.target.getAttribute('isfront');
         console.log(check);
         if (check === "true") {
-            document.getElementById("bodyFlip").setAttribute('isfront', "false");
             document.getElementById("bodyMap1").classList.add('bodyMapHide');
             document.getElementById("bodyMap1").classList.remove('bodyMapShow');
             document.getElementById("bodyMap2").classList.add('bodyMapShow');
             document.getElementById("bodyMap2").classList.remove('bodyMapHide');
 
         } else {
-            document.getElementById("bodyFlip").setAttribute('isfront', "true");
             document.getElementById("bodyMap1").classList.remove('bodyMapHide');
             document.getElementById("bodyMap1").classList.add('bodyMapShow');
             document.getElementById("bodyMap2").classList.remove('bodyMapShow');
@@ -120,8 +118,9 @@ export default class GymForm extends Component {
                 </div>                
                 <div id="bodyMap2" className="bodyMapHide">
                     <img className="imageWrapper" src={bodyImage2} />
-                    <div id="back" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="back" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false"></div>
                 </div>
                 <form id="form">
                     <p>workoutType</p>
