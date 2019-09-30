@@ -104,7 +104,8 @@ export default class GymForm extends Component {
     render() {
         return (
             <div className="mobileWrapper">
-                <div id="bodyMap1" background-image={bodyImage1} className="bodyMapHide">
+                <div id="bodyMap1" className="bodyMapHide">
+                    <img className="imageWrapper" src={bodyImage1} />
                     <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="chest" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="abs" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
