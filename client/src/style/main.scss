@@ -99,12 +99,14 @@ footer, header, hgroup, menu, nav, section {
 .Num{
     width: 100px;
     height: 50px;
+    float:left;
 }
 
 .NumBtn{
     width: 50px;
     height: 50px;
     background: $red;
+    float:left;
     color: $font-white;
     font-size:28px;
     line-height:30px;
