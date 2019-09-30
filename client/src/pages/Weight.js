@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
 import API from "../util/API";
 import "../style/main.scss";
+import bodyImage1 from "../style/image/body-front.png"
+import bodyImage2 from "../style/image/body-back.png"
+
 
 
 export default class GymForm extends Component {
@@ -34,8 +37,8 @@ export default class GymForm extends Component {
         });
         document.getElementById("bodyMap1").classList.add('bodyMapHide');
         document.getElementById("bodyMap1").classList.remove('bodyMapShow');
-        document.getElementById("bodyMap2").classList.add('bodyMapHide');
-        document.getElementById("bodyMap2").classList.remove('bodyMapShow');
+        document.getElementById("bodyFlip").classList.add('bodyMapHide');
+        document.getElementById("bodyFlip").classList.remove('bodyMapShow');
     }
     flipBodyPart = event => {
         var check = document.getElementById("bodyFlip").getAttribute('isfront');
@@ -51,6 +54,8 @@ export default class GymForm extends Component {
         }
     }
     updateBodyPart = event => {
+        document.getElementById("bodyMap1").classList.add('bodyMapShow');
+        document.getElementById("bodyMap1").classList.remove('bodyMapHide');
         document.getElementById("bodyMap1").classList.add('bodyMapShow');
         document.getElementById("bodyMap1").classList.remove('bodyMapHide');
     }
@@ -99,13 +104,13 @@ export default class GymForm extends Component {
     render() {
         return (
             <div className="mobileWrapper">
-                <div id="bodyMap1" className="bodyMapHide">
+                <div id="bodyMap1" background={bodyImage1} className="bodyMapHide">
                     <div id="arms" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="chest" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="abs" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                 </div>
                 <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true"></div>
-                <div id="bodyMap2" className="bodyMapHide">
+                <div id="bodyMap2" background={bodyImage1} className="bodyMapHide">
                     <div id="back" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="legs" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                 </div>
@@ -154,7 +159,7 @@ export default class GymForm extends Component {
                     />
                     <FormBtn onClick={this.handleFormSubmit}>
                         Submit
-            </FormBtn>
+                    </FormBtn>
                 </form>
             </div>
         )
