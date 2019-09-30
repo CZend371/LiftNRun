@@ -16,9 +16,7 @@ export class NumbericInput extends Component {
 export class NameInput extends Component {
     render() {
         return (
-
             <input {...this.props} />
-
         )
     }
 }

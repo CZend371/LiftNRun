@@ -219,6 +219,14 @@ margin-top: 10px;
 
 .display {
     border: 2px solid $red;
+    border-radius: 15px;
+    background: $red;
+    margin: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: white;
+    font-size:28px;
 }
 
 input{
@@ -275,8 +283,6 @@ input{
 .label{
     color: $font-white;
 }
-
-
 .flipBtn{
     background: $red;
     width: 100px;
@@ -334,5 +340,8 @@ input{
     top: 430px;
     width: 160px;
     height: 200px;
+
+#start, #resume, #stop{
+    margin-right: 40%;
 }
 

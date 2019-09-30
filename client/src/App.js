@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom'
 import Entrance from "./pages/Entrance";
-// import LoginPage from "./pages/Login/LoginPage/LoginPage.js";
+import LoginPage from "./pages/Login/LoginPage/LoginPage.js";
 import MenuWorkoutProfile from "./pages/MenuWorkoutProfile";
 import MenuGymRun from "./pages/MenuGymRun";
 import MenuWeightCardio from "./pages/MenuWeightCardio";
@@ -78,7 +78,7 @@ class App extends Component {
           </Switch>) : */}
         <Switch>
           <Route exact path="/Entrance" component={Entrance} />
-          {/* <Route exact path="/login" component={LoginPage} /> */}
+          <Route exact path="/login" component={LoginPage} />
           <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
           <Route exact path="/Profile" component={Profile} />
           <Route exact path="/MenuGymRun" component={MenuGymRun} />
