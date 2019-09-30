@@ -62,6 +62,7 @@ footer, header, hgroup, menu, nav, section {
     font-family: Arial, Helvetica, sans-serif;
 }
 .topBtn {
+    padding-top: 300px;
     width: 375px;
     height: 540px;
     background: $red;
@@ -80,6 +81,9 @@ footer, header, hgroup, menu, nav, section {
     transition: all 1s linear;
     left:0;
 }
+.topText{
+        font-size: 48px;
+    }
 .Input{
     width: 200px;
     height: 30px;
