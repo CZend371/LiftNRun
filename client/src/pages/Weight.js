@@ -46,12 +46,16 @@ export default class GymForm extends Component {
         if (check === true) {
             document.getElementById("bodyFlip").setAttribute('isfront', false);
             document.getElementById("bodyMap1").classList.add('bodyMapHide');
-            document.getElementById("bodyMap2").classList.remove('bodyMapShow');
+            document.getElementById("bodyMap1").classList.remove('bodyMapShow');
+            document.getElementById("bodyMap2").classList.add('bodyMapShow');
+            document.getElementById("bodyMap2").classList.remove('bodyMapHide');
 
         } else {
             document.getElementById("bodyFlip").setAttribute('isfront', true);
+            document.getElementById("bodyMap1").classList.remove('bodyMapHide');
             document.getElementById("bodyMap1").classList.add('bodyMapShow');
-            document.getElementById("bodyMap2").classList.remove('bodyMapHide');
+            document.getElementById("bodyMap2").classList.remove('bodyMapShow');
+            document.getElementById("bodyMap2").classList.add('bodyMapHide');
         }
     }
     updateBodyPart = event => {
@@ -113,10 +117,10 @@ export default class GymForm extends Component {
                     <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true"></div>
                 </div>                
-                <div id="bodyMap2" background={bodyImage2} className="bodyMapHide">
+                <div id="bodyMap2" className="bodyMapHide">
+                    <img className="imageWrapper" src={bodyImage2} />
                     <div id="back" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="legs" name="bodypart" className="bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true"></div>
                 </div>
                 <form id="form">
                     <p>workoutType</p>
