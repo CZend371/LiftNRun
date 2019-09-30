@@ -169,7 +169,7 @@ export default class GymForm extends Component {
                     <br/>
                     <div className="weightTag">timer</div>
                     <NameInput
-                        className="Num"
+                        className="Name"
                         value={this.state.timer}
                         onChange={this.handleInputChange}
                         name="timer"
