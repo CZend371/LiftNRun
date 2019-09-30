@@ -114,13 +114,14 @@ export default class GymForm extends Component {
                     <div id="chest" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="abs" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true"></div>
+                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true">Go to Back</div>
                 </div>                
                 <div id="bodyMap2" className="bodyMapHide">
                     <img className="imageWrapper" src={bodyImage2} />
+                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="back" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false"></div>
+                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false">Go to Front</div>
                 </div>
                 <form id="form">
                     <p>workoutType</p>
@@ -138,6 +139,7 @@ export default class GymForm extends Component {
                     <p>weight</p>
                     <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
+                        
                         value={this.state.weight}
                         onChange={this.handleInputChange}
                         id="weight"
