@@ -261,18 +261,18 @@ input{
     height : 792px;
     background:$darkRed;
     margin-top: -10px;
-    margin-left: -10px;
+    margin-left: 10px;
 }
 
 .arm{
     border-color: $red;
     border-style: solid;
-    border-width: 15px;
+    border-width: 1px;
     width: 150px;
     height: 300px;
-    position: absolute;
-    left: 0px;
-    top: 200px;
+    position: relative;
+    margin-left: 0px;
+    margin-top: 250px;
 }
 
 .chest{
