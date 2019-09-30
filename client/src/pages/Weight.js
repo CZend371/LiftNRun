@@ -38,21 +38,21 @@ export default class GymForm extends Component {
         });
         document.getElementById("bodyMap1").classList.add('bodyMapHide');
         document.getElementById("bodyMap1").classList.remove('bodyMapShow');
-        document.getElementById("bodyFlip").classList.add('bodyMapHide');
-        document.getElementById("bodyFlip").classList.remove('bodyMapShow');
+        document.getElementById("bodyMap2").classList.add('bodyMapHide');
+        document.getElementById("bodyMap2").classList.remove('bodyMapShow');
     }
     flipBodyPart = event => {
         var check = event.target.getAttribute('isfront');
         console.log(check);
-        if (check === true) {
-            document.getElementById("bodyFlip").setAttribute('isfront', false);
+        if (check === "true") {
+            document.getElementById("bodyFlip").setAttribute('isfront', "false");
             document.getElementById("bodyMap1").classList.add('bodyMapHide');
             document.getElementById("bodyMap1").classList.remove('bodyMapShow');
             document.getElementById("bodyMap2").classList.add('bodyMapShow');
             document.getElementById("bodyMap2").classList.remove('bodyMapHide');
 
         } else {
-            document.getElementById("bodyFlip").setAttribute('isfront', true);
+            document.getElementById("bodyFlip").setAttribute('isfront', "true");
             document.getElementById("bodyMap1").classList.remove('bodyMapHide');
             document.getElementById("bodyMap1").classList.add('bodyMapShow');
             document.getElementById("bodyMap2").classList.remove('bodyMapShow');
