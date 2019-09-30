@@ -61,7 +61,7 @@ export default class GymForm extends Component {
         });
     };
     IncreaseBtn = event => {
-        var name = event.target.name;
+        var name = event.target.getAttribute("name");
         console.log(name);
         var value = this.state[name]
         console.log(value);
@@ -79,7 +79,7 @@ export default class GymForm extends Component {
         document.getElementById(name).value = value;
     };
     DecreaseBtn = event => {
-        var name = event.target.name;
+        var name = event.target.getAttribute("name");
         var value = this.state[name]
         this.setState({ name: name })
         if (name === "weight") {
