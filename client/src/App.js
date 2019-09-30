@@ -88,10 +88,11 @@ class App extends Component {
           <Route exact path="/Weight" component={Weight} />
           <Route component={Entrance} />
         </Switch>
-        }
-        }
       </div>
     );
-  };
+  }
 }
+
+
+
 export default App;
