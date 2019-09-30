@@ -96,13 +96,19 @@ footer, header, hgroup, menu, nav, section {
     transition: all 1s linear;
     left:0;
 }
-
+.Num{
+    width: 30px;
+    height: 30px;
+}
 
 .NumBtn{
     width: 30px;
     height: 30px;
     background: $red;
     color: $font-white;
+    font-size:28px;
+    line-height:30px;
+    text-align:center;
 }
 
 .FormBtn{
@@ -208,6 +214,11 @@ input{
     right:0;
 }
 
+.bodypartSelect{
+    background: $red;
+    width: 100px;
+    height: 30px;
+}
 .btn{
     width: 100px;
     height: 30px;
@@ -240,11 +251,6 @@ input{
     color: $font-white;
 }
 
-.bodypartSelect{
-    background: $red;
-    width: 100px;
-    height: 30px;
-}
 
 .flipBtn{
     background: $red;
@@ -257,9 +263,7 @@ input{
     color: $font-white;
 }
 
-.flipBtnShow{
-    display: block;
-}
+
 
 .imageWrapper{
     width : 355px;
@@ -306,3 +310,4 @@ input{
     width: 160px;
     height: 200px;
 }
+
