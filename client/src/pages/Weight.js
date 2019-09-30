@@ -42,7 +42,8 @@ export default class GymForm extends Component {
         document.getElementById("bodyFlip").classList.remove('bodyMapShow');
     }
     flipBodyPart = event => {
-        var check = document.getElementById("bodyFlip").getAttribute('isfront');
+        var check = event.target.getAttribute('isfront');
+        console.log(check);
         if (check === true) {
             document.getElementById("bodyFlip").setAttribute('isfront', false);
             document.getElementById("bodyMap1").classList.add('bodyMapHide');
