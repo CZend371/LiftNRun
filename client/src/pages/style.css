@@ -1,0 +1,43 @@
+.bodyPartBtn {
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.bodyMapHide{
+    display: none;
+    Width: 500px;
+    height: 100px;
+}
+
+.bodyMapShow{
+    display: block;
+    Width: 500px;
+    height: 100px;
+    background: blue;
+}
+
+.workoutPartBtn{
+    Width: 500px;
+    height: 100px;
+    background: rgb(181, 20, 28);
+}
+
+.workoutMapHide{
+    display: none;
+}
+
+.workoutMapShow{
+    display: block;
+    Width: 500px;
+    height: 100px;
+    background: blue;
+}
+
+.historyGroupHide{
+    display: none;
+}
+
+.historyGroupShow{
+    display: block;
+}

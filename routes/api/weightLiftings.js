@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const weightLiftController = require("../../controllers/weightLiftController");
 
-router.route("/weightlift")
+router.route("/")
     .get(weightLiftController.findAll)
     .post(weightLiftController.create);
 
