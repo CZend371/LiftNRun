@@ -62,7 +62,9 @@ export default class GymForm extends Component {
     };
     IncreaseBtn = event => {
         var name = event.target.name;
+        console.log(name);
         var value = this.state[name]
+        console.log(value);
         if (name === "weight") {
             this.value += 5;
             this.setState({
