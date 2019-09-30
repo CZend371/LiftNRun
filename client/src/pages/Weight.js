@@ -31,7 +31,8 @@ export default class GymForm extends Component {
     };
 
     chooseBodyPart = event => {
-        const { name, id } = event.target.id;
+        var name = event.target.getAttribute("name");
+        var id = event.target.getAttribute("id");
         this.setState({
             [name]: id
         });
