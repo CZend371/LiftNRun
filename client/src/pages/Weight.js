@@ -66,12 +66,12 @@ export default class GymForm extends Component {
         var value = this.state[name]
         console.log(value);
         if (name === "weight") {
-            this.value += 5;
+            value += 5;
             this.setState({
-                name: value
+                weight: value
             });
         } else {
-            this.value += 1;
+            value += 1;
             this.setState({
                 name: value
             });
@@ -83,12 +83,12 @@ export default class GymForm extends Component {
         var value = this.state[name]
         this.setState({ name: name })
         if (name === "weight") {
-            this.value += 5;
+            value -= 5;
             this.setState({
-                name: value
+                weight: value
             });
         } else {
-            this.value += 1;
+            value = 1;
             this.setState({
                 name: value
             });
