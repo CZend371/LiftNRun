@@ -64,12 +64,23 @@ footer, header, hgroup, menu, nav, section {
     height: 540px;
     background: $red;
     color: $font-black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
 }
 .botBtn {
     width: 375px;
     height: 272px;
     color: $font-white;
     background: $gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
+
 }
 .binaryBtn{
     -webkit-transition: all 1s linear;
@@ -230,6 +241,7 @@ input{
     color: $font-white;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .label{
