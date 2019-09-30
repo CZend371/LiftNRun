@@ -10,7 +10,7 @@ import bodyImage2 from "../style/image/body-back.png"
 export default class GymForm extends Component {
     state = {
         workoutType: "",
-        bodypart: "",
+        bodypart: "Choose Body Part",
         weight: 5,
         rep: 0,
         set: 0,
