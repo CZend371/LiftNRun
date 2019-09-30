@@ -165,6 +165,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
     width : 375px;
     height : 812px;
+    position: relative;
 }
 
 .workoutPartBtn{
@@ -260,15 +261,15 @@ input{
     height : 792px;
     background:$darkRed;
     margin-top: -10px;
-    margin-left: 10px;
+    margin-left: -10px;
 }
 
 .arm{
     width: 150px;
     height: 300px;
-    position: relative;
-    margin-left: 0px;
-    margin-top: 250px;
+    position: absolute;
+    left: 0px;
+    top: 250px;
 }
 
 .chest{
