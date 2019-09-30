@@ -78,7 +78,8 @@ class App extends Component {
           </Switch>) : */}
         <Switch>
           <Route exact path="/Entrance" component={Entrance} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/Login" component={LoginPage} />
+          <Route exact path="/Signup" component={Signup} />
           <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
           <Route exact path="/Profile" component={Profile} />
           <Route exact path="/MenuGymRun" component={MenuGymRun} />
