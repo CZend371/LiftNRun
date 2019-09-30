@@ -186,6 +186,14 @@ footer, header, hgroup, menu, nav, section {
 
 .display {
     border: 2px solid $red;
+    border-radius: 15px;
+    background: $red;
+    margin: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: white;
+    font-size:28px;
 }
 
 input{
@@ -227,3 +235,7 @@ input{
 .label{
     color: $font-white;
 }
+#start, #resume, #stop{
+    margin-right: 40%;
+}
+
