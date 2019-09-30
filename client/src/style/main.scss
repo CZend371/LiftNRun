@@ -54,9 +54,11 @@ footer, header, hgroup, menu, nav, section {
 }
 .mainTitle{
     margin: auto;
-    font-size: 48px;
+    font-size: 36px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: $font-white;
-    background: $red;
     font-family: Arial, Helvetica, sans-serif;
 }
 .topBtn {
@@ -188,12 +190,12 @@ footer, header, hgroup, menu, nav, section {
     border: 2px solid $red;
 }
 
-input{
+.input{
     width: 200px;
     height: 30px;
-    color: black;
+    color: $font-black;
     background: $lightGray;
-    right:0;
+    margin: 10px;
 }
 
 .btn{
