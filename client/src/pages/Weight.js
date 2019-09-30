@@ -126,6 +126,7 @@ export default class GymForm extends Component {
                 <form id="form">
                     <p>workoutType</p>
                     <NameInput
+                        className="Num"
                         value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
