@@ -87,6 +87,7 @@ footer, header, hgroup, menu, nav, section {
     transition: all 0.3s linear;
 }
 .midBtn {
+    position: relative;
     width: 80px;
     height: 80px;
     line-height:80px;
@@ -97,6 +98,7 @@ footer, header, hgroup, menu, nav, section {
     margin-left: -30px
 }
 .topBtn {
+    position: relative;
     z-index: 10;
     width: 355px;
     height: 530px;
@@ -111,6 +113,7 @@ footer, header, hgroup, menu, nav, section {
     text-align: center;
 }
 .botBtn {
+    position: relative;
     width: 355px;
     height: 262px;
     color: $font-white;
