@@ -14,6 +14,7 @@ export default class BinarySelection extends Component {
             document.getElementById("botLink").href = "#";
             document.getElementById("topLink").href = this.props.topLink;
             document.getElementById("topBtn").style.height = "530px";
+            document.getElementById("midBuffer").style.height = "480px";
             document.getElementById("botBtn").style.height = "262px";
             this.setState({ top: true, bot: false });
         }
@@ -24,6 +25,7 @@ export default class BinarySelection extends Component {
             document.getElementById("topLink").href = "#";
             document.getElementById("botLink").href = this.props.botLink;
             document.getElementById("topBtn").style.height = "262px";
+            document.getElementById("midBuffer").style.height = "212px";
             document.getElementById("botBtn").style.height = "530px";
             this.setState({ top: false, bot: true });
         }
@@ -32,7 +34,13 @@ export default class BinarySelection extends Component {
         return (
             <div className="mobileWrapper">
                 <a id="topLink" href={this.props.topLink}>
-                    <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}</div></a>
+                    <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}
+                    <a id="midLink" href="#">
+                    <div id="midBuffer"></div>
+                    <div className="midBtn" onClick={this.clickBot}></div></a>
+                    </div></a>
+                <a id="midLink" href="#">
+                    <div className="midBtn" onClick={this.clickBot}></div></a>
                 <a id="botLink" href="#">
                     <div id="botBtn" className="botBtn binaryBtn" onClick={this.clickBot}>{this.props.botTitle}</div></a>
             </div>
