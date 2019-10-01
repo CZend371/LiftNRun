@@ -6,7 +6,7 @@ import "../style/main.scss";
 
 export default class GymForm extends Component {
     state = {
-        workoutType: "",
+        workoutType: "Pick Equipment",
         timer: "",
         name: ""
     };
@@ -23,12 +23,17 @@ export default class GymForm extends Component {
 
 
     chooseWorkoutPart = event => {
-        const id = event.target.id;
+        var name = event.target.getAttribute("name");
+        var id = event.target.getAttribute("id");
         this.setState({
-            name: id
+            [name]: id
         });
         document.getElementById("workoutMap").classList.add('workoutMapHide ');
         document.getElementById("workoutMap ").classList.remove('workoutMapShow');
+    }
+    updateWorkoutPart = event => {
+        document.getElementById("workoutMap").classList.add('bodyMapShow');
+        document.getElementById("workoutMap").classList.remove('bodyMapHide');
     }
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -41,16 +46,16 @@ export default class GymForm extends Component {
         return (
             <div className="mobileWrapper">
                 <div id="workoutMap" className="workoutMapHide">
-                    <div id="elliptical" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}></div>
-                    <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}></div>
-                    <div id="stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}></div>
+                    <div id="elliptical" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Elliptical</div>
+                    <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}>Treadmill</div>
+                    <div id="stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Stairmaster</div>
                 </div>
                 <Timer></Timer>
                 <form id="form">
-                    <p>Workout Type</p>
+                    <div name="weightTag">Workout Type</div>
                     <div className="workoutInput"
                         name="workoutType"
-                        onClick={this.updateworkoutPart}>
+                        onClick={this.updateworkoutPart}>{this.state.workoutType}
                     </div>
                     <p>timer</p>
                     <NameInput
