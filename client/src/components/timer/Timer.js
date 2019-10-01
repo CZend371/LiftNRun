@@ -59,8 +59,9 @@ class Timer extends Component {
         let minutes = ("0" + (Math.floor(timerTime / 60000) % 60)).slice(-2);
         let hours = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
         return (
-            <div className="timerLoc timer-container">
+            <div className="timer-container">
                 <div className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
+                <div className="timerLoc">
                 {this.state.isRunning === false && this.state.timerTime === 0 && (
                     <div type="button" className="bigBtn btn btn-success" id="start" onClick={this.handleStart}>Start</div>
                 )}
@@ -75,7 +76,7 @@ class Timer extends Component {
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
                     <div type="button" className="smallBtn btn-success" id="save" onClick={this.handleSave}>Save</div>
-                )}
+                )}</div>
             </div>
         )
     }
