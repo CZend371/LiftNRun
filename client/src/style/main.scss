@@ -216,49 +216,6 @@ footer, header, hgroup, menu, nav, section {
     line-height: 40px;
 	margin-top: 10px;
 }
-#profileGroup{
-    font-weight: bold;
-    font-size: 28px;
-    background: $red;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    color: $white;
-    padding: 10px;
-}
-
-#workout-history{
-    font-weight: bold;
-    font-size: 28px;
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    padding: 10px;
-}
-#workout-list{
-font-size: 20px;
-}
-
-#run-history{
-    font-weight: bold;
-    font-size: 28px;
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    padding: 10px;
-}
-
-#run-list{
-font-size: 20px;
-}
-
-
 
 
 
@@ -276,10 +233,8 @@ font-size: 20px;
 .display {
     border: 2px solid $red;
     border-radius: 15px;
-    background: $red;
-    margin: 20px;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     color: white;
     font-size:28px;
@@ -480,7 +435,68 @@ input{
     margin-bottom: 10px;
     text-align: center;
 }
-#start, #resume, #stop{
-    margin-right: 40%;
+
+
+///profile
+
+#profileGroup{
+    font-size: 28px;
+    background: $lightGray;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px;
+    color: $font-black;
+    padding: 10px;
 }
 
+#workout-list{
+    font-size: 20px;
+    text-align: left;
+    }
+    
+#run-history{
+        font-size: 28px;
+        text-align: left;
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+#run-list{
+    font-size: 20px;
+    text-align: left;
+    }
+
+
+#workout-history{
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin: 10px;
+    margin-left: -20px;
+    padding: 10px;
+    }
+#workout-list{
+    font-size: 20px;
+    text-align: left;
+    }
+    
+#run-history{
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin: 10px;
+    margin-left: -20px;
+    padding: 10px;
+    }
+    
+#run-list{
+    font-size: 20px;
+    text-align: left;
+    }
+    
+    
+    
+    

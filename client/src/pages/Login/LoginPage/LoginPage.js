@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import axios from 'axios';
-import Profile from "../../Profile";
+import MenuWorkoutProfile from "../../MenuWorkoutProfile";
 class LoginPage extends Component {
     constructor() {
         super()
@@ -55,7 +55,7 @@ class LoginPage extends Component {
     render() {
         const { username, password, submitted, loading, error } = this.state;
         if (this.state.redirectTo) {
-            return <Redirect to={{ pathname: { Profile } }} />
+            return <Redirect to={{ pathname: { MenuWorkoutProfile } }} />
         } else {
             // <Redirect to={{ pathname: "/Profile" }} />
         }
