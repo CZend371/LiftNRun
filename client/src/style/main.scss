@@ -33,7 +33,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
     vertical-align: baseline;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -65,7 +65,6 @@ footer, header, hgroup, menu, nav, section {
     margin-top: 20px;
     border-radius: 15px;
     background: $red;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .mainTitle{
     margin: auto;
@@ -75,7 +74,6 @@ footer, header, hgroup, menu, nav, section {
     text-align: center;
     border-radius: 15px;
     background: $red;
-    font-family: Impact, Charcoal, sans-serif;
 }
 .topBtn {
     width: 355px;
@@ -94,10 +92,10 @@ footer, header, hgroup, menu, nav, section {
     font-size: 50px;
 }
 .binaryBtn{
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     left:0;
 }
 .Num{
