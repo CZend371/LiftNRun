@@ -91,12 +91,12 @@ footer, header, hgroup, menu, nav, section {
     width: 90px;
     height: 80px;
     line-height:80px;
-    font-size: 60px;
+    font-size: 40px;
     background: $lightGray;
     color: $font-black;
     z-index: 100;
     margin-left: -30px;
-    border-radius: 0px 15px 0px 15px;
+    border-radius: 0px 15px 15px 0px;
 }
 .topBtn {
     position: relative;
