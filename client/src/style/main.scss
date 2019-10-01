@@ -282,8 +282,12 @@ input{
 .label{
     color: $font-white;
 }
-
-
+.weightForm{
+    display: block;
+}
+.weightFormHide{
+    display: none;
+}
 .flipBtn{
     background: $red;
     width: 100px;
@@ -293,8 +297,9 @@ input{
     left: 20px;
     z-index: 10;
     color: $font-white;
-    font-size: 36px;
-    line-height: 33px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
 }
 
 

@@ -40,6 +40,8 @@ export default class GymForm extends Component {
         document.getElementById("bodyMap1").classList.remove('bodyMapShow');
         document.getElementById("bodyMap2").classList.add('bodyMapHide');
         document.getElementById("bodyMap2").classList.remove('bodyMapShow');
+        document.getElementById("form").classList.remove('weightFormHide');
+        document.getElementById("form").classList.add('weightForm');
     }
     flipBodyPart = event => {
         var check = event.target.getAttribute('isfront');
@@ -60,8 +62,8 @@ export default class GymForm extends Component {
     updateBodyPart = event => {
         document.getElementById("bodyMap1").classList.add('bodyMapShow');
         document.getElementById("bodyMap1").classList.remove('bodyMapHide');
-        document.getElementById("bodyMap1").classList.add('bodyMapShow');
-        document.getElementById("bodyMap1").classList.remove('bodyMapHide');
+        document.getElementById("form").classList.add('weightFormHide');
+        document.getElementById("form").classList.remove('weightForm');
     }
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -123,7 +125,7 @@ export default class GymForm extends Component {
                     <div id="LEGS" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false">Go to Front</div>
                 </div>
-                <form id="form">
+                <form className="weightForm" id="form">
                     <div className="weightTag">Workout Type</div>
                     <NameInput
                         className="Name"
