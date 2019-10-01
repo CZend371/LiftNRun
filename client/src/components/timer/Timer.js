@@ -63,13 +63,13 @@ class Timer extends Component {
                 <div id="currentTime" className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
                 <div className="timerLoc">
                 {this.state.isRunning === false && this.state.timerTime === 0 && (
-                    <div type="button" className="bigBtn btn btn-success" id="start" onClick={this.handleStart}>Start</div>
+                    <div type="button" className="bigBtn  btn-success" id="start" onClick={this.handleStart}>Start</div>
                 )}
                 {this.state.isRunning === true && (
-                    <div type="button" className="bigBtn btn btn-secondary" id="stop" onClick={this.handleStop}>Stop</div>
+                    <div type="button" className="bigBtn  btn-secondary" id="stop" onClick={this.handleStop}>Stop</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <div type="button" className="smallBtn btn btn-success" id="resume" onClick={this.handleStart}>Resume</div>
+                    <div type="button" className="smallBtn  btn-success" id="resume" onClick={this.handleStart}>Resume</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
                     <div type="button" className="smallBtn btn-danger" id="reset" onClick={this.handleReset}>Reset</div>

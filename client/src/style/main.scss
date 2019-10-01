@@ -82,7 +82,7 @@ footer, header, hgroup, menu, nav, section {
     height: 530px;
     background: $red;
     color: $font-black;
-    padding-top:300px;
+    padding-top:50px;
     font-size: 50px;
 }
 .botBtn {
@@ -90,6 +90,8 @@ footer, header, hgroup, menu, nav, section {
     height: 262px;
     color: $font-white;
     background: $gray;
+    padding-top:50px;
+    font-size: 50px;
 }
 .binaryBtn{
     -webkit-transition: all 1s linear;
@@ -239,17 +241,17 @@ input{
     margin-top: 10px;
     text-align: center;
 }
-// .btn{
-//     width: 100px;
-//     height: 30px;
-//     color: $font-black;
-//     background: $lightGray;
-//     text-align: center;
-//     line-height: 30px;
-//     display: block;
-//     float: right;
-//     padding: 5px;
-// }
+.btn{
+    width: 100px;
+    height: 30px;
+    color: $font-black;
+    background: $lightGray;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    float: right;
+    padding: 5px;
+}
 
 .btn:hover{
     color: $font-white;
