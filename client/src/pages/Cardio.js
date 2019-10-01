@@ -54,7 +54,7 @@ export default class GymForm extends Component {
                 
                 <Timer></Timer>
                 <form id="form">
-                    <div className="bodypartSelect"
+                    <div className="WorkoutSelect"
                         name="workoutType"
                         onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
