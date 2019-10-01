@@ -36,14 +36,14 @@ export default class GymForm extends Component {
         document.getElementById("workoutMap").classList.add('workoutMapShow');
         document.getElementById("workoutMap").classList.remove('workoutMapHide');
     }
-    getTime = event => {
-        var name = event.target.getAttribute("name");
-        var timerDiv = document.getElementById('currentTime');
-        var timer = timerDiv.innerHTML;
-        this.setState({
-            [name]: timer
-        });
-    }
+    // getTime = event => {
+    //     var name = event.target.getAttribute("name");
+    //     var timerDiv = document.getElementById('currentTime');
+    //     var timer = timerDiv.innerHTML;
+    //     this.setState({
+    //         [name]: timer
+    //     });
+    // }
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
@@ -52,6 +52,14 @@ export default class GymForm extends Component {
     };
 
     render() {
+        document.getElementById("currentTime").addEventListener("change", function(){
+            document.getElementById("demo").innerHTML = "Hello World";
+            var timerDiv = document.getElementById('currentTime');
+            var time = timerDiv.innerHTML;
+            this.setState({
+                timer: time
+            });
+          });
         return (
             <div className="mobileWrapper">
                 <div id="workoutMap" className="workoutMapHide">
