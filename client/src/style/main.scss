@@ -88,14 +88,15 @@ footer, header, hgroup, menu, nav, section {
 }
 .midBtn {
     position: relative;
-    width: 80px;
+    width: 90px;
     height: 80px;
     line-height:80px;
-    font-size: 20px;
+    font-size: 60px;
     background: $lightGray;
     color: $font-black;
     z-index: 100;
     margin-left: -30px
+    border-radius: 0px 0px 15px 15px;
 }
 .topBtn {
     position: relative;
