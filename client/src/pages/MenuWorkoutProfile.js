@@ -7,7 +7,8 @@ class MenuWorkoutProfile extends Component {
         topTitle: "Work Out",
         botTitle: "Profile",
         topLink: "/MenuGymRun",
-        botLink: "/Profile"
+        botLink: "/Profile",
+        backLink: "/"
     };
     render() {
         return (

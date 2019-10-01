@@ -8,6 +8,7 @@ class MenuWeightCario extends Component {
         botTitle: "Cardio",
         topLink: "/Weight",
         botLink: "/Cardio"
+        backLink: "/MenuGymRun"
     };
     render() {
         return (
