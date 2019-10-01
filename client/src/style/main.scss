@@ -353,17 +353,17 @@ input{
     line-height: 50px;
     padding: 5px;
     font-size: 28px;
+    float: right;
 }
 
 .bigBtn{
-    width: 300px;
+    width: 360px;
     height: 50px;
     color: $font-white;
     background: $darkRed;
     text-align: center;
     line-height: 50px;
     display: block;
-    float: right;
     position: relative;
     left: -50%; /* or right 50% */
     padding: 5px;
