@@ -43,7 +43,7 @@ footer, header, hgroup, menu, nav, section {
 .mobileWrapper{
     width : 355px;
     height : 792px;
-    background:$gray;
+    // background:$gray;
     padding: 10px;
     margin: auto;
 }
@@ -205,6 +205,27 @@ margin-top: 10px;
     height: 500px;
     background: $gray;
 }
+#workout-history{
+    background: $red;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    color: $white;
+    padding: 10px;
+}
+#run-history{
+    background: $red;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    color: $white;
+    padding: 10px;
+
+}
 
 .workoutMapHide{
     display: none;
@@ -352,8 +373,8 @@ input{
     top: 430px;
     width: 160px;
     height: 200px;
+}
 
 #start, #resume, #stop{
     margin-right: 40%;
 }
-
