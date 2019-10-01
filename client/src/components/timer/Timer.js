@@ -60,22 +60,23 @@ class Timer extends Component {
         let hours = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
         return (
             <div className="timer-container">
-                <div className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
+                <div id="currentTime" className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
+                <div className="timerLoc">
                 {this.state.isRunning === false && this.state.timerTime === 0 && (
-                    <button type="button" className="btn btn-success" id="start" onClick={this.handleStart}>Start</button>
+                    <div type="button" className="bigBtn  btn-success" id="start" onClick={this.handleStart}>Start</div>
                 )}
                 {this.state.isRunning === true && (
-                    <button type="button" className="btn btn-secondary" id="stop" onClick={this.handleStop}>Stop</button>
+                    <div type="button" className="bigBtn  btn-secondary" id="stop" onClick={this.handleStop}>Stop</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="btn btn-success" id="resume" onClick={this.handleStart}>Resume</button>
+                    <div type="button" className="smallBtn  btn-success" id="resume" onClick={this.handleStart}>Resume</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="btn btn-danger" id="reset" onClick={this.handleReset}>Reset</button>
+                    <div type="button" className="smallBtn btn-danger" id="reset" onClick={this.handleReset}>Reset</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="btn btn-success" id="save" onClick={this.handleSave}>Save</button>
-                )}
+                    <div type="button" className="smallBtn btn-success" id="save" onClick={this.handleSave}>Save</div>
+                )}</div>
             </div>
         )
     }

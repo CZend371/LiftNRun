@@ -33,7 +33,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
     vertical-align: baseline;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -41,9 +41,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 .mobileWrapper{
-    width : 355px;
-    height : 792px;
-    // background:$gray;
+    width : 375px;
+    height : 812px;
+    background:$gray;
     padding: 10px;
     margin: auto;
 }
@@ -65,7 +65,6 @@ footer, header, hgroup, menu, nav, section {
     margin-top: 20px;
     border-radius: 15px;
     background: $red;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .mainTitle{
     margin: auto;
@@ -75,36 +74,30 @@ footer, header, hgroup, menu, nav, section {
     text-align: center;
     border-radius: 15px;
     background: $red;
-    font-family: Arial, Helvetica, sans-serif;
 }
 .topBtn {
-    width: 375px;
-    height: 540px;
+    width: 355px;
+    height: 530px;
     background: $red;
     color: $font-black;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 32px;
+    padding-top:40px;
+    padding-left:20px;
+    font-size: 50px;
 }
 .botBtn {
-    width: 375px;
-    height: 272px;
+    width: 355px;
+    height: 262px;
     color: $font-white;
     background: $gray;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-size: 32px;
-
+    padding-top:40px;
+    padding-left:20px;
+    font-size: 50px;
 }
 .binaryBtn{
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     left:0;
 }
 .Num{
@@ -175,9 +168,16 @@ footer, header, hgroup, menu, nav, section {
 }
 
 .bodyPartBtn {
+    background: $white;
+    opacity: 0;
+}
+
+.bodyPartBtn:hover {
     border-color: $red;
     border-style: solid;
-    border-width: 1px;
+    border-width: 5px;
+    background: $white;
+    opacity: 0.3;
 }
 
 .bodyMapHide{
@@ -200,64 +200,8 @@ footer, header, hgroup, menu, nav, section {
 	margin-top: 10px;
 }
 
-.workoutPartBtn{
-    width: 500px;
-    height: 500px;
-    background: $gray;
-}
-#profileGroup{
-    font-weight: bold;
-    font-size: 28px;
-    background: $red;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    color: $white;
-    padding: 10px;
-}
-
-#workout-history{
-    font-weight: bold;
-    font-size: 28px;
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    padding: 10px;
-}
-#workout-list{
-font-size: 20px;
-}
-
-#run-history{
-    font-weight: bold;
-    font-size: 28px;
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    padding: 10px;
-}
-
-#run-list{
-font-size: 20px;
-}
 
 
-.workoutMapHide{
-    display: none;
-}
-
-.workoutMapShow{
-    display: block;
-    width : 375px;
-    height : 812px;
-    background: $gray;
-}
 
 .historyGroupHide{
     display: none;
@@ -272,14 +216,6 @@ font-size: 20px;
 
 .display {
     border: 2px solid $red;
-    border-radius: 15px;
-    background: $red;
-    margin: 20px;
-    margin-left: 40%;
-    margin-right: 40%;
-    text-align: center;
-    color: white;
-    font-size:28px;
 }
 
 input{
@@ -303,7 +239,7 @@ input{
     line-height: 50px;
     float:left;
     margin-top: 10px;
-
+    text-align: center;
 }
 .btn{
     width: 100px;
@@ -331,11 +267,16 @@ input{
     color: $font-white;
     padding-top: 10px;
     padding-bottom: 10px;
-    text-align: center;
 }
 
 .label{
     color: $font-white;
+}
+.weightForm{
+    display: block;
+}
+.weightFormHide{
+    display: none;
 }
 .flipBtn{
     background: $red;
@@ -346,13 +287,18 @@ input{
     left: 20px;
     z-index: 10;
     color: $font-white;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+}
+.submitTag{
+    font-size: 36px;
 }
 
 
-
 .imageWrapper{
-    width : 355px;
-    height : 792px;
+    width : 375px;
+    height : 812px;
     background:$darkRed;
     margin-top: -10px;
     margin-left: -10px;
@@ -396,6 +342,73 @@ input{
     height: 200px;
 }
 
-#start, #resume, #stop{
-    margin-right: 40%;
+///timer
+.timerLoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallBtn{
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    color: $font-black;
+    background: $white;
+    text-align: center;
+    line-height: 50px;
+    padding: 5px;
+    font-size: 28px;
+}
+
+.bigBtn{
+    display: inline-block;
+    width: 360px;
+    height: 50px;
+    color: $font-white;
+    background: $darkRed;
+    text-align: center;
+    line-height: 50px;
+    padding: 5px;
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.workoutMapHide{
+    display: none;
+}
+
+.workoutMapShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    background: $gray;
+    margin-top:-20px;
+    margin-left:-10px;
+}
+
+.workoutPartBtn{
+    width: 300px;
+    height: 50px;
+    background: $red;
+    font-size: 36px;
+    line-height: 50px;
+    color: $white;
+    text-align: center;
+    margin: 10px;
+}
+
+.WorkoutSelect{
+    background: $red;
+    color: $font-white;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    float:left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
