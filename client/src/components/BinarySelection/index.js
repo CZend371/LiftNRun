@@ -35,8 +35,9 @@ export default class BinarySelection extends Component {
             <div className="mobileWrapper">
                 <a id="topLink" href={this.props.topLink}>
                     <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}
-                    <a id="midLink" href={this.props.backLink}>
+                    
                     <div id="midBuffer"></div>
+                    <a id="midLink" href={this.props.backLink}>
                     <div className="midBtn">Back</div></a>
                     </div></a>
                 <a id="botLink" href="#">
