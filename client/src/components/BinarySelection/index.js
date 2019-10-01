@@ -39,8 +39,6 @@ export default class BinarySelection extends Component {
                     <div id="midBuffer"></div>
                     <div className="midBtn" onClick={this.clickBot}></div></a>
                     </div></a>
-                <a id="midLink" href="#">
-                    <div className="midBtn" onClick={this.clickBot}></div></a>
                 <a id="botLink" href="#">
                     <div id="botBtn" className="botBtn binaryBtn" onClick={this.clickBot}>{this.props.botTitle}</div></a>
             </div>
