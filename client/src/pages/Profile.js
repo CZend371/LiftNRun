@@ -49,7 +49,7 @@ class Profile extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="mobileWrapper">
                 <div id="profileGroup">
                     <div id="profileName"><u>Name:</u> {this.state.name}</div>
                     <div id="profileIntro"><u>Bio:<br></br></u> {this.state.intro}</div>
