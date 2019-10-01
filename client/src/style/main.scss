@@ -75,7 +75,32 @@ footer, header, hgroup, menu, nav, section {
     border-radius: 15px;
     background: $red;
 }
+#midBuffer{
+    display:block;
+    height: 500px;
+    width: 355px;
+    margin-left: -30px;
+    margin-top: -110px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.midBtn {
+    position: relative;
+    width: 90px;
+    height: 80px;
+    line-height:80px;
+    font-size: 40px;
+    background: $lightGray;
+    color: $font-black;
+    z-index: 100;
+    margin-left: -30px;
+    border-radius: 0px 15px 15px 0px;
+}
 .topBtn {
+    position: relative;
+    z-index: 10;
     width: 355px;
     height: 530px;
     background: $red;
@@ -89,6 +114,7 @@ footer, header, hgroup, menu, nav, section {
     text-align: center;
 }
 .botBtn {
+    position: relative;
     width: 355px;
     height: 262px;
     color: $font-white;
@@ -100,6 +126,7 @@ footer, header, hgroup, menu, nav, section {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    opacity: 1;
 }
 .binaryBtn{
     -webkit-transition: all 0.3s linear;
