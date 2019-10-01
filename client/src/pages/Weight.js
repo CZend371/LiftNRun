@@ -169,7 +169,7 @@ export default class GymForm extends Component {
                     />
                     <div name="set" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <br/>
-                    <div className="weightTag">timer</div>
+                    <div className="weightTag">Rest Time</div>
                     <NameInput
                         className="Name"
                         value={this.state.timer}
@@ -177,7 +177,7 @@ export default class GymForm extends Component {
                         name="timer"
                     />
                     <br/>
-                    <FormBtn onClick={this.handleFormSubmit}>
+                    <FormBtn className="submitTag" onClick={this.handleFormSubmit}>
                         Submit
                     </FormBtn>
                 </form>
