@@ -21,12 +21,12 @@ export default class BinarySelection extends Component {
     }
     clickBot = event => {
         if (this.state.bot === false){
-
+            event.preventDefault();
             document.getElementById("topLink").href = "#";
             document.getElementById("botLink").href = this.props.botLink;
-            this.setState({ top: false, bot: true });
             document.getElementById("topBtn").style.height = "262px";
             document.getElementById("botBtn").style.height = "530px";
+            this.setState({ top: false, bot: true });
         }
     }
     render() {
