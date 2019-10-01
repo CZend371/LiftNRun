@@ -14,7 +14,7 @@ export default class BinarySelection extends Component {
             document.getElementById("botLink").href = "#";
             document.getElementById("topLink").href = this.props.topLink;
             document.getElementById("topBtn").style.height = "530px";
-            document.getElementById("midBuffer").style.height = "480px";
+            document.getElementById("midBuffer").style.height = "500px";
             document.getElementById("botBtn").style.height = "262px";
             this.setState({ top: true, bot: false });
         }
@@ -25,7 +25,7 @@ export default class BinarySelection extends Component {
             document.getElementById("topLink").href = "#";
             document.getElementById("botLink").href = this.props.botLink;
             document.getElementById("topBtn").style.height = "262px";
-            document.getElementById("midBuffer").style.height = "212px";
+            document.getElementById("midBuffer").style.height = "242px";
             document.getElementById("botBtn").style.height = "530px";
             this.setState({ top: false, bot: true });
         }
