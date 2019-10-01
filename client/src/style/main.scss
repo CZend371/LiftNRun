@@ -78,6 +78,8 @@ footer, header, hgroup, menu, nav, section {
 #midBuffer{
     height: 480px;
     width: 355px;
+    margin-left: -30;
+    margin-top: -120;
     background: green;
 }
 .midBtn {
@@ -85,6 +87,7 @@ footer, header, hgroup, menu, nav, section {
     height: 50px;
     background: $lightGray;
     color: $font-black;
+    z-index: 10;
 }
 .topBtn {
     width: 355px;
