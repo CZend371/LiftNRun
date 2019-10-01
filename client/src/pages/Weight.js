@@ -159,7 +159,7 @@ export default class GymForm extends Component {
                     />
                     <div name="rep" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <br/>        
-                    <div className="weightTag">Sets</div>
+                    <div className="weightTag">Sets</div>r
                     <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -185,4 +185,3 @@ export default class GymForm extends Component {
         )
     }
 }
-

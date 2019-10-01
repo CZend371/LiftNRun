@@ -1,9 +1,9 @@
 // import { userService } from '../services';
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import axios from 'axios';
+import { Route, Link } from 'react-router-dom';
+// import axios from 'axios';
 import Profile from "../../Profile";
-
 class LoginPage extends Component {
     constructor() {
         super()
@@ -15,43 +15,43 @@ class LoginPage extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
-
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
-
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         event.preventDefault()
         console.log('handleSubmit')
 
-        axios
-            .post('/user/login', {
-                username: this.state.username,
-                password: this.state.password
-            })
-            .then(response => {
-                console.log('login response: ')
-                console.log(response)
-                if (response.status === 200) {
-                    // update App.js state
-                    this.props.updateUser({
-                        loggedIn: true,
-                        username: response.data.username
-                    })
-                    // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/Profile'
-                    })
-                }
-            }).catch(error => {
-                console.log('login error: ')
-                console.log(error);
+        // <Link to="/Profile" className="btn btn-link text-secondary">
+        // <span className="text-secondary">home</span>
+        // </Link>
 
-            })
+        // axios
+        //     .post('/user/login', {
+        //         username: this.state.username,
+        //         password: this.state.password
+        //     })
+        //     .then(response => {
+        //         console.log('login response: ')
+        //         console.log(response)
+        //         if (response.status === 200) {
+        //             // update App.js state
+        //             this.props.updateUser({
+        //                 loggedIn: true,
+        //                 username: response.data.username
+        //             })
+        //             // update the state to redirect to home
+        //             this.setState({
+        //                 redirectTo: '/Profile'
+        //             })
+        //         }
+        //     }).catch(error => {
+        //         console.log('login error: ')
+        //         console.log(error);
+        //     })
     }
-
     render() {
         const { username, password, submitted, loading, error } = this.state;
         if (this.state.redirectTo) {
@@ -82,7 +82,7 @@ class LoginPage extends Component {
                         }
                     </div>
                     <div className="form-group">
-                        <button className="btn btn-primary" disabled={loading}>Login</button>
+                        <Link to="/Profile"> <button className="btn btn-primary" disabled={loading}>Login</button></Link>
                         {loading &&
                             <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                         }
@@ -95,5 +95,4 @@ class LoginPage extends Component {
         );
     };
 };
-
 export default LoginPage;

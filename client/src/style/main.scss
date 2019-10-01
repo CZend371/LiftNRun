@@ -83,6 +83,10 @@ footer, header, hgroup, menu, nav, section {
     padding-top:40px;
     padding-left:20px;
     font-size: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 .botBtn {
     width: 355px;
@@ -92,6 +96,10 @@ footer, header, hgroup, menu, nav, section {
     padding-top:40px;
     padding-left:20px;
     font-size: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 .binaryBtn{
     -webkit-transition: all 0.3s linear;
@@ -200,6 +208,57 @@ footer, header, hgroup, menu, nav, section {
 	margin-top: 10px;
 }
 
+.weightTag{
+    color: $font-white;
+    clear: both;
+    font-size: 36px;
+    height: 40px;
+    line-height: 40px;
+	margin-top: 10px;
+}
+#profileGroup{
+    font-weight: bold;
+    font-size: 28px;
+    background: $red;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    color: $white;
+    padding: 10px;
+}
+
+#workout-history{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    padding: 10px;
+}
+#workout-list{
+font-size: 20px;
+}
+
+#run-history{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    padding: 10px;
+}
+
+#run-list{
+font-size: 20px;
+}
+
+
 
 
 
@@ -216,6 +275,14 @@ footer, header, hgroup, menu, nav, section {
 
 .display {
     border: 2px solid $red;
+    border-radius: 15px;
+    background: $red;
+    margin: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: white;
+    font-size:28px;
 }
 
 input{
@@ -267,11 +334,13 @@ input{
     color: $font-white;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .label{
     color: $font-white;
 }
+
 .weightForm{
     display: block;
 }
@@ -294,7 +363,6 @@ input{
 .submitTag{
     font-size: 36px;
 }
-
 
 .imageWrapper{
     width : 375px;
@@ -412,3 +480,7 @@ input{
     margin-bottom: 10px;
     text-align: center;
 }
+#start, #resume, #stop{
+    margin-right: 40%;
+}
+
