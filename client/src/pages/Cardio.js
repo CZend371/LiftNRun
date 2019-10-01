@@ -7,7 +7,7 @@ import "../style/main.scss";
 export default class GymForm extends Component {
     state = {
         workoutType: "Pick Equipment",
-        timer: "Record Time",
+        timer: "00:00:00:00",
         name: ""
     };
     handleFormSubmit = event => {
@@ -55,9 +55,9 @@ export default class GymForm extends Component {
         return (
             <div className="mobileWrapper">
                 <div id="workoutMap" className="workoutMapHide">
-                    <div id="elliptical" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Elliptical</div>
-                    <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}>Treadmill</div>
-                    <div id="stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Stairmaster</div>
+                    <div id="Elliptical" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Elliptical</div>
+                    <div id="Treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}>Treadmill</div>
+                    <div id="Stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Stairmaster</div>
                 </div>
 
                 <Timer></Timer>
@@ -66,7 +66,7 @@ export default class GymForm extends Component {
                         name="workoutType"
                         onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
-                    <div className="weightTag">Timer</div>
+                    <div className="weightTag">Record Time</div>
                     <div className="WorkoutSelect"
                         name="timer"
                         onClick={this.getTime}>{this.state.timer}
