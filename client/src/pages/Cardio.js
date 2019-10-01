@@ -29,7 +29,7 @@ export default class GymForm extends Component {
             [name]: id
         });
         document.getElementById("workoutMap").classList.add('workoutMapHide ');
-        document.getElementById("workoutMap ").classList.remove('workoutMapShow');
+        document.getElementById("workoutMap").classList.remove('workoutMapShow');
     }
     updateWorkoutPart = event => {
         console.log("clicked");
@@ -58,13 +58,13 @@ export default class GymForm extends Component {
                         name="workoutType"
                         onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
-                    <p>timer</p>
+                    <div className="weightTag">timer</div>
                     <NameInput
                         value={this.state.timer}
                         onChange={this.handleInputChange}
                         name="timer"
                     />
-                    <FormBtn onClick={this.handleFormSubmit}>
+                    <FormBtn className="submitTag" onClick={this.handleFormSubmit}>
                         Submit
                 </FormBtn>
                 </form>
