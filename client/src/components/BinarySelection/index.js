@@ -22,8 +22,7 @@ export default class BinarySelection extends Component {
     clickBot = event => {
         if (this.state.bot === false){
 
-            var a = document.getElementById('topLink');
-            a.href = "#";
+            document.getElementById("topLink").href = "#";
             document.getElementById("botBtn").href = this.props.botLink;
             this.setState({ top: false, bot: true });
             document.getElementById("topBtn").style.height = "262px";
