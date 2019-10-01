@@ -33,8 +33,8 @@ export default class GymForm extends Component {
     }
     updateWorkoutPart = event => {
         console.log("clicked");
-        document.getElementById("workoutMap").classList.add('bodyMapShow');
-        document.getElementById("workoutMap").classList.remove('bodyMapHide');
+        document.getElementById("workoutMap").classList.add('workoutMapShow');
+        document.getElementById("workoutMap").classList.remove('workoutMapHide');
     }
     handleInputChange = event => {
         const { name, value } = event.target;
