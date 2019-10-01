@@ -19,6 +19,10 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/liftnrun",
   { useNewUrlParser: true },
   { useUnifiedTopology: true });
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("MongoDB connection established");
+})
 
 // Start the API server
 app.listen(PORT, function () {
