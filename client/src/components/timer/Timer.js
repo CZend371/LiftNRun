@@ -62,19 +62,19 @@ class Timer extends Component {
             <div className="timer-container">
                 <div className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
                 {this.state.isRunning === false && this.state.timerTime === 0 && (
-                    <button type="button" className="bigBtn btn btn-success" id="start" onClick={this.handleStart}>Start</button>
+                    <div type="button" className="bigBtn btn btn-success" id="start" onClick={this.handleStart}>Start</div>
                 )}
                 {this.state.isRunning === true && (
-                    <button type="button" className="bigBtn btn btn-secondary" id="stop" onClick={this.handleStop}>Stop</button>
+                    <div type="button" className="bigBtn btn btn-secondary" id="stop" onClick={this.handleStop}>Stop</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="smallBtn btn btn-success" id="resume" onClick={this.handleStart}>Resume</button>
+                    <div type="button" className="smallBtn btn btn-success" id="resume" onClick={this.handleStart}>Resume</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="smallBtn btn-danger" id="reset" onClick={this.handleReset}>Reset</button>
+                    <div type="button" className="smallBtn btn-danger" id="reset" onClick={this.handleReset}>Reset</div>
                 )}
                 {this.state.isRunning === false && this.state.timerTime > 0 && (
-                    <button type="button" className="smallBtn btn-success" id="save" onClick={this.handleSave}>Save</button>
+                    <div type="button" className="smallBtn btn-success" id="save" onClick={this.handleSave}>Save</div>
                 )}
             </div>
         )
