@@ -56,7 +56,7 @@ export default class GymForm extends Component {
                 <form id="form">
                     <div className="bodypartSelect"
                         name="workoutType"
-                        onClick={this.updateworkoutPart}>{this.state.workoutType}
+                        onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
                     <p>timer</p>
                     <NameInput

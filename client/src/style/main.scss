@@ -339,9 +339,14 @@ input{
 }
 
 ///timer
-
+.timerLoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .smallBtn{
+    display: inline-block;
     width: 120px;
     height: 50px;
     color: $font-black;
@@ -351,9 +356,11 @@ input{
     padding: 5px;
     font-size: 28px;
     margin: 10px;
+    float: 
 }
 
 .bigBtn{
+    display: inline-block;
     width: 360px;
     height: 50px;
     color: $font-white;
