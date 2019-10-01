@@ -23,7 +23,7 @@ export default class BinarySelection extends Component {
         if (this.state.bot === false){
 
             document.getElementById("topLink").href = "#";
-            document.getElementById("botBtn").href = this.props.botLink;
+            document.getElementById("botLink").href = this.props.botLink;
             this.setState({ top: false, bot: true });
             document.getElementById("topBtn").style.height = "262px";
             document.getElementById("botBtn").style.height = "530px";
