@@ -40,6 +40,8 @@ export default class GymForm extends Component {
         document.getElementById("bodyMap1").classList.remove('bodyMapShow');
         document.getElementById("bodyMap2").classList.add('bodyMapHide');
         document.getElementById("bodyMap2").classList.remove('bodyMapShow');
+        document.getElementById("form").classList.remove('weightFormHide');
+        document.getElementById("form").classList.add('weightForm');
     }
     flipBodyPart = event => {
         var check = event.target.getAttribute('isfront');
@@ -60,8 +62,8 @@ export default class GymForm extends Component {
     updateBodyPart = event => {
         document.getElementById("bodyMap1").classList.add('bodyMapShow');
         document.getElementById("bodyMap1").classList.remove('bodyMapHide');
-        document.getElementById("bodyMap1").classList.add('bodyMapShow');
-        document.getElementById("bodyMap1").classList.remove('bodyMapHide');
+        document.getElementById("form").classList.add('weightFormHide');
+        document.getElementById("form").classList.remove('weightForm');
     }
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -109,35 +111,35 @@ export default class GymForm extends Component {
         return (
             <div className="mobileWrapper">
                 <div id="bodyMap1" className="bodyMapHide">
-                    <img className="imageWrapper" src={bodyImage1} />
-                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="chest" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="abs" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <img className="imageWrapper" src={bodyImage1} alt="body" />
+                    <div id="ARM" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="CHEST" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="ABS" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="LEGS" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true">Go to Back</div>
-                </div>                
+                </div>
                 <div id="bodyMap2" className="bodyMapHide">
-                    <img className="imageWrapper" src={bodyImage2} />
-                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="back" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <img className="imageWrapper" src={bodyImage2} alt="body" />
+                    <div id="ARM" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="CHEST" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="LEGS" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false">Go to Front</div>
                 </div>
-                <form id="form">
-                    <div className="weightTag">workoutType</div>
+                <form className="weightForm" id="form">
+                    <div className="weightTag">Workout Type</div>
                     <NameInput
                         className="Name"
                         value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
                     />
-                    <br/>
+                    <br />
                     <div className="bodypartSelect"
                         value=""
                         name="bodypart"
                         onClick={this.updateBodyPart}>{this.state.bodypart}
                     </div>
-                    <div className="weightTag">weight</div>
+                    <div className="weightTag">Weight</div>
                     <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -146,8 +148,8 @@ export default class GymForm extends Component {
                         id="weight"
                     />
                     <div name="weight" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
-                    <br/>
-                    <div className="weightTag">rep</div>
+                    <br />
+                    <div className="weightTag">Reps</div>
                     <div name="rep" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -156,8 +158,8 @@ export default class GymForm extends Component {
                         id="rep"
                     />
                     <div name="rep" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
-                    <br/>        
-                    <div className="weightTag">Set</div>
+                    <br />
+                    <div className="weightTag">Sets</div>r
                     <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -166,16 +168,16 @@ export default class GymForm extends Component {
                         id="set"
                     />
                     <div name="set" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
-                    <br/>
-                    <div className="weightTag">timer</div>
+                    <br />
+                    <div className="weightTag">Rest Time</div>
                     <NameInput
                         className="Name"
                         value={this.state.timer}
                         onChange={this.handleInputChange}
                         name="timer"
                     />
-                    <br/>
-                    <FormBtn onClick={this.handleFormSubmit}>
+                    <br />
+                    <FormBtn className="submitTag" onClick={this.handleFormSubmit}>
                         Submit
                     </FormBtn>
                 </form>
@@ -183,5 +185,3 @@ export default class GymForm extends Component {
         )
     }
 }
-
-

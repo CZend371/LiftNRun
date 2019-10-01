@@ -38,11 +38,11 @@ export default class History extends Component {
         return (
             <div>
                 {this.generateJSX()}
-                <div className="historyTitle" onclick={this.ShowHistory}>
+                <div className="historyTitle" onClick={this.ShowHistory}>
                     {this.props.date}{this.props.type}
                 </div>
                 <div className="history" id={this.props.id}>
-                    <div className="hideHistory" onclick={this.HideHistory}>
+                    <div className="hideHistory" onClick={this.HideHistory}>
                         Exit</div>
                 </div>
             </div>
