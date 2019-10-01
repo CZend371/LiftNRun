@@ -20,7 +20,7 @@ export default class BinarySelection extends Component {
     }
     clickBot = event => {
         if (this.state.bot === true) {
-            var a = document.getElementById('botBtn');
+            var a = document.getElementById('botLink');
             a.href = this.props.botLink;
         } else {
             this.setState({ top: false, bot: true });
@@ -33,7 +33,7 @@ export default class BinarySelection extends Component {
             <div className="mobileWrapper">
                 <a id="topLink" href={this.props.topLink}>
                     <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}</div></a>
-                <a id="bopLink" href="#">
+                <a id="botLink" href="#">
                     <div id="botBtn" className="botBtn binaryBtn" onClick={this.clickBot}>{this.props.botTitle}</div></a>
             </div>
         )

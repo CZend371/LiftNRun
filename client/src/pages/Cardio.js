@@ -66,11 +66,11 @@ export default class GymForm extends Component {
                         name="workoutType"
                         onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
-                    <div className="weightTag">Record Time</div>
+                    {/* <div className="weightTag">Record Time</div>
                     <div className="WorkoutSelect"
                         name="timer"
                         onClick={this.getTime}>{this.state.timer}
-                    </div>
+                    </div> */}
                     <FormBtn className="submitTag" onClick={this.handleFormSubmit}>
                         Submit
                 </FormBtn>
