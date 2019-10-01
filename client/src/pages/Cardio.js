@@ -52,14 +52,6 @@ export default class GymForm extends Component {
     };
 
     render() {
-        document.getElementById("currentTime").addEventListener("change", function(){
-            document.getElementById("demo").innerHTML = "Hello World";
-            var timerDiv = document.getElementById('currentTime');
-            var time = timerDiv.innerHTML;
-            this.setState({
-                timer: time
-            });
-          });
         return (
             <div className="mobileWrapper">
                 <div id="workoutMap" className="workoutMapHide">
@@ -74,16 +66,11 @@ export default class GymForm extends Component {
                         name="workoutType"
                         onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
+                    <div className="weightTag">Timer</div>
                     <div className="WorkoutSelect"
                         name="timer"
                         onClick={this.getTime}>{this.state.timer}
                     </div>
-                    <div className="weightTag">Timer</div>
-                    <NameInput
-                        value={this.state.timer}
-                        onChange={this.handleInputChange}
-                        name="timer"
-                    />
                     <FormBtn className="submitTag" onClick={this.handleFormSubmit}>
                         Submit
                 </FormBtn>
