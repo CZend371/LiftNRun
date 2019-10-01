@@ -51,8 +51,8 @@ export default class GymForm extends Component {
                     <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}>Treadmill</div>
                     <div id="stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Stairmaster</div>
                 </div>
-                <div className="timerLoc">
-                <Timer></Timer></div>
+                
+                <Timer></Timer>
                 <form id="form">
                     <div className="bodypartSelect"
                         name="workoutType"
