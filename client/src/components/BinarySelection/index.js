@@ -36,7 +36,7 @@ export default class BinarySelection extends Component {
                 <a id="topLink" href={this.props.topLink}>
                     <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}
                     <a id="midLink" href={this.props.backLink}>
-                    <div id="midBuffer binaryBtn"></div>
+                    <div id="midBuffer"></div>
                     <div className="midBtn">Back</div></a>
                     </div></a>
                 <a id="botLink" href="#">
