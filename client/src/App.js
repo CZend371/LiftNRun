@@ -8,7 +8,7 @@ import MenuWeightCardio from "./pages/MenuWeightCardio";
 import Weight from "./pages/Weight";
 import Run from "./pages/Run/Run";
 import Navbar from "./pages/Login/LoginPage/NavBar";
-import Signup from "./pages/Login/LoginPage/SignUp";
+// import Signup from "./pages/Login/LoginPage/SignUp";
 import axios from "axios";
 import Cardio from "./pages/Cardio";
 import Profile from "./pages/Profile";

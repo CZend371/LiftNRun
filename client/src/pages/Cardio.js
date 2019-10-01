@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NumbericInput, NameInput, FormBtn } from "../components/Form";
+import { FormBtn } from "../components/Form";
 import Timer from "../components/timer/Timer";
 import API from "../util/API";
 import "../style/main.scss";
