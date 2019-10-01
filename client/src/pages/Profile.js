@@ -51,24 +51,24 @@ class Profile extends Component {
         return (
             <div>
                 <div id="profileGroup">
-                    <div id="profileName">Name: {this.state.name}</div>
-                    <div id="profileIntro">Intro: {this.state.intro}</div>
-                    <div id="profileLocation">Location: {this.state.location}</div>
+                    <div id="profileName"><u>Name:</u> {this.state.name}</div>
+                    <div id="profileIntro"><u>Bio:<br></br></u> {this.state.intro}</div>
+                    <div id="profileLocation"><u>Location:</u> {this.state.location}</div>
                     <div className="container">
-                        <div id="workout-history">Previous Workouts
-                            <ul>
-                                <ul>workoutType: {this.state.savedWorkout[0].workoutType},</ul>
-                                <ul>bodypart: {this.state.savedWorkout[0].bodypart},</ul>
-                                <ul>sets: {this.state.savedWorkout[0].sets},</ul>
-                                <ul>reps: {this.state.savedWorkout[0].reps},</ul>
-                                <ul>weight: {this.state.savedWorkout[0].weight},</ul>
-                                <ul>restTime: {this.state.savedWorkout[0].restTime}</ul>
+                        <div id="workout-history"><u>Previous Workouts</u>
+                            <ul id="workout-list">
+                                <ul>Workout Type: {this.state.savedWorkout[0].workoutType},</ul>
+                                <ul>Body part: {this.state.savedWorkout[0].bodypart},</ul>
+                                <ul>Sets: {this.state.savedWorkout[0].sets},</ul>
+                                <ul>Reps: {this.state.savedWorkout[0].reps},</ul>
+                                <ul>Weight: {this.state.savedWorkout[0].weight},</ul>
+                                <ul>Rest Time: {this.state.savedWorkout[0].restTime}</ul>
                             </ul>
                         </div>
-                        <div id="run-history">Previous Runs
-                            <ul>
-                                <ul>time: {this.state.savedRun[0].time},</ul>
-                                <ul>distance: {this.state.savedRun[0].distance}</ul>
+                        <div id="run-history"><u>Previous Runs</u>
+                            <ul id="run-list">
+                                <ul>Time: {this.state.savedRun[0].time},</ul>
+                                <ul>Distance: {this.state.savedRun[0].distance}</ul>
                             </ul>
                         </div>
                     </div>

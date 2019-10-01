@@ -131,7 +131,7 @@ footer, header, hgroup, menu, nav, section {
     height: 50px;
     background: $gray;
     color: $font-white;
-margin-top: 10px;
+    margin-top: 10px;
 	float:left
 }
 
@@ -205,9 +205,11 @@ margin-top: 10px;
     height: 500px;
     background: $gray;
 }
-#workout-history{
+#profileGroup{
+    font-weight: bold;
+    font-size: 28px;
     background: $red;
-    text-align: left;
+    text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -215,17 +217,36 @@ margin-top: 10px;
     color: $white;
     padding: 10px;
 }
-#run-history{
-    background: $red;
-    text-align: left;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    color: $white;
-    padding: 10px;
 
+#workout-history{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    padding: 10px;
 }
+#workout-list{
+font-size: 20px;
+}
+
+#run-history{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    padding: 10px;
+}
+
+#run-list{
+font-size: 20px;
+}
+
 
 .workoutMapHide{
     display: none;
