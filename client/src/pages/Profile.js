@@ -23,11 +23,11 @@ class Profile extends Component {
         }]
     };
     componentDidMount() {
-        API.getWorkout()
-            .then(res => this.setState({
-                savedWorkout: res.data
-            }))
-            .catch(err => console.log(err))
+        // API.getWorkout()
+        //     .then(res => this.setState({
+        //         savedWorkout: res.data
+        //     }))
+        //     .catch(err => console.log(err))
         API.getRun()
             .then(res => this.setState({
                 savedRun: res.data

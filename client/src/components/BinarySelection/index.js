@@ -19,7 +19,7 @@ export default class BinarySelection extends Component {
         }
     }
     clickBot = event => {
-        if (this.state.bot === false){
+        if (this.state.bot === false) {
             event.preventDefault();
             document.getElementById("topLink").href = "#";
             document.getElementById("botLink").href = this.props.botLink;
