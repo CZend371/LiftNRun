@@ -36,14 +36,14 @@ export default class GymForm extends Component {
         document.getElementById("workoutMap").classList.add('workoutMapShow');
         document.getElementById("workoutMap").classList.remove('workoutMapHide');
     }
-    // getTime = event => {
-    //     var name = event.target.getAttribute("name");
-    //     var timerDiv = document.getElementById('currentTime');
-    //     var timer = timerDiv.innerHTML;
-    //     this.setState({
-    //         [name]: timer
-    //     });
-    // }
+    getTime = event => {
+        var name = event.target.getAttribute("name");
+        var timerDiv = document.getElementById('currentTime');
+        var timer = timerDiv.innerHTML;
+        this.setState({
+            [name]: timer
+        });
+    }
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
