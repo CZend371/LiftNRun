@@ -17,7 +17,7 @@ class Entrance extends Component {
                 <br />
                 <br />
                 <a href="/login">
-                <div class="mainTitle" >
+                <div class="mainTitleEntrance" >
                     Lift N Run </div>
                 </a>
             </div>

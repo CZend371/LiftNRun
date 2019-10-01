@@ -11,7 +11,7 @@ class MenuWeightCario extends Component {
     };
     render() {
         return (
-            <BinarySelection {...this.state} />
+            <BinarySelection {...this.state}/>
         );
     }
 }
