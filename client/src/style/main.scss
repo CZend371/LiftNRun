@@ -339,10 +339,7 @@ input{
 }
 
 ///timer
-// .timerLoc{
-//     position: absolute;
-//     left: 110px;
-// }
+
 
 .smallBtn{
     width: 120px;
@@ -353,8 +350,7 @@ input{
     line-height: 50px;
     padding: 5px;
     font-size: 28px;
-    display: flex;
-    align-items: center;
+    margin: 10px;
 }
 
 .bigBtn{
@@ -364,10 +360,11 @@ input{
     background: $darkRed;
     text-align: center;
     line-height: 50px;
-    display: flex;
-    align-items: center;
     padding: 5px;
     font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .workoutMapHide{
