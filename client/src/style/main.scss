@@ -43,7 +43,7 @@ footer, header, hgroup, menu, nav, section {
 .mobileWrapper{
     width : 355px;
     height : 792px;
-    background:$gray;
+    // background:$gray;
     padding: 10px;
     margin: auto;
 }
@@ -82,12 +82,23 @@ footer, header, hgroup, menu, nav, section {
     height: 540px;
     background: $red;
     color: $font-black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
 }
 .botBtn {
     width: 375px;
     height: 272px;
     color: $font-white;
     background: $gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
+
 }
 .binaryBtn{
     -webkit-transition: all 1s linear;
@@ -120,7 +131,7 @@ footer, header, hgroup, menu, nav, section {
     height: 50px;
     background: $gray;
     color: $font-white;
-margin-top: 10px;
+    margin-top: 10px;
 	float:left
 }
 
@@ -194,6 +205,48 @@ margin-top: 10px;
     height: 500px;
     background: $gray;
 }
+#profileGroup{
+    font-weight: bold;
+    font-size: 28px;
+    background: $red;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    color: $white;
+    padding: 10px;
+}
+
+#workout-history{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    padding: 10px;
+}
+#workout-list{
+font-size: 20px;
+}
+
+#run-history{
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+    padding: 10px;
+}
+
+#run-list{
+font-size: 20px;
+}
+
 
 .workoutMapHide{
     display: none;
@@ -278,6 +331,7 @@ input{
     color: $font-white;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .label{
@@ -340,8 +394,8 @@ input{
     top: 430px;
     width: 160px;
     height: 200px;
+}
 
 #start, #resume, #stop{
     margin-right: 40%;
 }
-
