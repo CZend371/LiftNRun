@@ -50,10 +50,10 @@ export default class GymForm extends Component {
                     <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}>Treadmill</div>
                     <div id="stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Stairmaster</div>
                 </div>
-                <Timer></Timer>
+                <div className="timerLoc">
+                <Timer></Timer></div>
                 <form id="form">
-                    <div name="weightTag">Workout Type</div>
-                    <div className="workoutInput"
+                    <div className="bodypartSelect"
                         name="workoutType"
                         onClick={this.updateworkoutPart}>{this.state.workoutType}
                     </div>
