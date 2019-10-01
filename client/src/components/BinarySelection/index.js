@@ -9,23 +9,25 @@ export default class BinarySelection extends Component {
         bot: false,
     }
     clickTop = event => {
-        if (this.state.top === true) {
+        if (this.state.top === false) {
             var a = document.getElementById('topLink');
             a.href = this.props.topLink;
-        } else {
+            var b = document.getElementById('botLink');
+            b.href = "#";
             this.setState({ top: true, bot: false });
-            document.getElementById("topBtn").style.height = "812px";
-            document.getElementById("botBtn").style.height = "162px";
+            document.getElementById("topBtn").style.height = "530px";
+            document.getElementById("botBtn").style.height = "262px";
         }
     }
     clickBot = event => {
-        if (this.state.bot === true) {
-            var a = document.getElementById('botLink');
-            a.href = this.props.botLink;
-        } else {
+        if (this.state.bot === false){
+            var b = document.getElementById('botLink');
+            b.href = this.props.botLink;
+            var a = document.getElementById('topLink');
+            a.href = "#";
             this.setState({ top: false, bot: true });
-            document.getElementById("topBtn").style.height = "812px";
-            document.getElementById("botBtn").style.height = "162px";
+            document.getElementById("topBtn").style.height = "262px";
+            document.getElementById("botBtn").style.height = "530px";
         }
     }
     render() {
