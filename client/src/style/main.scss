@@ -216,18 +216,7 @@ footer, header, hgroup, menu, nav, section {
     line-height: 40px;
 	margin-top: 10px;
 }
-#profileGroup{
-    font-weight: bold;
-    font-size: 28px;
-    background: $red;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 50px;
-    color: $white;
-    padding: 10px;
-}
+
 
 #workout-history{
     font-weight: bold;
@@ -482,4 +471,33 @@ input{
 }
 
 
-///
+///profile
+
+#profileGroup{
+    font-size: 28px;
+    background: $lightGray;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px;
+    color: $font-black;
+    padding: 10px;
+}
+
+#workout-list{
+    font-size: 20px;
+    }
+    
+    #run-history{
+        font-size: 28px;
+        text-align: left;
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    #run-list{
+    font-size: 20px;
+    }
+    
