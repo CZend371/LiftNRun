@@ -21,7 +21,7 @@ class LoginPage extends Component {
         })
     }
     handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         console.log('handleSubmit')
 
         // <Link to="/Profile" className="btn btn-link text-secondary">
@@ -66,6 +66,7 @@ class LoginPage extends Component {
                     Password: test
                 </div>
                 <h2>Login</h2>
+                <hr/>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                         <label htmlFor="username">Username</label>
