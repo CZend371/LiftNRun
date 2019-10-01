@@ -80,7 +80,8 @@ footer, header, hgroup, menu, nav, section {
     height: 530px;
     background: $red;
     color: $font-black;
-    padding-top:50px;
+    padding-top:40px;
+    padding-left:20px;
     font-size: 50px;
 }
 .botBtn {
@@ -88,7 +89,8 @@ footer, header, hgroup, menu, nav, section {
     height: 262px;
     color: $font-white;
     background: $gray;
-    padding-top:50px;
+    padding-top:40px;
+    padding-left:20px;
     font-size: 50px;
 }
 .binaryBtn{
@@ -122,7 +124,7 @@ footer, header, hgroup, menu, nav, section {
     height: 50px;
     background: $gray;
     color: $font-white;
-margin-top: 10px;
+    margin-top: 10px;
 	float:left
 }
 
