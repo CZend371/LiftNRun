@@ -1,13 +1,19 @@
 
 //backgrd color
-$red:rgb(190, 30, 38);  
+$red:rgb(160, 55, 55);
+$darkRed:rgb(91, 47, 47);   
 $gray: rgb(63, 63, 63);
+$lightGray: rgb(141, 121, 121);
 $white:  rgb(255, 249, 223);
 //for grey backgrd
 $font-white: rgb(216, 216, 216);
 //for red backgrd
 $font-black: rgb(26, 22, 22);
 
+a {text-decoration: none;} 
+legend.green-color a:hover{
+    text-decoration: none;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,72 +32,119 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
-.topBtn {
-    width: 1125px;
-    height: 812px;
+.mobileWrapper{
+    width : 355px;
+    height : 792px;
+    background:$gray;
+    padding: 10px;
+    margin: auto;
+}
+.logo{
+    width : 300px;
+    height : 300px;
+    top: 30px;
+    position: relative;
+  	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
+}
+.mainTitleEntrance{
+    margin: auto;
+    font-size: 60px;
+    font-weight: 200;
+    color: $font-white;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 15px;
     background: $red;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-    left:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainTitle{
+    margin: auto;
+    font-size: 48px;
+    font-weight: 200;
+    color: $font-white;
+    text-align: center;
+    border-radius: 15px;
+    background: $red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.topBtn {
+    width: 375px;
+    height: 540px;
+    background: $red;
+    color: $font-black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
 }
 .botBtn {
-    width: 1125px;
-    height: 1624px;
+    width: 375px;
+    height: 272px;
     color: $font-white;
     background: $gray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
+
+}
+.binaryBtn{
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
     -o-transition: all 1s linear;
     transition: all 1s linear;
     left:0;
 }
-
-.Input{
-    width: 1125px;
-    height: 1624px;
-    color: $font-white;
-    background: $gray;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-    left:0;
+.Num{
+    width: 100px;
+    height: 50px;
+    float:left;
+    font-size:48px;
+    text-align:center;
 }
 
 .NumBtn{
     width: 50px;
     height: 50px;
-    background: $gray;
+    background: $red;
+    float:left;
     color: $font-white;
+    font-size:40px;
+    line-height:50px;
+    text-align:center;
 }
 
 .FormBtn{
-    width: 150px;
+    width: 200px;
     height: 50px;
     background: $gray;
     color: $font-white;
+margin-top: 10px;
+	float:left
 }
 
 .titleClass{
     width: 75%;
-    height: 100px;
+    height: 30px;
     background: $gray;
     color: $font-white;
 }
 
 .contentClass{
     width: 75%;
-    height: 100px;
+    height: 40px;
     background: $white;
     color: $font-black;
 }
@@ -102,15 +155,206 @@ footer, header, hgroup, menu, nav, section {
 
 .historyTitle{
     width: 75%;
-    height: 150px;
+    height: 35px;
+    background: $red;
 }
 
 .history{
-    width: auto;
+    width: 75%;
+    height: 30px;
+    background: $white;
+    color: $font-black;
 
 }
 
 .hideHistory{
     width: auto;
+    height: 30px;
+    background: $gray;
+    color: $font-white;
+}
+
+.bodyPartBtn {
+    border-color: $red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.bodyMapHide{
+    display: none;
+}
+
+.bodyMapShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    position: relative;
+}
+
+.weightTag{
+    color: $font-white;
+    clear: both;
+    font-size: 36px;
+    height: 40px;
+    line-height: 40px;
+	margin-top: 10px;
+}
+
+.workoutPartBtn{
+    width: 500px;
+    height: 500px;
+    background: $gray;
+}
+
+.workoutMapHide{
+    display: none;
+}
+
+.workoutMapShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    background: $gray;
+}
+
+.historyGroupHide{
+    display: none;
+}
+
+.historyGroupShow{
+    display: block;
+    width : 375px;
+    height : 812px;
+    background: $gray;
+}
+
+.display {
+    border: 2px solid $red;
+    border-radius: 15px;
+    background: $red;
+    margin: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: white;
+    font-size:28px;
+}
+
+input{
+    color: $font-black;
+    background: $white;
+    right:0;
+}
+.Name{
+    width: 200px;
+    height: 50px;
+    float:left;
+    font-size:24px;
+    text-align:center;
+}
+.bodypartSelect{
+    background: $red;
+    color: $font-white;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    float:left;
+    margin-top: 10px;
 
 }
+.btn{
+    width: 100px;
+    height: 30px;
+    color: $font-black;
+    background: $lightGray;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    float: right;
+    padding: 5px;
+}
+
+.btn:hover{
+    color: $font-white;
+    background: $gray;
+}
+
+.alert{
+    background: $red;
+}
+
+.mainTitle{
+    font-size: 24px;
+    color: $font-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.label{
+    color: $font-white;
+}
+.flipBtn{
+    background: $red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: $font-white;
+}
+
+
+
+.imageWrapper{
+    width : 355px;
+    height : 792px;
+    background:$darkRed;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+.arm{
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 160px;
+}
+
+.chest{
+    position: absolute;
+    left: 190px;
+    top: 160px;
+    width: 160px;
+    height: 110px;
+}
+
+.abs{
+   position: absolute;
+    left: 190px;
+    top: 270px;
+    width: 160px;
+    height: 160px;
+}
+.back{
+   position: absolute;
+    left: 190px;
+    top: 160px;
+    width: 160px;
+    height: 270px;
+}
+.legs{
+   position: absolute;
+    left: 190px;
+    top: 430px;
+    width: 160px;
+    height: 200px;
+}
+
+#start, #resume, #stop{
+    margin-right: 40%;
+}
+

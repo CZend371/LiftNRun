@@ -9,9 +9,9 @@ export class BodyInput extends Component(props) {
     render() {
         return (
             <div className="Input">
-                <div name={prop.name} class="Bodybtn" onclick={this.DecreaseBtn}></div>
+                <div name={prop.name} className="Bodybtn" onClick={this.DecreaseBtn}></div>
                 <input {...props} />
-                <div name={prop.name} class="Bodybtn" onclick={this.IncreaseBtn}></div>
+                <div name={prop.name} className="Bodybtn" onClick={this.IncreaseBtn}></div>
             </div>
         )
     }

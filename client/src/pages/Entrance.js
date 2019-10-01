@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "../style/main.scss";
+import image from "../style/image/logo.png"
 
 
 class Entrance extends Component {
@@ -10,11 +12,14 @@ class Entrance extends Component {
 
     render() {
         return (
-            <div>
-                <img href="/Login" src="asset/logo.jpg" />
-                <div href="/Login">
-                    Lift N Run
-                </div>
+            <div className="mobileWrapper">
+                <img className="logo" href="/Login" src={image} />
+                <br />
+                <br />
+                <a href="/login">
+                <div class="mainTitle" >
+                    Lift N Run </div>
+                </a>
             </div>
         );
     }

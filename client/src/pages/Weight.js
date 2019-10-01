@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { NumbericInput, NameInput, FormBtn } from "../components/Form";
 import API from "../util/API";
-import "./style.css";
+import "../style/main.scss";
+import bodyImage1 from "../style/image/body-front.png"
+import bodyImage2 from "../style/image/body-back.png"
+
+
 
 export default class GymForm extends Component {
     state = {
         workoutType: "",
-        bodypart: "",
-        weight: 10,
+        bodypart: "Choose Body Part",
+        weight: 5,
         rep: 0,
         set: 0,
         timer: "",
@@ -22,37 +26,42 @@ export default class GymForm extends Component {
             rep: this.state.rep,
             set: this.state.set,
             timer: this.state.timer,
-            //date:""
         })
             .catch(err => console.log(err));
     };
 
     chooseBodyPart = event => {
-        const { name, id } = event.target.id;
+        var name = event.target.getAttribute("name");
+        var id = event.target.getAttribute("id");
         this.setState({
             [name]: id
         });
-        document.getElementById("bodyMap1").classList.add('bodyMapHide ');
-        document.getElementById("bodyMap1 ").classList.remove('bodyMapShow');
-        document.getElementById("bodyMap2").classList.add('bodyMapHide ');
-        document.getElementById("bodyMap2 ").classList.remove('bodyMapShow');
+        document.getElementById("bodyMap1").classList.add('bodyMapHide');
+        document.getElementById("bodyMap1").classList.remove('bodyMapShow');
+        document.getElementById("bodyMap2").classList.add('bodyMapHide');
+        document.getElementById("bodyMap2").classList.remove('bodyMapShow');
     }
     flipBodyPart = event => {
-        var check = document.getElementById("bodyFlip").getAttribute('isFront');
-        if (check === true) {
-            document.getElementById("bodyFlip").setAttribute('isFront', false);
-            document.getElementById("bodyMap1").classList.add('bodyMapHide ');
-            document.getElementById("bodyMap2 ").classList.remove('bodyMapShow');
+        var check = event.target.getAttribute('isfront');
+        console.log(check);
+        if (check === "true") {
+            document.getElementById("bodyMap1").classList.add('bodyMapHide');
+            document.getElementById("bodyMap1").classList.remove('bodyMapShow');
+            document.getElementById("bodyMap2").classList.add('bodyMapShow');
+            document.getElementById("bodyMap2").classList.remove('bodyMapHide');
 
         } else {
-            document.getElementById("bodyFlip").setAttribute('isFront', true);
-            document.getElementById("bodyMap1").classList.add('bodyMapShow ');
-            document.getElementById("bodyMap2 ").classList.remove('bodyMapHide');
+            document.getElementById("bodyMap1").classList.remove('bodyMapHide');
+            document.getElementById("bodyMap1").classList.add('bodyMapShow');
+            document.getElementById("bodyMap2").classList.remove('bodyMapShow');
+            document.getElementById("bodyMap2").classList.add('bodyMapHide');
         }
     }
     updateBodyPart = event => {
-        document.getElementById("bodyMap1").classList.add('bodyMapShow ');
-        document.getElementById("bodyMap1 ").classList.remove('bodyMapHide');
+        document.getElementById("bodyMap1").classList.add('bodyMapShow');
+        document.getElementById("bodyMap1").classList.remove('bodyMapHide');
+        document.getElementById("bodyMap1").classList.add('bodyMapShow');
+        document.getElementById("bodyMap1").classList.remove('bodyMapHide');
     }
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -60,62 +69,119 @@ export default class GymForm extends Component {
             [name]: value
         });
     };
+    IncreaseBtn = event => {
+        var name = event.target.getAttribute("name");
+        console.log(name);
+        var value = this.state[name]
+        console.log(value);
+        if (name === "weight") {
+            value += 5;
+            this.setState({
+                weight: value
+            });
+        } else {
+            value += 1;
+            this.setState({
+                [name]: value
+            });
+        }
+        document.getElementById(name).value = value;
+    };
+    DecreaseBtn = event => {
+        var name = event.target.getAttribute("name");
+        var value = this.state[name]
+        if (name === "weight") {
+            value -= 5;
+            this.setState({
+                weight: value
+            });
+        } else {
+            value = 1;
+            this.setState({
+                [name]: value
+            });
+        }
+        document.getElementById(name).value = value;
+    };
+
 
     render() {
         return (
-            <div>
+            <div className="mobileWrapper">
                 <div id="bodyMap1" className="bodyMapHide">
-                    <div id="arms" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
-                    <div id="chest" name="bodyType" className="bodyPartBtn" src="assets/chest.jpg" onClick={this.chooseBodyPart}></div>
-                    <div id="abs" name="bodyType" className="bodyPartBtn" src="assets/arm.jpg" onClick={this.chooseBodyPart}></div>
-                </div>
-                <div id="bodyFlip" className="flipBtn" onClick={this.FlipBodyPart} isFront="true"></div>
-                <div id="bodyMap2" name="bodyType" className="bodyMapHide">
-                    <div id="back" name="bodyType" className="bodyPartBtn" src="assets/back.jpg" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodyType" className="bodyPartBtn" src="assets/thigh.jpg" onClick={this.chooseBodyPart}></div>
+                    <img className="imageWrapper" src={bodyImage1} />
+                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="chest" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="abs" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true">Go to Back</div>
+                </div>                
+                <div id="bodyMap2" className="bodyMapHide">
+                    <img className="imageWrapper" src={bodyImage2} />
+                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="back" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false">Go to Front</div>
                 </div>
                 <form id="form">
-                    <p>workoutType</p>
+                    <div className="weightTag">workoutType</div>
                     <NameInput
-                        value={this.state.name}
+                        className="Name"
+                        value={this.state.workoutType}
                         onChange={this.handleInputChange}
                         name="workoutType"
                     />
-                    <p>bodypart</p>
-                    <div class="bodypartSelect"
+                    <br/>
+                    <div className="bodypartSelect"
+                        value=""
                         name="bodypart"
-                        onClick={this.updateBodyPart}>
+                        onClick={this.updateBodyPart}>{this.state.bodypart}
                     </div>
-                    <p>weight</p>
+                    <div className="weightTag">weight</div>
+                    <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
+                        className="Num"
                         value={this.state.weight}
                         onChange={this.handleInputChange}
-                        name="weight"
+                        id="weight"
                     />
-                    <p>rep</p>
+                    <div name="weight" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
+                    <br/>
+                    <div className="weightTag">rep</div>
+                    <div name="rep" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
+                        className="Num"
                         value={this.state.rep}
                         onChange={this.handleInputChange}
-                        name="rep"
+                        id="rep"
                     />
-                    <p>set</p>
+                    <div name="rep" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
+                    <br/>        
+                    <div className="weightTag">Set</div>
+                    <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
+                        className="Num"
                         value={this.state.set}
                         onChange={this.handleInputChange}
-                        name="set"
+                        id="set"
                     />
-                    <p>timer</p>
+                    <div name="set" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
+                    <br/>
+                    <div className="weightTag">timer</div>
                     <NameInput
+                        className="Name"
                         value={this.state.timer}
                         onChange={this.handleInputChange}
                         name="timer"
                     />
+                    <br/>
                     <FormBtn onClick={this.handleFormSubmit}>
                         Submit
-            </FormBtn>
+                    </FormBtn>
                 </form>
             </div>
         )
     }
 }
+
 

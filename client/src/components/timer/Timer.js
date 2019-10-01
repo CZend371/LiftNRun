@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import moment from "moment";
 import momentDurationFormatSetup from "moment-duration-format";
-import "../timer/style.scss"
-// import file for API
+import "../../style/main.scss";
+import API from "../../util/API"
+// import "../timer/style.scss"
 
 
 
@@ -40,8 +41,14 @@ class Timer extends Component {
         })
     }
 
-    handleSave = () => {
+    handleSave = (props) => {
         // api call to save time displayed on timer
+        API.saveRun({
+            type: "Run",
+            timer: this.state.timerTime,
+            distance: props.distance
+        })
+            .catch(err => console.log(err));
     }
 
 

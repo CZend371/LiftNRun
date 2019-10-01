@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../style/main";
+import "../../style/main.scss";
 
 // pass topTitle botTitle topLink botLink
 
@@ -30,9 +30,11 @@ export default class BinarySelection extends Component {
     }
     render() {
         return (
-            <div>
-                <a id="topLink" href={this.props.topLink}><div id="topBtn" className="binaryBtn" onclick={this.clickTop}>{this.props.topTitle}</div></a>
-                <a id="bopLink" href={this.props.botLink}><div id="botBtn" class="binaryBtn" onclick={this.clickBot}>{this.props.botTitle}</div></a>
+            <div className="mobileWrapper">
+                <a id="topLink" href={this.props.topLink}>
+                    <div id="topBtn" className="topBtn binaryBtn" onClick={this.clickTop}>{this.props.topTitle}</div></a>
+                <a id="bopLink" href={this.props.botLink}>
+                    <div id="botBtn" className="botBtn binaryBtn" onClick={this.clickBot}>{this.props.botTitle}</div></a>
             </div>
         )
     }

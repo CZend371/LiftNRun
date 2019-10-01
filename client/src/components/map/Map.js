@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import "./map.scss";
+import "../../style/main.scss";
+
 
 class Map extends Component {
     constructor(props) {

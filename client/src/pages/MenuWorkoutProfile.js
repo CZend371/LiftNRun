@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import BinarySeletion from "../components/BinarySeletion";
+import "../style/main.scss";
+import BinarySelection from "../components/BinarySelection";
 
 class MenuWorkoutProfile extends Component {
     state = {
@@ -7,10 +8,10 @@ class MenuWorkoutProfile extends Component {
         botTitle: "Profile",
         topLink: "/MenuGymRun",
         botLink: "/Profile"
-      };
+    };
     render() {
         return (
-                <BinarySeletion {...this.state}/>
+            <BinarySelection {...this.state} />
         );
     }
 }
