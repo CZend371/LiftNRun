@@ -7,7 +7,7 @@ import "../style/main.scss";
 export default class GymForm extends Component {
     state = {
         workoutType: "Pick Equipment",
-        timer: "",
+        timer: "Record Time",
         name: ""
     };
     handleFormSubmit = event => {
@@ -28,13 +28,21 @@ export default class GymForm extends Component {
         this.setState({
             [name]: id
         });
-        document.getElementById("workoutMap").classList.add('workoutMapHide ');
+        document.getElementById("workoutMap").classList.add('workoutMapHide');
         document.getElementById("workoutMap").classList.remove('workoutMapShow');
     }
     updateWorkoutPart = event => {
         console.log("clicked");
         document.getElementById("workoutMap").classList.add('workoutMapShow');
         document.getElementById("workoutMap").classList.remove('workoutMapHide');
+    }
+    getTime = event => {
+        var name = event.target.getAttribute("name");
+        var timerDiv = document.getElementById('currentTime');
+        var timer = timerDiv.innerHTML;
+        this.setState({
+            [name]: timer
+        });
     }
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -51,14 +59,18 @@ export default class GymForm extends Component {
                     <div id="treadmill" name="workoutType" className="workoutPartBtn" src="assets/chest.jpg" onClick={this.chooseWorkoutPart}>Treadmill</div>
                     <div id="stairmaster" name="workoutType" className="workoutPartBtn" src="assets/arm.jpg" onClick={this.chooseWorkoutPart}>Stairmaster</div>
                 </div>
-                
+
                 <Timer></Timer>
                 <form id="form">
                     <div className="WorkoutSelect"
                         name="workoutType"
                         onClick={this.updateWorkoutPart}>{this.state.workoutType}
                     </div>
-                    <div className="weightTag">timer</div>
+                    <div className="WorkoutSelect"
+                        name="timer"
+                        onClick={this.getTime}>{this.state.timer}
+                    </div>
+                    <div className="weightTag">Timer</div>
                     <NameInput
                         value={this.state.timer}
                         onChange={this.handleInputChange}

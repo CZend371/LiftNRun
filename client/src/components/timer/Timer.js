@@ -60,7 +60,7 @@ class Timer extends Component {
         let hours = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
         return (
             <div className="timer-container">
-                <div className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
+                <div id="currentTime" className="display">{hours}:{minutes}:{seconds}:{centiseconds}</div>
                 <div className="timerLoc">
                 {this.state.isRunning === false && this.state.timerTime === 0 && (
                     <div type="button" className="bigBtn btn btn-success" id="start" onClick={this.handleStart}>Start</div>
