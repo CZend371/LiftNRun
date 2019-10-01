@@ -75,7 +75,7 @@ footer, header, hgroup, menu, nav, section {
     text-align: center;
     border-radius: 15px;
     background: $red;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impact, Charcoal, sans-serif;
 }
 .topBtn {
     width: 355px;
@@ -164,9 +164,16 @@ margin-top: 10px;
 }
 
 .bodyPartBtn {
+    background: $white;
+    opacity: 0;
+}
+
+.bodyPartBtn:hover {
     border-color: $red;
     border-style: solid;
-    border-width: 1px;
+    border-width: 5px;
+    background: $white;
+    opacity: 0.3;
 }
 
 .bodyMapHide{
@@ -291,8 +298,8 @@ input{
 
 
 .imageWrapper{
-    width : 355px;
-    height : 792px;
+    width : 375px;
+    height : 812px;
     background:$darkRed;
     margin-top: -10px;
     margin-left: -10px;

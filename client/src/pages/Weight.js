@@ -110,21 +110,21 @@ export default class GymForm extends Component {
             <div className="mobileWrapper">
                 <div id="bodyMap1" className="bodyMapHide">
                     <img className="imageWrapper" src={bodyImage1} />
-                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="chest" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="abs" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="ARM" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="CHEST" name="bodypart" className="chest bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="ABS" name="bodypart" className="abs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="LEGS" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="true">Go to Back</div>
                 </div>                
                 <div id="bodyMap2" className="bodyMapHide">
                     <img className="imageWrapper" src={bodyImage2} />
-                    <div id="arms" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="back" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
-                    <div id="legs" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="ARM" name="bodypart" className="arm bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="CHEST" name="bodypart" className="back bodyPartBtn" onClick={this.chooseBodyPart}></div>
+                    <div id="LEGS" name="bodypart" className="legs bodyPartBtn" onClick={this.chooseBodyPart}></div>
                     <div id="bodyFlip" className="flipBtn" onClick={this.flipBodyPart} isfront="false">Go to Front</div>
                 </div>
                 <form id="form">
-                    <div className="weightTag">workoutType</div>
+                    <div className="weightTag">Workout Type</div>
                     <NameInput
                         className="Name"
                         value={this.state.workoutType}
@@ -137,7 +137,7 @@ export default class GymForm extends Component {
                         name="bodypart"
                         onClick={this.updateBodyPart}>{this.state.bodypart}
                     </div>
-                    <div className="weightTag">weight</div>
+                    <div className="weightTag">Weight</div>
                     <div name="weight" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -147,7 +147,7 @@ export default class GymForm extends Component {
                     />
                     <div name="weight" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <br/>
-                    <div className="weightTag">rep</div>
+                    <div className="weightTag">Reps</div>
                     <div name="rep" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
@@ -157,7 +157,7 @@ export default class GymForm extends Component {
                     />
                     <div name="rep" className="NumBtn" onClick={this.IncreaseBtn}>+</div>
                     <br/>        
-                    <div className="weightTag">Set</div>
+                    <div className="weightTag">Sets</div>
                     <div name="set" className="NumBtn" onClick={this.DecreaseBtn}>-</div>
                     <NumbericInput
                         className="Num"
