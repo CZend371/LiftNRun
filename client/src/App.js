@@ -8,7 +8,7 @@ import MenuWeightCardio from "./pages/MenuWeightCardio";
 import Weight from "./pages/Weight";
 import Run from "./pages/Run/Run";
 import Navbar from "./pages/Login/LoginPage/NavBar";
-// import Signup from "./pages/Login/LoginPage/SignUp";
+import Signup from "./pages/Login/LoginPage/SignUp";
 import axios from "axios";
 import Cardio from "./pages/Cardio";
 import Profile from "./pages/Profile";
@@ -78,7 +78,8 @@ class App extends Component {
           </Switch>) : */}
         <Switch>
           <Route exact path="/Entrance" component={Entrance} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/Login" component={LoginPage} />
+          <Route exact path="/Signup" component={Signup} />
           <Route exact path="/MenuWorkoutProfile" component={MenuWorkoutProfile} />
           <Route exact path="/Profile" component={Profile} />
           <Route exact path="/MenuGymRun" component={MenuGymRun} />
