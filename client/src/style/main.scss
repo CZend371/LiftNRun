@@ -353,7 +353,8 @@ input{
     line-height: 50px;
     padding: 5px;
     font-size: 28px;
-    float: right;
+    display: flex;
+    align-items: center;
 }
 
 .bigBtn{
@@ -363,9 +364,8 @@ input{
     background: $darkRed;
     text-align: center;
     line-height: 50px;
-    display: block;
-    position: relative;
-    left: -50%; /* or right 50% */
+    display: flex;
+    align-items: center;
     padding: 5px;
     font-size: 28px;
 }
