@@ -2,18 +2,14 @@ body {
     background-color: #615c5d;
 }
 #myMap{
-    margin:60px;
-    border: 2px solid #b40125;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #b40125; 
+    margin-bottom: 30px;
 }
 
 .timer {
-    margin: 60px;
-    text-align: center;
-    color: white;
-    font-size:28px;
-}
-
-.display {
     margin: 60px;
     text-align: center;
     color: white;

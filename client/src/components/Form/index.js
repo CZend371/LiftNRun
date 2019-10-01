@@ -25,7 +25,7 @@ export class NameInput extends Component {
 
 export function FormBtn() {
     return (
-        <button {...this.props} className="FormBtn">
+        <button className="FormBtn" >
             Submit
         </button>
     );
